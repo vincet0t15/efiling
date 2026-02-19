@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\OfficeController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use Laravel\Fortify\Features;
@@ -14,4 +15,12 @@ Route::get('dashboard', function () {
     return Inertia::render('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-require __DIR__.'/settings.php';
+Route::middleware(['auth', 'verified'])->group(function () {
+    //   Route::get('dashboard', DashboardController::class)->name('dashboard');
+
+
+    //OFFICES
+    Route::get('offices', [OfficeController::class, 'index'])->name('offices.index');
+});
+
+require __DIR__ . '/settings.php';

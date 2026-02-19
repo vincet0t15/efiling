@@ -44,17 +44,20 @@ export default function Register() {
                             </div>
 
                             <div className="grid gap-2">
-                                <Label htmlFor="email">Email address</Label>
+                                <Label htmlFor="username">Username</Label>
                                 <Input
-                                    id="email"
-                                    type="email"
+                                    id="username"
+                                    type="text"
                                     required
                                     tabIndex={2}
-                                    autoComplete="email"
-                                    name="email"
-                                    placeholder="email@example.com"
+                                    autoComplete="username"
+                                    name="username"
+                                    placeholder="username"
                                 />
-                                <InputError message={errors.email} />
+                                <InputError
+                                    message={errors.username}
+                                    className="mt-2"
+                                />
                             </div>
 
                             <div className="grid gap-2">
