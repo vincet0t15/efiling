@@ -27,6 +27,7 @@ export default function Dashboard({ documentTypes }: Props) {
         title: '',
         name: '',
         description: '',
+        document_type_id: '',
         document_files: [],
     });
 
@@ -60,7 +61,7 @@ export default function Dashboard({ documentTypes }: Props) {
 
     const documentTypeOptions = documentTypes.map((documentType) => ({
         label: documentType.name,
-        id: String(documentType.id)
+        value: String(documentType.id)
     }));
 
     const onChangeDocumentType = (value: string | null) => {
@@ -81,7 +82,11 @@ export default function Dashboard({ documentTypes }: Props) {
                         </div>
                         <div className="grid gap-3 w-full">
                             <Label htmlFor="name">Office Name</Label>
-                            <ComboboxBasic items={documentTypeOptions} value={data.document_type_id} onChange={onChangeDocumentType} />
+                            <ComboboxBasic items={documentTypeOptions} value={
+                                documentTypeOptions.find(
+                                    (item) => item.value === data.document_type_id
+                                )?.label ?? ''
+                            } onChange={onChangeDocumentType} />
                             <InputError />
                         </div>
                     </div>

@@ -9,29 +9,37 @@ import {
     ComboboxList,
 } from "@/components/ui/combobox"
 
-
 interface Options {
     label: string
-    id: string
+    value: string
 }
 
 interface Props {
-    items: Options[],
-    value?: string;
-    onChange: (value: string | null) => void;
+    items: Options[]
+    value?: string
+    onChange: (value: string | null) => void
 }
+
 export function ComboboxBasic({ items, value, onChange }: Props) {
+
+    const selectedItem = items.find(item => item.value === value)
+
     return (
-        <Combobox value={value || undefined} items={items} onValueChange={onChange}>
+        <Combobox
+            value={value ?? undefined}
+            items={items}
+            onValueChange={onChange}
+        >
             <ComboboxInput
                 placeholder="Select an option"
-                value={items.find((item) => item.id === value)?.label || ""}
+
             />
+
             <ComboboxContent>
                 <ComboboxEmpty>No items found.</ComboboxEmpty>
                 <ComboboxList>
                     {(item) => (
-                        <ComboboxItem key={item.id} value={item.id}>
+                        <ComboboxItem key={item.value} value={item.value}>
                             {item.label}
                         </ComboboxItem>
                     )}
