@@ -1,5 +1,5 @@
 import { Link, usePage } from '@inertiajs/react';
-import { BookOpen, Folder, LayoutGrid, Menu, Search } from 'lucide-react';
+import { BookOpen, Building2, ChartBarIncreasingIcon, Folder, LayoutGrid, Menu, Search } from 'lucide-react';
 import { Breadcrumbs } from '@/components/breadcrumbs';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
@@ -35,6 +35,10 @@ import type { BreadcrumbItem, NavItem } from '@/types';
 import AppLogo from './app-logo';
 import AppLogoIcon from './app-logo-icon';
 import { dashboard } from '@/routes';
+import offices from '@/routes/offices';
+import documentTypes from '@/routes/document-types';
+import documents from '@/routes/documents';
+import { DropdownMenuDemo } from './test';
 
 type Props = {
     breadcrumbs?: BreadcrumbItem[];
@@ -46,18 +50,23 @@ const mainNavItems: NavItem[] = [
         href: dashboard(),
         icon: LayoutGrid,
     },
+    {
+        title: 'Documents',
+        href: documents.index.url(),
+        icon: BookOpen,
+    },
 ];
 
 const rightNavItems: NavItem[] = [
     {
-        title: 'Repository',
-        href: 'https://github.com/laravel/react-starter-kit',
-        icon: Folder,
+        title: 'Office',
+        href: offices.index.url(),
+        icon: Building2,
     },
     {
-        title: 'Documentation',
-        href: 'https://laravel.com/docs/starter-kits#react',
-        icon: BookOpen,
+        title: 'Document Types',
+        href: documentTypes.index.url(),
+        icon: ChartBarIncreasingIcon,
     },
 ];
 
@@ -130,6 +139,7 @@ export function AppHeader({ breadcrumbs = [] }: Props) {
                                         </div>
                                     </div>
                                 </div>
+                                <DropdownMenuDemo />
                             </SheetContent>
                         </Sheet>
                     </div>
@@ -172,8 +182,10 @@ export function AppHeader({ breadcrumbs = [] }: Props) {
                                         )}
                                     </NavigationMenuItem>
                                 ))}
+
                             </NavigationMenuList>
                         </NavigationMenu>
+                        <DropdownMenuDemo />
                     </div>
 
                     <div className="ml-auto flex items-center space-x-2">
