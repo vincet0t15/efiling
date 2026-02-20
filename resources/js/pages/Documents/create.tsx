@@ -10,19 +10,24 @@ import { File, FileText, Paperclip, Trash2 } from 'lucide-react';
 import type { BreadcrumbItem } from '@/types';
 import { dashboard } from '@/routes';
 import { DocumentCreateProps } from '@/types/document';
+import { ComboboxBasic } from '@/components/test';
+import { DocumentTypeProps } from '@/types/documentType';
 
 const breadcrumbs: BreadcrumbItem[] = [
     { title: 'Dashboard', href: dashboard().url },
 ];
 
-export default function Dashboard() {
+interface Props {
+    documentTypes: DocumentTypeProps[]
+}
+export default function Dashboard({ documentTypes }: Props) {
     const fileInputRef = useRef<HTMLInputElement>(null);
 
     const { data, setData } = useForm<DocumentCreateProps>({
         title: '',
         name: '',
         description: '',
-        document_files: [], // array of selected files
+        document_files: [],
     });
 
     const handleButtonClick = () => {
@@ -49,9 +54,19 @@ export default function Dashboard() {
 
     const handleRemoveFile = (index: number) => {
         const newFiles = [...data.document_files];
-        newFiles.splice(index, 1); // remove file at index
+        newFiles.splice(index, 1);
         setData('document_files', newFiles);
     };
+
+    const documentTypeOptions = documentTypes.map((documentType) => ({
+        label: documentType.name,
+        id: String(documentType.id)
+    }));
+
+    const onChangeDocumentType = (value: string | null) => {
+        setData('document_type_id', value ?? '');
+    };
+
 
     return (
         <AppLayout breadcrumbs={breadcrumbs}>
@@ -66,7 +81,7 @@ export default function Dashboard() {
                         </div>
                         <div className="grid gap-3 w-full">
                             <Label htmlFor="name">Office Name</Label>
-                            <Input id="name" name="name" placeholder="e.g. Office of the Municipal Mayor" />
+                            <ComboboxBasic items={documentTypeOptions} value={data.document_type_id} onChange={onChangeDocumentType} />
                             <InputError />
                         </div>
                     </div>
