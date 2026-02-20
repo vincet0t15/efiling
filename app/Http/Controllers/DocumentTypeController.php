@@ -29,8 +29,8 @@ class DocumentTypeController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|max:255',
-            'code' => 'required|string|max:255',
+            'name' => 'required|string|max:255|unique:document_types,name',
+            'code' => 'required|string|max:255|unique:document_types,code',
         ]);
 
         DocumentType::create($request->only('name', 'code'));

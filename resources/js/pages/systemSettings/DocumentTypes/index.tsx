@@ -16,6 +16,7 @@ import Pagination from '@/components/paginationData';
 import documentTypes from '@/routes/document-types';
 import { DocumentTypeProps } from '@/types/documentType';
 import { DocumentTypeCreateDialog } from './create';
+import { DocumentTypeEditDialog } from './edit';
 
 
 const breadcrumbs: BreadcrumbItem[] = [
@@ -136,6 +137,7 @@ export default function DocumentTypeIndex({ documentTypesList, filters }: Props)
                 </div>
 
                 {openCreate && <DocumentTypeCreateDialog open={openCreate} setOpen={setOpenCreate} />}
+                {openEdit && selectedDocumentType && <DocumentTypeEditDialog open={openEdit} setOpen={setOpenEdit} documentType={selectedDocumentType} />}
             </div>
 
         </AppLayout>
