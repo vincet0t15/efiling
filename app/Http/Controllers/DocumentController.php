@@ -33,7 +33,25 @@ class DocumentController extends Controller
             'office_receiver_id' => 'required|exists:offices,id',
         ]);
 
-        Document::create($request->all());
+        $document = Document::create($request->all());
+
+        if ($request->hasFile('document_files')) {
+            foreach ($request->file('document_files') as $file) {
+                $units = ['B', 'KB', 'MB', 'GB', 'TB', 'PB'];
+
+                $size = $file->getSize();
+                for ($i = 0; $size > 1024; $i++) {
+                    $size /= 1024;
+                }
+                $document->documentFiles()->create([
+                    'extension_name' => $file->getClientOriginalExtension(),
+                    'path' => $file->store('document_files', 'public'),
+                    'file_size' => number_format($size, 2) . ' ' . $units[$i],
+                    'original_name' => $file->getClientOriginalName(),
+                    'date_created' => now(),
+                ]);
+            }
+        }
 
         return redirect()->back()->with('success', 'Document created successfully.');
     }

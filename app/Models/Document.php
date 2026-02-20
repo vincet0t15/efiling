@@ -27,6 +27,11 @@ class Document extends Model
         return $this->belongsTo(Office::class, 'office_receiver_id');
     }
 
+    public function documentFiles()
+    {
+        return $this->hasMany(DocumentFile::class);
+    }
+
     protected static function booted()
     {
         static::creating(function ($document) {

@@ -7,6 +7,7 @@ export interface DocumentProps {
     description?: string;
     office_receiver_id: number;
     document_type: DocumentTypeProps;
+    document_files?: File[];
 }
 
 export type DocumentCreateProps = Omit<DocumentProps, 'id', 'office_receiver_id', 'document_type'>;
