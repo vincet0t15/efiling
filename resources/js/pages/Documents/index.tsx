@@ -71,7 +71,7 @@ export default function Documents({ documentList, filters }: Props) {
             <Head title="Document Type" />
             <div className="flex h-full flex-1 flex-col gap-4 overflow-x-auto rounded-xl p-4">
                 <div className="flex w-full flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-                    <Button onClick={() => setOpenCreate(true)} className='cursor-pointer rounded-sm'>
+                    <Button onClick={() => router.get(documents.create.url())} className='cursor-pointer rounded-sm'>
                         <PlusIcon />
                         <span className="rounded-sm lg:inline">Register Document</span>
                     </Button>

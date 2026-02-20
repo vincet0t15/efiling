@@ -38,6 +38,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('documents', [DocumentController::class, 'store'])->name('documents.store');
     Route::put('documents/{document}', [DocumentController::class, 'update'])->name('documents.update');
     Route::delete('documents/{document}', [DocumentController::class, 'destroy'])->name('documents.destroy');
+    Route::get('documents/create', [DocumentController::class, 'create'])->name('documents.create');
 });
 
 require __DIR__ . '/settings.php';

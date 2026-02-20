@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Document;
+use App\Models\DocumentType;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -56,5 +57,15 @@ class DocumentController extends Controller
         $document->delete();
 
         return redirect()->back()->with('success', 'Document deleted successfully.');
+    }
+
+    public function create(Request $request)
+    {
+        $documentTypes = DocumentType::all();
+
+        return Inertia::render('Documents/create', [
+            'documentTypes' => $documentTypes,
+
+        ]);
     }
 }
