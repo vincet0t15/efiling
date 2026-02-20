@@ -15,6 +15,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import Pagination from '@/components/paginationData';
 import documentTypes from '@/routes/document-types';
 import { DocumentTypeProps } from '@/types/documentType';
+import { DocumentTypeCreateDialog } from './create';
 
 
 const breadcrumbs: BreadcrumbItem[] = [
@@ -133,6 +134,8 @@ export default function DocumentTypeIndex({ documentTypesList, filters }: Props)
                 <div>
                     <Pagination data={documentTypesList} />
                 </div>
+
+                {openCreate && <DocumentTypeCreateDialog open={openCreate} setOpen={setOpenCreate} />}
             </div>
 
         </AppLayout>
