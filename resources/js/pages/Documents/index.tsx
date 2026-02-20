@@ -2,22 +2,19 @@ import { Head, router } from '@inertiajs/react';
 import AppLayout from '@/layouts/app-layout';
 import type { BreadcrumbItem } from '@/types';
 import { dashboard } from '@/routes';
-import offices from '@/routes/offices';
 import { Button } from '@/components/ui/button';
 import { PlusIcon } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { ChangeEventHandler, KeyboardEventHandler, useState } from 'react';
-
 import { PaginatedDataResponse } from '@/types/pagination';
-import { OfficeProps } from '@/types/office';
 import { FilterProps } from '@/types/filter';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import Pagination from '@/components/paginationData';
 import documentTypes from '@/routes/document-types';
 import { DocumentTypeProps } from '@/types/documentType';
-import { DocumentTypeCreateDialog } from './create';
-import { DocumentTypeEditDialog } from './edit';
-import DeleteDocumentTypeDialog from './delete';
+import documents from '@/routes/documents';
+import { DocumentProps } from '@/types/document';
+
 
 
 const breadcrumbs: BreadcrumbItem[] = [
@@ -26,22 +23,22 @@ const breadcrumbs: BreadcrumbItem[] = [
         href: dashboard().url,
     },
     {
-        title: 'Document Types',
-        href: documentTypes.index.url(),
+        title: 'Documents',
+        href: documents.index.url(),
     },
 ];
 
 interface Props {
-    documentTypesList: PaginatedDataResponse<DocumentTypeProps>;
+    documentList: PaginatedDataResponse<DocumentProps>;
     filters: FilterProps;
 }
 
-export default function DocumentTypeIndex({ documentTypesList, filters }: Props) {
+export default function DocumentTypeIndex({ documentList, filters }: Props) {
     const [search, setSearch] = useState(filters.search || '');
     const [openCreate, setOpenCreate] = useState(false);
     const [openEdit, setOpenEdit] = useState(false);
     const [openDelete, setOpenDelete] = useState(false);
-    const [selectedDocumentType, setSelectedDocumentType] = useState<DocumentTypeProps>();
+    const [selectedDocumentType, setSelectedDocumentType] = useState<DocumentProps>();
 
     const handleSearch: ChangeEventHandler<HTMLInputElement> = (e) => {
         setSearch(e.target.value);
@@ -60,13 +57,13 @@ export default function DocumentTypeIndex({ documentTypesList, filters }: Props)
         }
     }
 
-    const onEditClick = (documentType: DocumentTypeProps) => {
-        setSelectedDocumentType(documentType);
+    const onEditClick = (document: DocumentProps) => {
+        setSelectedDocumentType(document);
         setOpenEdit(true);
     }
 
-    const onDeleteClick = (documentType: DocumentTypeProps) => {
-        setSelectedDocumentType(documentType);
+    const onDeleteClick = (document: DocumentProps) => {
+        setSelectedDocumentType(document);
         setOpenDelete(true);
     }
     return (
@@ -94,27 +91,27 @@ export default function DocumentTypeIndex({ documentTypesList, filters }: Props)
                             </TableRow>
                         </TableHeader>
                         <TableBody>
-                            {documentTypesList.data.length > 0 ? (
-                                documentTypesList.data.map((documentType, index) => (
+                            {documentList.data.length > 0 ? (
+                                documentList.data.map((document, index) => (
                                     <TableRow key={index} className="text-sm">
                                         <TableCell>
-                                            <span >{documentType.name}</span>
+                                            <span >{document.title}</span>
                                         </TableCell>
                                         <TableCell>
-                                            <span >{documentType.code}</span>
+                                            <span >{document.description}</span>
                                         </TableCell>
 
 
                                         <TableCell className="text-sm gap-2 flex justify-end">
                                             <span
                                                 className="cursor-pointer text-green-500 hover:text-green-700 hover:underline"
-                                                onClick={() => onEditClick(documentType)}
+                                                onClick={() => onEditClick(document)}
                                             >
                                                 Edit
                                             </span>
                                             <span
                                                 className="text-red-500 cursor-pointer hover:text-orange-700 hover:underline"
-                                                onClick={() => onDeleteClick(documentType)}
+                                                onClick={() => onDeleteClick(document)}
                                             >
                                                 Delete
                                             </span>
@@ -134,11 +131,8 @@ export default function DocumentTypeIndex({ documentTypesList, filters }: Props)
                     </Table>
                 </div>
                 <div>
-                    <Pagination data={documentTypesList} />
+                    <Pagination data={documentList} />
                 </div>
-                {openCreate && <DocumentTypeCreateDialog open={openCreate} setOpen={setOpenCreate} />}
-                {openEdit && selectedDocumentType && <DocumentTypeEditDialog open={openEdit} setOpen={setOpenEdit} documentType={selectedDocumentType} />}
-                {openDelete && selectedDocumentType && <DeleteDocumentTypeDialog open={openDelete} setOpen={setOpenDelete} documentType={selectedDocumentType} />}
             </div>
         </AppLayout>
     );

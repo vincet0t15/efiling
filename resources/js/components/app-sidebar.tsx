@@ -17,12 +17,18 @@ import AppLogo from './app-logo';
 import { dashboard } from '@/routes';
 import offices from '@/routes/offices';
 import documentTypes from '@/routes/document-types';
+import documents from '@/routes/documents';
 
 const mainNavItems: NavItem[] = [
     {
         title: 'Dashboard',
         href: dashboard(),
         icon: LayoutGrid,
+    },
+    {
+        title: 'Documents',
+        href: documents.index.url(),
+        icon: BookOpen,
     },
 ];
 
