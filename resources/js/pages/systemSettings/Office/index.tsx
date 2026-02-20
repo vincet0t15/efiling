@@ -7,6 +7,8 @@ import offices from '@/routes/offices';
 import { Button } from '@/components/ui/button';
 import { PlusIcon } from 'lucide-react';
 import { Input } from '@/components/ui/input';
+import { useState } from 'react';
+import { OfficeCreateDialog } from './create';
 
 
 const breadcrumbs: BreadcrumbItem[] = [
@@ -21,12 +23,13 @@ const breadcrumbs: BreadcrumbItem[] = [
 ];
 
 export default function Dashboard() {
+    const [openCreate, setOpenCreate] = useState(false);
     return (
         <AppLayout breadcrumbs={breadcrumbs}>
             <Head title="Dashboard" />
             <div className="flex h-full flex-1 flex-col gap-4 overflow-x-auto rounded-xl p-4">
                 <div className="flex w-full flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-                    <Button className='cursor-pointer'>
+                    <Button onClick={() => setOpenCreate(true)} className='cursor-pointer'>
                         <PlusIcon />
                         <span className="rounded-sm lg:inline">Add Office</span>
                     </Button>
@@ -36,6 +39,9 @@ export default function Dashboard() {
                     </div>
                 </div>
             </div>
+            {openCreate && (
+                <OfficeCreateDialog open={openCreate} setOpen={setOpenCreate} />
+            )}
         </AppLayout>
     );
 }

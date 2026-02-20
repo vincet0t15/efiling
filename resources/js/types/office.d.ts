@@ -6,3 +6,5 @@ export interface OfficeProps {
     code: string;
     users: User[]
 }
+
+export type OfficeType = Omit<OfficeProps, 'id' | 'users'>;

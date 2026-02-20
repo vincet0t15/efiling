@@ -21,6 +21,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     //OFFICES
     Route::get('offices', [OfficeController::class, 'index'])->name('offices.index');
+    Route::post('offices', [OfficeController::class, 'store'])->name('offices.store');
 });
 
 require __DIR__ . '/settings.php';
