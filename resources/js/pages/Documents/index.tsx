@@ -33,7 +33,7 @@ interface Props {
     filters: FilterProps;
 }
 
-export default function DocumentTypeIndex({ documentList, filters }: Props) {
+export default function Documents({ documentList, filters }: Props) {
     const [search, setSearch] = useState(filters.search || '');
     const [openCreate, setOpenCreate] = useState(false);
     const [openEdit, setOpenEdit] = useState(false);
@@ -73,7 +73,7 @@ export default function DocumentTypeIndex({ documentList, filters }: Props) {
                 <div className="flex w-full flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                     <Button onClick={() => setOpenCreate(true)} className='cursor-pointer rounded-sm'>
                         <PlusIcon />
-                        <span className="rounded-sm lg:inline">Add Document Type</span>
+                        <span className="rounded-sm lg:inline">Register Document</span>
                     </Button>
 
                     <div className="flex items-center gap-2">
@@ -85,9 +85,10 @@ export default function DocumentTypeIndex({ documentList, filters }: Props) {
                     <Table>
                         <TableHeader className="bg-muted/50">
                             <TableRow>
-                                <TableHead className="text-primary font-bold">Document Type Name</TableHead>
-                                <TableHead className="text-primary font-bold">Document Type Code</TableHead>
-                                <TableHead className="text-primary font-bold text-center w-25"> Actions</TableHead>
+                                <TableHead className="text-primary font-bold">Title</TableHead>
+                                <TableHead className="text-primary font-bold">Description</TableHead>
+                                <TableHead className="text-primary font-bold">Type</TableHead>
+                                <TableHead className="text-primary font-bold text-center w-25">Actions</TableHead>
                             </TableRow>
                         </TableHeader>
                         <TableBody>
