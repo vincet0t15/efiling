@@ -11,7 +11,20 @@ class OfficeController extends Controller
     //OFFICES
     public function index(Request $request)
     {
-        return Inertia::render('systemSettings/Office/index');
+
+        $search = $request->input('search');
+        $offices = Office::query()
+            ->when($search, function ($query, $search) {
+                $query->where('name', 'like', "%{$search}%")
+                    ->orWhere('code', 'like', "%{$search}%");
+            })
+            ->paginate(25)
+            ->withQueryString();
+
+        return Inertia::render('systemSettings/Office/index', [
+            'offices_list' => $offices,
+            'filters' => $request->only('search'),
+        ]);
     }
 
     public function store(Request $request)
