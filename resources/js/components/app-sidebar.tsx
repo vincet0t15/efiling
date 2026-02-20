@@ -1,5 +1,5 @@
 import { Link } from '@inertiajs/react';
-import { BookOpen, Building2, Folder, LayoutGrid } from 'lucide-react';
+import { BookOpen, Building2, ChartBarIncreasingIcon, Folder, LayoutGrid } from 'lucide-react';
 import { NavFooter } from '@/components/nav-footer';
 import { NavMain } from '@/components/nav-main';
 import { NavUser } from '@/components/nav-user';
@@ -16,6 +16,7 @@ import type { NavItem } from '@/types';
 import AppLogo from './app-logo';
 import { dashboard } from '@/routes';
 import offices from '@/routes/offices';
+import documentTypes from '@/routes/document-types';
 
 const mainNavItems: NavItem[] = [
     {
@@ -32,9 +33,9 @@ const footerNavItems: NavItem[] = [
         icon: Building2,
     },
     {
-        title: 'Documentation',
-        href: 'https://laravel.com/docs/starter-kits#react',
-        icon: BookOpen,
+        title: 'Document Types',
+        href: documentTypes.index.url(),
+        icon: ChartBarIncreasingIcon,
     },
 ];
 

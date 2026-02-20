@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DocumentTypeController;
 use App\Http\Controllers\OfficeController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -24,6 +25,12 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('offices', [OfficeController::class, 'store'])->name('offices.store');
     Route::put('offices/{office}', [OfficeController::class, 'update'])->name('offices.update');
     Route::delete('offices/{office}', [OfficeController::class, 'destroy'])->name('offices.destroy');
+
+    //DOCUMENT TYPES
+    Route::get('document-types', [DocumentTypeController::class, 'index'])->name('document-types.index');
+    Route::post('document-types', [DocumentTypeController::class, 'store'])->name('document-types.store');
+    Route::put('document-types/{documentType}', [DocumentTypeController::class, 'update'])->name('document-types.update');
+    Route::delete('document-types/{documentType}', [DocumentTypeController::class, 'destroy'])->name('document-types.destroy');
 });
 
 require __DIR__ . '/settings.php';
