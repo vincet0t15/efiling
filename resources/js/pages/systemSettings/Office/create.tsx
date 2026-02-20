@@ -18,6 +18,8 @@ import { ChangeEventHandler, SubmitEventHandler } from "react";
 import InputError from "@/components/input-error";
 import { LoaderCircle } from "lucide-react";
 import { OfficeType } from "@/types/office";
+import offices from "@/routes/offices";
+import { toast } from "sonner";
 
 
 interface Props {
@@ -37,17 +39,17 @@ export function OfficeCreateDialog({ open, setOpen }: Props) {
         })
     }
 
-    // const submit: SubmitEventHandler = (e) => {
-    //     e.preventDefault();
-    //     post(event.store().url, {
-    //         preserveState: true,
-    //         onSuccess: (response: { props: FlashProps }) => {
-    //             toast.success(response.props.flash?.success);
-    //             setOpen(false);
-    //             reset();
-    //         },
-    //     })
-    // }
+    const submit: SubmitEventHandler = (e) => {
+        e.preventDefault();
+        post(offices.store().url, {
+            preserveState: true,
+            onSuccess: (response: { props: FlashProps }) => {
+                toast.success(response.props.flash?.success);
+                setOpen(false);
+                reset();
+            },
+        })
+    }
     return (
         <Dialog open={open} onOpenChange={setOpen}>
 
@@ -59,7 +61,7 @@ export function OfficeCreateDialog({ open, setOpen }: Props) {
                         Please fill in the office details below.
                     </DialogDescription>
                 </DialogHeader>
-                <form >
+                <form onSubmit={submit}>
                     <div className="grid gap-4 mb-4">
                         <div className="grid gap-3">
                             <Label htmlFor="name">Office Name</Label>
