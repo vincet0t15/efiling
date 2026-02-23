@@ -25,7 +25,7 @@ interface Props {
 export default function Dashboard({ documentTypes }: Props) {
     const fileInputRef = useRef<HTMLInputElement>(null);
 
-    const { data, setData, post, processing, reset } = useForm<DocumentCreateProps>({
+    const { data, setData, post, processing, reset, errors } = useForm<DocumentCreateProps>({
         title: '',
         name: '',
         description: '',
@@ -94,27 +94,26 @@ export default function Dashboard({ documentTypes }: Props) {
                 <div className="w-2xl flex flex-col gap-4">
                     <form onSubmit={submit}>
 
-
                         <div className='flex gap-2'>
                             <div className="grid gap-3 w-full">
                                 <Label htmlFor="title">Document Title</Label>
-                                <Input id="title" name="title" placeholder="e.g. Office of the Municipal Mayor" onChange={handleChangeInput} value={data.title} />
-                                <InputError />
+                                <Input id="title" name="title" placeholder="e.g. Application for License" onChange={handleChangeInput} value={data.title} />
+                                <InputError message={errors.title} />
                             </div>
                             <div className="grid gap-3 w-full">
-                                <Label htmlFor="name">Office Name</Label>
+                                <Label htmlFor="name">Document Type</Label>
                                 <ComboboxBasic items={documentTypeOptions} value={
                                     documentTypeOptions.find(
                                         (item) => item.value === data.document_type_id
                                     )?.label ?? ''
                                 } onChange={onChangeDocumentType} />
-                                <InputError />
+                                <InputError message={errors.document_type_id} />
                             </div>
                         </div>
                         <div className="grid gap-3 mt-4">
-                            <Label htmlFor="description">Office Description</Label>
-                            <Textarea id="description" name="description" placeholder="e.g. Office of the Municipal Mayor" onChange={handleChangeInput} value={data.description} />
-                            <InputError />
+                            <Label htmlFor="description">Document Description</Label>
+                            <Textarea id="description" name="description" placeholder="e.g. Application for License" onChange={handleChangeInput} value={data.description} />
+                            <InputError message={errors.description} />
                         </div>
 
                         <div className='mt-4'>
