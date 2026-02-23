@@ -10,4 +10,12 @@ export interface DocumentProps {
     document_files?: File[];
 }
 
-export type DocumentCreateProps = Omit<DocumentProps, 'id', 'office_receiver_id', 'document_type'>;
+export interface DocumentCreateProps {
+    document_type_id: string;
+    title: string;
+    description?: string;
+    document_files: File[];
+    existing_files?: any[];
+    new_files?: File[];
+    removed_file_ids?: number[];
+}

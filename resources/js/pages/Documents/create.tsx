@@ -30,6 +30,9 @@ export default function Dashboard({ documentTypes }: Props) {
         description: '',
         document_type_id: '',
         document_files: [],
+        existing_files: [],
+        new_files: [],
+        removed_file_ids: [],
     });
 
     const handleButtonClick = () => {

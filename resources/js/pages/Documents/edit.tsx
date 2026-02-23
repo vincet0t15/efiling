@@ -30,7 +30,8 @@ export default function Dashboard({ documentTypes, document }: Props) {
         title: document.title,
         description: document.description,
         document_type_id: String(document.document_type_id),
-        existing_files: document.document_files,
+        document_files: [],
+        existing_files: document.document_files ?? [],
         new_files: [] as File[],
         removed_file_ids: [] as number[],
     });
@@ -53,13 +54,16 @@ export default function Dashboard({ documentTypes, document }: Props) {
         }
 
         if (pdfFiles.length > 0) {
-            setData('new_files', [...data.new_files, ...pdfFiles]);
+            setData('new_files', [...(data.new_files ?? []), ...pdfFiles]);
         }
     };
 
     const handleRemoveExistingFile = (fileId: number) => {
-        setData('existing_files', data.existing_files.filter((f: { id: number }) => f.id !== fileId));
-        setData('removed_file_ids', [...data.removed_file_ids, fileId]);
+        setData(
+            'existing_files',
+            (data.existing_files ?? []).filter((f: { id: number }) => f.id !== fileId),
+        );
+        setData('removed_file_ids', [...(data.removed_file_ids ?? []), fileId]);
     };
 
     const documentTypeOptions = documentTypes.map((documentType) => ({
@@ -83,13 +87,13 @@ export default function Dashboard({ documentTypes, document }: Props) {
     const handleChangeInput: ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement> = (e) => {
         setData((prev: DocumentCreateProps) => ({
             ...prev,
-            [e.target.name]: e.target.value
-        }))
-    }
+            [e.target.name]: e.target.value,
+        }));
+    };
 
     return (
         <AppLayout breadcrumbs={breadcrumbs}>
-            <Head title="Create Document" />
+            <Head title="Edit Document" />
             <div className="flex h-full flex-1 flex-col gap-4 overflow-x-auto rounded-xl p-4 justify-center items-center">
                 <div className="w-2xl flex flex-col gap-4">
                     <form onSubmit={submit}>
@@ -132,11 +136,11 @@ export default function Dashboard({ documentTypes, document }: Props) {
                         </div>
 
                         {/* List of selected files */}
-                        {data.existing_files.length > 0 && (
+                        {(data.existing_files ?? []).length > 0 && (
                             <div className="mt-4 flex flex-col gap-2">
                                 <Label>Existing Files:</Label>
                                 <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-                                    {data.existing_files.map((file: any) => (
+                                    {(data.existing_files ?? []).map((file: any) => (
                                         <div
                                             key={file.id}
                                             className="flex justify-between items-center p-2 border rounded-md bg-gray-50 dark:bg-gray-800"
@@ -165,11 +169,11 @@ export default function Dashboard({ documentTypes, document }: Props) {
                             </div>
                         )}
 
-                        {data.new_files.length > 0 && (
+                        {(data.new_files ?? []).length > 0 && (
                             <div className="mt-4 flex flex-col gap-2">
                                 <Label>New Files:</Label>
                                 <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-                                    {data.new_files.map((file: File, index: number) => (
+                                    {(data.new_files ?? []).map((file: File, index: number) => (
                                         <div
                                             key={index}
                                             className="flex justify-between items-center p-2 border rounded-md bg-gray-50 dark:bg-gray-800"
@@ -183,7 +187,7 @@ export default function Dashboard({ documentTypes, document }: Props) {
                                                 variant="ghost"
                                                 type="button"
                                                 onClick={() => {
-                                                    const updated = [...data.new_files];
+                                                    const updated = [...(data.new_files ?? [])];
                                                     updated.splice(index, 1);
                                                     setData('new_files', updated);
                                                 }}
