@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Document;
+use App\Models\DocumentFile;
 use App\Models\DocumentType;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
@@ -56,19 +57,7 @@ class DocumentController extends Controller
         return redirect()->back()->with('success', 'Document created successfully.');
     }
 
-    public function update(Request $request, Document $document)
-    {
-        $request->validate([
-            'document_type_id' => 'required|exists:document_types,id',
-            'title' => 'required|string|max:255|unique:documents,title,' . $document->id,
-            'description' => 'nullable|string',
-            'office_receiver_id' => 'required|exists:offices,id',
-        ]);
 
-        $document->update($request->all());
-
-        return redirect()->back()->with('success', 'Document updated successfully.');
-    }
 
     public function destroy(Request $request, Document $document)
     {
@@ -85,5 +74,59 @@ class DocumentController extends Controller
             'documentTypes' => $documentTypes,
 
         ]);
+    }
+
+    public function edit(Request $request, Document $document)
+    {
+        $document->load(['documentFiles', 'documentType', 'officeReceiver']);
+        $documentTypes = DocumentType::all();
+
+        return Inertia::render('Documents/edit', [
+            'document' => $document,
+            'documentTypes' => $documentTypes,
+        ]);
+    }
+
+    public function update(Request $request, Document $document)
+    {
+        dd($request->all());
+        $request->validate([
+            'title' => 'required|string|max:255|unique:documents,title,' . $document->id,
+            'document_type_id' => 'required|exists:document_types,id',
+            'new_files' => 'nullable|array',
+            'new_files.*' => 'nullable|file|max:2048',
+        ]);
+
+        $document->update([
+            'title' => $request->title,
+            'description' => $request->description,
+            'document_type_id' => $request->document_type_id,
+        ]);
+
+        if ($request->removed_file_ids) {
+            DocumentFile::whereIn('id', $request->removed_file_ids)->delete();
+        }
+
+
+        if ($request->hasFile('new_files')) {
+            foreach ($request->file('new_files') as $file) {
+
+                $units = ['B', 'KB', 'MB', 'GB', 'TB', 'PB'];
+                $size = $file->getSize();
+                for ($i = 0; $size > 1024; $i++) {
+                    $size /= 1024;
+                }
+
+                $document->documentFiles()->create([
+                    'extension_name' => $file->getClientOriginalExtension(),
+                    'path' => $file->store('document_files', 'public'),
+                    'file_size' => number_format($size, 2) . ' ' . $units[$i],
+                    'original_name' => $file->getClientOriginalName(),
+                    'date_created' => now(),
+                ]);
+            }
+        }
+
+        return redirect()->back()->with('success', 'Document updated successfully.');
     }
 }

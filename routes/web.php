@@ -36,9 +36,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
     //DOCUMENTS
     Route::get('documents', [DocumentController::class, 'index'])->name('documents.index');
     Route::post('documents', [DocumentController::class, 'store'])->name('documents.store');
-    Route::put('documents/{document}', [DocumentController::class, 'update'])->name('documents.update');
     Route::delete('documents/{document}', [DocumentController::class, 'destroy'])->name('documents.destroy');
     Route::get('documents/create', [DocumentController::class, 'create'])->name('documents.create');
+    Route::get('documents/{document}', [DocumentController::class, 'edit'])->name('documents.edit');
+    Route::put('documents/{document}/files', [DocumentController::class, 'update'])->name('documents.update');
 });
 
 require __DIR__ . '/settings.php';

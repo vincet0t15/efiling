@@ -9,7 +9,7 @@ import { Button } from '@/components/ui/button';
 import { File, FileText, Paperclip, Trash2 } from 'lucide-react';
 import type { BreadcrumbItem } from '@/types';
 import { dashboard } from '@/routes';
-import { DocumentCreateProps } from '@/types/document';
+import { DocumentCreateProps, DocumentProps } from '@/types/document';
 import { ComboboxBasic } from '@/components/test';
 import { DocumentTypeProps } from '@/types/documentType';
 import documents from '@/routes/documents';
@@ -21,15 +21,18 @@ const breadcrumbs: BreadcrumbItem[] = [
 
 interface Props {
     documentTypes: DocumentTypeProps[]
+    document: DocumentProps
 }
-export default function Dashboard({ documentTypes }: Props) {
+export default function Dashboard({ documentTypes, document }: Props) {
     const fileInputRef = useRef<HTMLInputElement>(null);
 
-    const { data, setData, post, processing, reset, errors } = useForm<DocumentCreateProps>({
-        title: '',
-        description: '',
-        document_type_id: '',
-        document_files: [],
+    const { data, setData, put, processing, reset, errors } = useForm<DocumentCreateProps>({
+        title: document.title,
+        description: document.description,
+        document_type_id: String(document.document_type_id),
+        existing_files: document.document_files,
+        new_files: [] as File[],
+        removed_file_ids: [] as number[],
     });
 
     const handleButtonClick = () => {
@@ -50,14 +53,13 @@ export default function Dashboard({ documentTypes }: Props) {
         }
 
         if (pdfFiles.length > 0) {
-            setData('document_files', [...data.document_files, ...pdfFiles]);
+            setData('new_files', [...data.new_files, ...pdfFiles]);
         }
     };
 
-    const handleRemoveFile = (index: number) => {
-        const newFiles = [...data.document_files];
-        newFiles.splice(index, 1);
-        setData('document_files', newFiles);
+    const handleRemoveExistingFile = (fileId: number) => {
+        setData('existing_files', data.existing_files.filter((f: { id: number }) => f.id !== fileId));
+        setData('removed_file_ids', [...data.removed_file_ids, fileId]);
     };
 
     const documentTypeOptions = documentTypes.map((documentType) => ({
@@ -71,13 +73,12 @@ export default function Dashboard({ documentTypes }: Props) {
 
     const submit: SubmitEventHandler = (e) => {
         e.preventDefault();
-        post(documents.store().url, {
+        put(documents.update(document.id).url, {
             onSuccess: (response: { props: FlashProps }) => {
                 toast.success(response.props.flash?.success);
-                reset();
             }
         });
-    }
+    };
 
     const handleChangeInput: ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement> = (e) => {
         setData((prev: DocumentCreateProps) => ({
@@ -131,11 +132,44 @@ export default function Dashboard({ documentTypes }: Props) {
                         </div>
 
                         {/* List of selected files */}
-                        {data.document_files.length > 0 && (
+                        {data.existing_files.length > 0 && (
                             <div className="mt-4 flex flex-col gap-2">
-                                <Label>Selected Files:</Label>
+                                <Label>Existing Files:</Label>
                                 <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-                                    {data.document_files.map((file: File, index: number) => (
+                                    {data.existing_files.map((file: any) => (
+                                        <div
+                                            key={file.id}
+                                            className="flex justify-between items-center p-2 border rounded-md bg-gray-50 dark:bg-gray-800"
+                                        >
+                                            <div className="flex items-center gap-2 w-27">
+                                                <FileText className="w-4 h-4" />
+                                                <a
+                                                    href={file.url}
+                                                    target="_blank"
+                                                    className="truncate hover:underline"
+                                                >
+                                                    {file.original_name}
+                                                </a>
+                                            </div>
+                                            <Button
+                                                size="icon"
+                                                variant="ghost"
+                                                type="button"
+                                                onClick={() => handleRemoveExistingFile(file.id)}
+                                            >
+                                                <Trash2 className="w-4 h-4" />
+                                            </Button>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
+                        {data.new_files.length > 0 && (
+                            <div className="mt-4 flex flex-col gap-2">
+                                <Label>New Files:</Label>
+                                <div className="grid auto-rows-min gap-4 md:grid-cols-3">
+                                    {data.new_files.map((file: File, index: number) => (
                                         <div
                                             key={index}
                                             className="flex justify-between items-center p-2 border rounded-md bg-gray-50 dark:bg-gray-800"
@@ -147,7 +181,12 @@ export default function Dashboard({ documentTypes }: Props) {
                                             <Button
                                                 size="icon"
                                                 variant="ghost"
-                                                onClick={() => handleRemoveFile(index)}
+                                                type="button"
+                                                onClick={() => {
+                                                    const updated = [...data.new_files];
+                                                    updated.splice(index, 1);
+                                                    setData('new_files', updated);
+                                                }}
                                             >
                                                 <Trash2 className="w-4 h-4" />
                                             </Button>
@@ -158,7 +197,7 @@ export default function Dashboard({ documentTypes }: Props) {
                         )}
                         <div className="flex justify-end">
                             <Button type="submit" className="" disabled={processing}>
-                                {processing ? 'Processing...' : 'Create Document'}
+                                {processing ? 'Processing...' : 'Update Document'}
                             </Button>
                         </div>
                     </form>

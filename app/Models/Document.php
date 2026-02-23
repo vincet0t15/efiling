@@ -29,7 +29,7 @@ class Document extends Model
 
     public function documentFiles()
     {
-        return $this->hasMany(DocumentFile::class);
+        return $this->hasMany(DocumentFile::class, 'document_id');
     }
 
     protected static function booted()

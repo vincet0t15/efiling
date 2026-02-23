@@ -31,10 +31,7 @@ interface Props {
 
 export default function Documents({ documentList, filters }: Props) {
     const [search, setSearch] = useState(filters.search || '');
-    const [openCreate, setOpenCreate] = useState(false);
-    const [openEdit, setOpenEdit] = useState(false);
-    const [openDelete, setOpenDelete] = useState(false);
-    const [selectedDocumentType, setSelectedDocumentType] = useState<DocumentProps>();
+
 
     const handleSearch: ChangeEventHandler<HTMLInputElement> = (e) => {
         setSearch(e.target.value);
@@ -53,15 +50,6 @@ export default function Documents({ documentList, filters }: Props) {
         }
     }
 
-    const onEditClick = (document: DocumentProps) => {
-        setSelectedDocumentType(document);
-        setOpenEdit(true);
-    }
-
-    const onDeleteClick = (document: DocumentProps) => {
-        setSelectedDocumentType(document);
-        setOpenDelete(true);
-    }
     return (
         <AppLayout breadcrumbs={breadcrumbs}>
             <Head title="Document Type" />
@@ -102,13 +90,13 @@ export default function Documents({ documentList, filters }: Props) {
                                         <TableCell className="text-sm gap-2 flex justify-end">
                                             <span
                                                 className="cursor-pointer text-green-500 hover:text-green-700 hover:underline"
-                                                onClick={() => onEditClick(document)}
+                                                onClick={() => router.get(documents.edit.url(document))}
                                             >
                                                 Edit
                                             </span>
                                             <span
                                                 className="text-red-500 cursor-pointer hover:text-orange-700 hover:underline"
-                                                onClick={() => onDeleteClick(document)}
+
                                             >
                                                 Delete
                                             </span>
