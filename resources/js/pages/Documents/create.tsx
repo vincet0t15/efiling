@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { ChangeEventHandler, SubmitEventHandler, useRef } from 'react';
 import { Head, useForm } from '@inertiajs/react';
 import AppLayout from '@/layouts/app-layout';
 import { Label } from '@/components/ui/label';
@@ -12,6 +12,8 @@ import { dashboard } from '@/routes';
 import { DocumentCreateProps } from '@/types/document';
 import { ComboboxBasic } from '@/components/test';
 import { DocumentTypeProps } from '@/types/documentType';
+import documents from '@/routes/documents';
+import { toast } from 'sonner';
 
 const breadcrumbs: BreadcrumbItem[] = [
     { title: 'Dashboard', href: dashboard().url },
@@ -23,7 +25,7 @@ interface Props {
 export default function Dashboard({ documentTypes }: Props) {
     const fileInputRef = useRef<HTMLInputElement>(null);
 
-    const { data, setData } = useForm<DocumentCreateProps>({
+    const { data, setData, post, processing, reset } = useForm<DocumentCreateProps>({
         title: '',
         name: '',
         description: '',
@@ -68,75 +70,100 @@ export default function Dashboard({ documentTypes }: Props) {
         setData('document_type_id', value ?? '');
     };
 
+    const submit: SubmitEventHandler = (e) => {
+        e.preventDefault();
+        post(documents.store().url, {
+            onSuccess: (response: { props: FlashProps }) => {
+                toast.success(response.props.flash?.success);
+                reset();
+            }
+        });
+    }
+
+    const handleChangeInput: ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement> = (e) => {
+        setData((prev: DocumentCreateProps) => ({
+            ...prev,
+            [e.target.name]: e.target.value
+        }))
+    }
 
     return (
         <AppLayout breadcrumbs={breadcrumbs}>
             <Head title="Create Document" />
             <div className="flex h-full flex-1 flex-col gap-4 overflow-x-auto rounded-xl p-4 justify-center items-center">
                 <div className="w-2xl flex flex-col gap-4">
-                    <div className='flex gap-2'>
-                        <div className="grid gap-3 w-full">
-                            <Label htmlFor="title">Document Title</Label>
-                            <Input id="title" name="title" placeholder="e.g. Office of the Municipal Mayor" />
-                            <InputError />
-                        </div>
-                        <div className="grid gap-3 w-full">
-                            <Label htmlFor="name">Office Name</Label>
-                            <ComboboxBasic items={documentTypeOptions} value={
-                                documentTypeOptions.find(
-                                    (item) => item.value === data.document_type_id
-                                )?.label ?? ''
-                            } onChange={onChangeDocumentType} />
-                            <InputError />
-                        </div>
-                    </div>
-                    <div className="grid gap-3 mt-4">
-                        <Label htmlFor="description">Office Description</Label>
-                        <Textarea id="description" name="description" placeholder="e.g. Office of the Municipal Mayor" />
-                        <InputError />
-                    </div>
+                    <form onSubmit={submit}>
 
-                    <div>
-                        <Button variant="outline" size="sm" onClick={handleButtonClick}>
-                            <Paperclip /> Add Files
-                        </Button>
-                        <Input
-                            hidden
-                            id="picture"
-                            type="file"
-                            ref={fileInputRef}
-                            accept="application/pdf"
-                            onChange={handleFileChange}
-                            multiple
-                        />
-                    </div>
 
-                    {/* List of selected files */}
-                    {data.document_files.length > 0 && (
-                        <div className="mt-4 flex flex-col gap-2">
-                            <Label>Selected Files:</Label>
-                            <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-                                {data.document_files.map((file: File, index: number) => (
-                                    <div
-                                        key={index}
-                                        className="flex justify-between items-center p-2 border rounded-md bg-gray-50 dark:bg-gray-800"
-                                    >
-                                        <div className="flex items-center gap-2 w-27">
-                                            <FileText className="w-4 h-4" />
-                                            <span className="truncate">{file.name}</span>
-                                        </div>
-                                        <Button
-                                            size="icon"
-                                            variant="ghost"
-                                            onClick={() => handleRemoveFile(index)}
-                                        >
-                                            <Trash2 className="w-4 h-4" />
-                                        </Button>
-                                    </div>
-                                ))}
+                        <div className='flex gap-2'>
+                            <div className="grid gap-3 w-full">
+                                <Label htmlFor="title">Document Title</Label>
+                                <Input id="title" name="title" placeholder="e.g. Office of the Municipal Mayor" onChange={handleChangeInput} value={data.title} />
+                                <InputError />
+                            </div>
+                            <div className="grid gap-3 w-full">
+                                <Label htmlFor="name">Office Name</Label>
+                                <ComboboxBasic items={documentTypeOptions} value={
+                                    documentTypeOptions.find(
+                                        (item) => item.value === data.document_type_id
+                                    )?.label ?? ''
+                                } onChange={onChangeDocumentType} />
+                                <InputError />
                             </div>
                         </div>
-                    )}
+                        <div className="grid gap-3 mt-4">
+                            <Label htmlFor="description">Office Description</Label>
+                            <Textarea id="description" name="description" placeholder="e.g. Office of the Municipal Mayor" onChange={handleChangeInput} value={data.description} />
+                            <InputError />
+                        </div>
+
+                        <div className='mt-4'>
+                            <Button variant="outline" size="sm" type="button" onClick={handleButtonClick}>
+                                <Paperclip /> Add Files
+                            </Button>
+                            <Input
+                                hidden
+                                id="picture"
+                                type="file"
+                                ref={fileInputRef}
+                                accept="application/pdf"
+                                onChange={handleFileChange}
+                                multiple
+                            />
+                        </div>
+
+                        {/* List of selected files */}
+                        {data.document_files.length > 0 && (
+                            <div className="mt-4 flex flex-col gap-2">
+                                <Label>Selected Files:</Label>
+                                <div className="grid auto-rows-min gap-4 md:grid-cols-3">
+                                    {data.document_files.map((file: File, index: number) => (
+                                        <div
+                                            key={index}
+                                            className="flex justify-between items-center p-2 border rounded-md bg-gray-50 dark:bg-gray-800"
+                                        >
+                                            <div className="flex items-center gap-2 w-27">
+                                                <FileText className="w-4 h-4" />
+                                                <span className="truncate">{file.name}</span>
+                                            </div>
+                                            <Button
+                                                size="icon"
+                                                variant="ghost"
+                                                onClick={() => handleRemoveFile(index)}
+                                            >
+                                                <Trash2 className="w-4 h-4" />
+                                            </Button>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+                        <div className="flex justify-end">
+                            <Button type="submit" className="">
+                                Create Document
+                            </Button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </AppLayout>

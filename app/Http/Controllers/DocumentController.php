@@ -26,11 +26,11 @@ class DocumentController extends Controller
 
     public function store(Request $request)
     {
+
         $request->validate([
             'document_type_id' => 'required|exists:document_types,id',
             'title' => 'required|string|max:255|unique:documents,title',
             'description' => 'nullable|string',
-            'office_receiver_id' => 'required|exists:offices,id',
         ]);
 
         $document = Document::create($request->all());
