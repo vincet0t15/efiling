@@ -103,7 +103,8 @@ export default function DocumentShow({ document: doc }: ShowProps) {
         <>
             <Head title={`Document - ${doc.tracking_number}`} />
 
-            <div className="mb-6 flex items-center gap-4">
+            <div className="flex h-full flex-1 flex-col gap-4 overflow-x-auto rounded-xl p-4">
+                <div className="mb-6 flex items-center gap-4">
                 <Button
                     variant="ghost"
                     size="icon"
@@ -475,6 +476,7 @@ export default function DocumentShow({ document: doc }: ShowProps) {
                     </form>
                 </DialogContent>
             </Dialog>
+            </div>
         </>
     );
 }
