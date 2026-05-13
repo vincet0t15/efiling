@@ -178,16 +178,6 @@
     },
     {
       "type": "file",
-      "name": "resources/js/layouts/app-layout.tsx",
-      "file": "resources/js/layouts/app-layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/auth-layout.tsx",
-      "file": "resources/js/layouts/auth-layout.tsx"
-    },
-    {
-      "type": "file",
       "name": "resources/js/lib/utils.ts",
       "file": "resources/js/lib/utils.ts"
     },
@@ -215,6 +205,16 @@
       "type": "file",
       "name": "resources/js/types/ui.ts",
       "file": "resources/js/types/ui.ts"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/layouts/app-layout.tsx",
+      "file": "resources/js/layouts/app-layout.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/layouts/auth-layout.tsx",
+      "file": "resources/js/layouts/auth-layout.tsx"
     },
     {
       "type": "file",
@@ -373,36 +373,6 @@
     },
     {
       "type": "file",
-      "name": "resources/js/layouts/app/app-header-layout.tsx",
-      "file": "resources/js/layouts/app/app-header-layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/app/app-sidebar-layout.tsx",
-      "file": "resources/js/layouts/app/app-sidebar-layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/auth/auth-card-layout.tsx",
-      "file": "resources/js/layouts/auth/auth-card-layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/auth/auth-simple-layout.tsx",
-      "file": "resources/js/layouts/auth/auth-simple-layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/auth/auth-split-layout.tsx",
-      "file": "resources/js/layouts/auth/auth-split-layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/settings/layout.tsx",
-      "file": "resources/js/layouts/settings/layout.tsx"
-    },
-    {
-      "type": "file",
       "name": "resources/js/pages/auth/confirm-password.tsx",
       "file": "resources/js/pages/auth/confirm-password.tsx"
     },
@@ -458,21 +428,6 @@
     },
     {
       "type": "file",
-      "name": "resources/js/pages/settings/appearance.tsx",
-      "file": "resources/js/pages/settings/appearance.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/pages/settings/profile.tsx",
-      "file": "resources/js/pages/settings/profile.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/pages/settings/security.tsx",
-      "file": "resources/js/pages/settings/security.tsx"
-    },
-    {
-      "type": "file",
       "name": "resources/js/pages/documents/create.tsx",
       "file": "resources/js/pages/documents/create.tsx"
     },
@@ -495,6 +450,51 @@
       "type": "file",
       "name": "resources/js/pages/documents/show.tsx",
       "file": "resources/js/pages/documents/show.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/settings/appearance.tsx",
+      "file": "resources/js/pages/settings/appearance.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/settings/profile.tsx",
+      "file": "resources/js/pages/settings/profile.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/settings/security.tsx",
+      "file": "resources/js/pages/settings/security.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/layouts/app/app-header-layout.tsx",
+      "file": "resources/js/layouts/app/app-header-layout.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/layouts/app/app-sidebar-layout.tsx",
+      "file": "resources/js/layouts/app/app-sidebar-layout.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/layouts/auth/auth-card-layout.tsx",
+      "file": "resources/js/layouts/auth/auth-card-layout.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/layouts/auth/auth-simple-layout.tsx",
+      "file": "resources/js/layouts/auth/auth-simple-layout.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/layouts/auth/auth-split-layout.tsx",
+      "file": "resources/js/layouts/auth/auth-split-layout.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/layouts/settings/layout.tsx",
+      "file": "resources/js/layouts/settings/layout.tsx"
     },
     {
       "type": "dependency",
@@ -899,16 +899,6 @@
     },
     {
       "type": "file",
-      "name": "resources/js/layouts/app-layout.tsx",
-      "file": "resources/js/layouts/app-layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/auth-layout.tsx",
-      "file": "resources/js/layouts/auth-layout.tsx"
-    },
-    {
-      "type": "file",
       "name": "resources/js/lib/utils.ts",
       "file": "resources/js/lib/utils.ts"
     },
@@ -936,6 +926,16 @@
       "type": "file",
       "name": "resources/js/types/ui.ts",
       "file": "resources/js/types/ui.ts"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/layouts/app-layout.tsx",
+      "file": "resources/js/layouts/app-layout.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/layouts/auth-layout.tsx",
+      "file": "resources/js/layouts/auth-layout.tsx"
     },
     {
       "type": "file",
@@ -1094,36 +1094,6 @@
     },
     {
       "type": "file",
-      "name": "resources/js/layouts/app/app-header-layout.tsx",
-      "file": "resources/js/layouts/app/app-header-layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/app/app-sidebar-layout.tsx",
-      "file": "resources/js/layouts/app/app-sidebar-layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/auth/auth-card-layout.tsx",
-      "file": "resources/js/layouts/auth/auth-card-layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/auth/auth-simple-layout.tsx",
-      "file": "resources/js/layouts/auth/auth-simple-layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/auth/auth-split-layout.tsx",
-      "file": "resources/js/layouts/auth/auth-split-layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/settings/layout.tsx",
-      "file": "resources/js/layouts/settings/layout.tsx"
-    },
-    {
-      "type": "file",
       "name": "resources/js/pages/auth/confirm-password.tsx",
       "file": "resources/js/pages/auth/confirm-password.tsx"
     },
@@ -1179,21 +1149,6 @@
     },
     {
       "type": "file",
-      "name": "resources/js/pages/settings/appearance.tsx",
-      "file": "resources/js/pages/settings/appearance.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/pages/settings/profile.tsx",
-      "file": "resources/js/pages/settings/profile.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/pages/settings/security.tsx",
-      "file": "resources/js/pages/settings/security.tsx"
-    },
-    {
-      "type": "file",
       "name": "resources/js/pages/documents/create.tsx",
       "file": "resources/js/pages/documents/create.tsx"
     },
@@ -1216,6 +1171,51 @@
       "type": "file",
       "name": "resources/js/pages/documents/show.tsx",
       "file": "resources/js/pages/documents/show.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/settings/appearance.tsx",
+      "file": "resources/js/pages/settings/appearance.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/settings/profile.tsx",
+      "file": "resources/js/pages/settings/profile.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/settings/security.tsx",
+      "file": "resources/js/pages/settings/security.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/layouts/app/app-header-layout.tsx",
+      "file": "resources/js/layouts/app/app-header-layout.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/layouts/app/app-sidebar-layout.tsx",
+      "file": "resources/js/layouts/app/app-sidebar-layout.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/layouts/auth/auth-card-layout.tsx",
+      "file": "resources/js/layouts/auth/auth-card-layout.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/layouts/auth/auth-simple-layout.tsx",
+      "file": "resources/js/layouts/auth/auth-simple-layout.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/layouts/auth/auth-split-layout.tsx",
+      "file": "resources/js/layouts/auth/auth-split-layout.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/layouts/settings/layout.tsx",
+      "file": "resources/js/layouts/settings/layout.tsx"
     }
   ],
   "unusedDeps": [

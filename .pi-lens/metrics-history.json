@@ -278,14 +278,14 @@
     },
     "resources\\js\\pages\\documents\\index.tsx": {
       "latest": {
-        "commit": "296261d",
-        "timestamp": "2026-05-13T09:10:07.752Z",
-        "mi": 21.1,
-        "cognitive": 38,
+        "commit": "e2cefc1",
+        "timestamp": "2026-05-13T10:58:24.223Z",
+        "mi": 19.3,
+        "cognitive": 41,
         "nesting": 4,
-        "lines": 293,
-        "maxCyclomatic": 42,
-        "entropy": 6.17
+        "lines": 349,
+        "maxCyclomatic": 45,
+        "entropy": 6.49
       },
       "history": [
         {
@@ -297,10 +297,20 @@
           "lines": 293,
           "maxCyclomatic": 42,
           "entropy": 6.17
+        },
+        {
+          "commit": "e2cefc1",
+          "timestamp": "2026-05-13T10:58:24.223Z",
+          "mi": 19.3,
+          "cognitive": 41,
+          "nesting": 4,
+          "lines": 349,
+          "maxCyclomatic": 45,
+          "entropy": 6.49
         }
       ],
       "trend": "stable"
     }
   },
-  "capturedAt": "2026-05-13T09:10:12.760Z"
+  "capturedAt": "2026-05-13T10:58:29.229Z"
 }

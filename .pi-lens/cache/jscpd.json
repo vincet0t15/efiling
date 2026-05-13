@@ -1,0 +1,2440 @@
+{
+  "success": true,
+  "clones": [
+    {
+      "fileA": "resources\\js\\actions\\Laravel\\Fortify\\Http\\Controllers\\VerifyEmailController.ts",
+      "startA": 48,
+      "fileB": "resources\\js\\actions\\Laravel\\Fortify\\Http\\Controllers\\VerifyEmailController.ts",
+      "startB": 7,
+      "lines": 9,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\Laravel\\Fortify\\Http\\Controllers\\VerifyEmailController.ts",
+      "startA": 77,
+      "fileB": "resources\\js\\actions\\Laravel\\Fortify\\Http\\Controllers\\VerifyEmailController.ts",
+      "startB": 67,
+      "lines": 10,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\Laravel\\Fortify\\Http\\Controllers\\TwoFactorQrCodeController.ts",
+      "startA": 69,
+      "fileB": "resources\\js\\actions\\Laravel\\Fortify\\Http\\Controllers\\TwoFactorSecretKeyController.ts",
+      "startB": 69,
+      "lines": 12,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\Laravel\\Fortify\\Http\\Controllers\\TwoFactorAuthenticationController.ts",
+      "startA": 111,
+      "fileB": "resources\\js\\actions\\Laravel\\Fortify\\Http\\Controllers\\TwoFactorAuthenticationController.ts",
+      "startB": 96,
+      "lines": 11,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\Laravel\\Fortify\\Http\\Controllers\\RegisteredUserController.ts",
+      "startA": 69,
+      "fileB": "resources\\js\\actions\\Laravel\\Fortify\\Http\\Controllers\\TwoFactorAuthenticatedSessionController.ts",
+      "startB": 69,
+      "lines": 16,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\Laravel\\Fortify\\Http\\Controllers\\PasswordResetLinkController.ts",
+      "startA": 69,
+      "fileB": "resources\\js\\actions\\Laravel\\Fortify\\Http\\Controllers\\TwoFactorAuthenticatedSessionController.ts",
+      "startB": 69,
+      "lines": 16,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\Laravel\\Fortify\\Http\\Controllers\\NewPasswordController.ts",
+      "startA": 50,
+      "fileB": "resources\\js\\actions\\Laravel\\Fortify\\Http\\Controllers\\NewPasswordController.ts",
+      "startB": 7,
+      "lines": 9,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\Laravel\\Fortify\\Http\\Controllers\\NewPasswordController.ts",
+      "startA": 79,
+      "fileB": "resources\\js\\actions\\Laravel\\Fortify\\Http\\Controllers\\NewPasswordController.ts",
+      "startB": 69,
+      "lines": 10,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\Laravel\\Fortify\\Http\\Controllers\\ConfirmedPasswordStatusController.ts",
+      "startA": 69,
+      "fileB": "resources\\js\\actions\\Laravel\\Fortify\\Http\\Controllers\\TwoFactorSecretKeyController.ts",
+      "startB": 69,
+      "lines": 12,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\Laravel\\Fortify\\Http\\Controllers\\ConfirmablePasswordController.ts",
+      "startA": 69,
+      "fileB": "resources\\js\\actions\\Laravel\\Fortify\\Http\\Controllers\\TwoFactorSecretKeyController.ts",
+      "startB": 69,
+      "lines": 16,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\Laravel\\Fortify\\Http\\Controllers\\AuthenticatedSessionController.ts",
+      "startA": 69,
+      "fileB": "resources\\js\\actions\\Laravel\\Fortify\\Http\\Controllers\\TwoFactorAuthenticatedSessionController.ts",
+      "startB": 69,
+      "lines": 16,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\Settings\\SecurityController.ts",
+      "startA": 134,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\Settings\\SecurityController.ts",
+      "startB": 119,
+      "lines": 11,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\Settings\\ProfileController.ts",
+      "startA": 69,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\Settings\\SecurityController.ts",
+      "startB": 69,
+      "lines": 16,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\Settings\\ProfileController.ts",
+      "startA": 134,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\Settings\\ProfileController.ts",
+      "startB": 119,
+      "lines": 11,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\Settings\\ProfileController.ts",
+      "startA": 184,
+      "fileB": "resources\\js\\actions\\Laravel\\Fortify\\Http\\Controllers\\TwoFactorAuthenticationController.ts",
+      "startB": 96,
+      "lines": 15,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\Settings\\ProfileController.ts",
+      "startA": 199,
+      "fileB": "resources\\js\\actions\\Laravel\\Fortify\\Http\\Controllers\\TwoFactorAuthenticationController.ts",
+      "startB": 111,
+      "lines": 12,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentTypeController.ts",
+      "startA": 69,
+      "fileB": "resources\\js\\actions\\Laravel\\Fortify\\Http\\Controllers\\RecoveryCodeController.ts",
+      "startB": 69,
+      "lines": 16,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentTypeController.ts",
+      "startA": 147,
+      "fileB": "resources\\js\\actions\\Laravel\\Fortify\\Http\\Controllers\\TwoFactorAuthenticatedSessionController.ts",
+      "startB": 69,
+      "lines": 16,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentTypeController.ts",
+      "startA": 261,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentTypeController.ts",
+      "startB": 218,
+      "lines": 9,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentTypeController.ts",
+      "startA": 290,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentTypeController.ts",
+      "startB": 280,
+      "lines": 10,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentTypeController.ts",
+      "startA": 330,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentTypeController.ts",
+      "startB": 233,
+      "lines": 19,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentTypeController.ts",
+      "startA": 358,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentTypeController.ts",
+      "startB": 315,
+      "lines": 9,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentTypeController.ts",
+      "startA": 387,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentTypeController.ts",
+      "startB": 377,
+      "lines": 10,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentTypeController.ts",
+      "startA": 460,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentTypeController.ts",
+      "startB": 412,
+      "lines": 9,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentTypeController.ts",
+      "startA": 494,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentTypeController.ts",
+      "startB": 479,
+      "lines": 15,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentTypeController.ts",
+      "startA": 539,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentTypeController.ts",
+      "startB": 427,
+      "lines": 24,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentTypeController.ts",
+      "startA": 572,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentTypeController.ts",
+      "startB": 524,
+      "lines": 10,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentTypeController.ts",
+      "startA": 597,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentTypeController.ts",
+      "startB": 479,
+      "lines": 11,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startA": 69,
+      "fileB": "resources\\js\\actions\\Laravel\\Fortify\\Http\\Controllers\\RecoveryCodeController.ts",
+      "startB": 69,
+      "lines": 16,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startA": 147,
+      "fileB": "resources\\js\\actions\\Laravel\\Fortify\\Http\\Controllers\\TwoFactorAuthenticatedSessionController.ts",
+      "startB": 69,
+      "lines": 16,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startA": 266,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startB": 218,
+      "lines": 9,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startA": 295,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startB": 285,
+      "lines": 10,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startA": 304,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentTypeController.ts",
+      "startB": 299,
+      "lines": 16,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startA": 335,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startB": 233,
+      "lines": 24,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startA": 368,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startB": 266,
+      "lines": 9,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startA": 397,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startB": 295,
+      "lines": 10,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startA": 406,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentTypeController.ts",
+      "startB": 396,
+      "lines": 16,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startA": 422,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentTypeController.ts",
+      "startB": 412,
+      "lines": 8,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startA": 437,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startB": 233,
+      "lines": 24,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startA": 470,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startB": 422,
+      "lines": 9,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startA": 489,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentTypeController.ts",
+      "startB": 479,
+      "lines": 15,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startA": 504,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startB": 489,
+      "lines": 15,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startA": 518,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startB": 489,
+      "lines": 16,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startA": 534,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentTypeController.ts",
+      "startB": 524,
+      "lines": 8,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startA": 549,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startB": 233,
+      "lines": 24,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startA": 582,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startB": 534,
+      "lines": 10,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startA": 592,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentTypeController.ts",
+      "startB": 582,
+      "lines": 15,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startA": 607,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startB": 489,
+      "lines": 16,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startA": 638,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startB": 233,
+      "lines": 24,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startA": 671,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startB": 623,
+      "lines": 10,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startA": 691,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startB": 489,
+      "lines": 6,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startA": 750,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startB": 702,
+      "lines": 9,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startA": 779,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startB": 769,
+      "lines": 10,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startA": 819,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startB": 717,
+      "lines": 24,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startA": 852,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startB": 750,
+      "lines": 9,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startA": 881,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startB": 779,
+      "lines": 10,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startA": 921,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startB": 717,
+      "lines": 24,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startA": 954,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startB": 906,
+      "lines": 10,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startA": 979,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentController.ts",
+      "startB": 964,
+      "lines": 11,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\routes\\two-factor\\login\\index.ts",
+      "startA": 2,
+      "fileB": "resources\\js\\actions\\Laravel\\Fortify\\Http\\Controllers\\TwoFactorAuthenticatedSessionController.ts",
+      "startB": 80,
+      "lines": 56,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\routes\\storage\\local\\index.ts",
+      "startA": 47,
+      "fileB": "resources\\js\\routes\\storage\\local\\index.ts",
+      "startB": 6,
+      "lines": 9,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\routes\\storage\\local\\index.ts",
+      "startA": 70,
+      "fileB": "resources\\js\\routes\\storage\\local\\index.ts",
+      "startB": 56,
+      "lines": 11,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\routes\\password\\confirm\\index.ts",
+      "startA": 2,
+      "fileB": "resources\\js\\actions\\Laravel\\Fortify\\Http\\Controllers\\ConfirmablePasswordController.ts",
+      "startB": 80,
+      "lines": 56,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\routes\\verification\\index.ts",
+      "startA": 100,
+      "fileB": "resources\\js\\actions\\Laravel\\Fortify\\Http\\Controllers\\VerifyEmailController.ts",
+      "startB": 22,
+      "lines": 16,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\routes\\verification\\index.ts",
+      "startA": 126,
+      "fileB": "resources\\js\\routes\\verification\\index.ts",
+      "startB": 85,
+      "lines": 9,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\routes\\verification\\index.ts",
+      "startA": 155,
+      "fileB": "resources\\js\\routes\\verification\\index.ts",
+      "startB": 145,
+      "lines": 10,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\routes\\user-password\\index.ts",
+      "startA": 2,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\Settings\\SecurityController.ts",
+      "startB": 80,
+      "lines": 66,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\routes\\two-factor\\index.ts",
+      "startA": 245,
+      "fileB": "resources\\js\\routes\\two-factor\\index.ts",
+      "startB": 230,
+      "lines": 11,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\routes\\storage\\index.ts",
+      "startA": 21,
+      "fileB": "resources\\js\\routes\\storage\\local\\index.ts",
+      "startB": 20,
+      "lines": 19,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\routes\\storage\\index.ts",
+      "startA": 48,
+      "fileB": "resources\\js\\routes\\storage\\index.ts",
+      "startB": 7,
+      "lines": 8,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\routes\\storage\\index.ts",
+      "startA": 74,
+      "fileB": "resources\\js\\routes\\storage\\index.ts",
+      "startB": 65,
+      "lines": 9,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\routes\\security\\index.ts",
+      "startA": 2,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\Settings\\SecurityController.ts",
+      "startB": 2,
+      "lines": 79,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\routes\\register\\index.ts",
+      "startA": 2,
+      "fileB": "resources\\js\\actions\\Laravel\\Fortify\\Http\\Controllers\\RegisteredUserController.ts",
+      "startB": 80,
+      "lines": 56,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\routes\\profile\\index.ts",
+      "startA": 2,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\Settings\\ProfileController.ts",
+      "startB": 2,
+      "lines": 209,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\routes\\password\\index.ts",
+      "startA": 101,
+      "fileB": "resources\\js\\actions\\Laravel\\Fortify\\Http\\Controllers\\NewPasswordController.ts",
+      "startB": 22,
+      "lines": 19,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\routes\\password\\index.ts",
+      "startA": 129,
+      "fileB": "resources\\js\\routes\\password\\index.ts",
+      "startB": 86,
+      "lines": 9,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\routes\\password\\index.ts",
+      "startA": 158,
+      "fileB": "resources\\js\\routes\\password\\index.ts",
+      "startB": 148,
+      "lines": 10,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\routes\\login\\index.ts",
+      "startA": 2,
+      "fileB": "resources\\js\\actions\\Laravel\\Fortify\\Http\\Controllers\\AuthenticatedSessionController.ts",
+      "startB": 80,
+      "lines": 56,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\routes\\login\\index.ts",
+      "startA": 51,
+      "fileB": "resources\\js\\routes\\two-factor\\login\\index.ts",
+      "startB": 51,
+      "lines": 11,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\routes\\document-types\\index.ts",
+      "startA": 2,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\DocumentTypeController.ts",
+      "startB": 2,
+      "lines": 607,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\routes\\appearance\\index.ts",
+      "startA": 69,
+      "fileB": "resources\\js\\actions\\App\\Http\\Controllers\\Settings\\SecurityController.ts",
+      "startB": 69,
+      "lines": 12,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\pages\\documents\\index.tsx",
+      "startA": 122,
+      "fileB": "resources\\js\\pages\\documents\\index.tsx",
+      "startB": 97,
+      "lines": 22,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\pages\\documents\\create.tsx",
+      "startA": 48,
+      "fileB": "resources\\js\\pages\\documents\\edit.tsx",
+      "startB": 40,
+      "lines": 16,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\pages\\documents\\create.tsx",
+      "startA": 65,
+      "fileB": "resources\\js\\pages\\documents\\show.tsx",
+      "startB": 56,
+      "lines": 7,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\pages\\documents\\create.tsx",
+      "startA": 260,
+      "fileB": "resources\\js\\pages\\documents\\index.tsx",
+      "startB": 336,
+      "lines": 20,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\pages\\documents\\create.tsx",
+      "startA": 310,
+      "fileB": "resources\\js\\pages\\documents\\edit.tsx",
+      "startB": 40,
+      "lines": 40,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\pages\\documents\\create.tsx",
+      "startA": 453,
+      "fileB": "resources\\js\\pages\\documents\\create.tsx",
+      "startB": 223,
+      "lines": 15,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\pages\\document-types\\index.tsx",
+      "startA": 127,
+      "fileB": "resources\\js\\pages\\documents\\index.tsx",
+      "startB": 270,
+      "lines": 33,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\pages\\document-types\\edit.tsx",
+      "startA": 80,
+      "fileB": "resources\\js\\pages\\documents\\edit.tsx",
+      "startB": 126,
+      "lines": 16,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\pages\\document-types\\edit.tsx",
+      "startA": 95,
+      "fileB": "resources\\js\\pages\\documents\\edit.tsx",
+      "startB": 142,
+      "lines": 20,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\pages\\document-types\\delete.tsx",
+      "startA": 33,
+      "fileB": "resources\\js\\pages\\documents\\delete.tsx",
+      "startB": 33,
+      "lines": 8,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\pages\\document-types\\delete.tsx",
+      "startA": 59,
+      "fileB": "resources\\js\\pages\\documents\\delete.tsx",
+      "startB": 62,
+      "lines": 22,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\pages\\document-types\\create.tsx",
+      "startA": 1,
+      "fileB": "resources\\js\\pages\\document-types\\edit.tsx",
+      "startB": 1,
+      "lines": 15,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\pages\\document-types\\create.tsx",
+      "startA": 72,
+      "fileB": "resources\\js\\pages\\document-types\\edit.tsx",
+      "startB": 66,
+      "lines": 10,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\pages\\document-types\\create.tsx",
+      "startA": 82,
+      "fileB": "resources\\js\\pages\\document-types\\edit.tsx",
+      "startB": 75,
+      "lines": 15,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\pages\\document-types\\create.tsx",
+      "startA": 97,
+      "fileB": "resources\\js\\pages\\document-types\\edit.tsx",
+      "startB": 89,
+      "lines": 19,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startA": 68,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 7,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startA": 103,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 7,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startA": 123,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 7,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startA": 149,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 7,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\fc3bb2833e927c5e5533ab48e44327ba.php",
+      "startA": 4,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 4,
+      "lines": 16,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\fc3bb2833e927c5e5533ab48e44327ba.php",
+      "startA": 19,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 19,
+      "lines": 13,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f7adeabacd22b5d77dcc855143b605ee.php",
+      "startA": 4,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 4,
+      "lines": 16,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f7adeabacd22b5d77dcc855143b605ee.php",
+      "startA": 19,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 19,
+      "lines": 13,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f7adeabacd22b5d77dcc855143b605ee.php",
+      "startA": 37,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 7,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f7adeabacd22b5d77dcc855143b605ee.php",
+      "startA": 74,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 7,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f7adeabacd22b5d77dcc855143b605ee.php",
+      "startA": 84,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 7,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f7adeabacd22b5d77dcc855143b605ee.php",
+      "startA": 114,
+      "fileB": "storage\\framework\\views\\f7adeabacd22b5d77dcc855143b605ee.php",
+      "startB": 73,
+      "lines": 8,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f7adeabacd22b5d77dcc855143b605ee.php",
+      "startA": 124,
+      "fileB": "storage\\framework\\views\\f7adeabacd22b5d77dcc855143b605ee.php",
+      "startB": 102,
+      "lines": 11,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f7adeabacd22b5d77dcc855143b605ee.php",
+      "startA": 139,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 7,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f57b0b48ad539fef946d2c7400d2d3de.php",
+      "startA": 4,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 7,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f57b0b48ad539fef946d2c7400d2d3de.php",
+      "startA": 14,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 7,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f57b0b48ad539fef946d2c7400d2d3de.php",
+      "startA": 24,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 7,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f57b0b48ad539fef946d2c7400d2d3de.php",
+      "startA": 55,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 8,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f57b0b48ad539fef946d2c7400d2d3de.php",
+      "startA": 75,
+      "fileB": "storage\\framework\\views\\f57b0b48ad539fef946d2c7400d2d3de.php",
+      "startB": 13,
+      "lines": 8,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f57b0b48ad539fef946d2c7400d2d3de.php",
+      "startA": 86,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 7,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f57b0b48ad539fef946d2c7400d2d3de.php",
+      "startA": 101,
+      "fileB": "storage\\framework\\views\\f57b0b48ad539fef946d2c7400d2d3de.php",
+      "startB": 39,
+      "lines": 16,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f57b0b48ad539fef946d2c7400d2d3de.php",
+      "startA": 116,
+      "fileB": "storage\\framework\\views\\f57b0b48ad539fef946d2c7400d2d3de.php",
+      "startB": 54,
+      "lines": 8,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f57b0b48ad539fef946d2c7400d2d3de.php",
+      "startA": 123,
+      "fileB": "storage\\framework\\views\\f57b0b48ad539fef946d2c7400d2d3de.php",
+      "startB": 61,
+      "lines": 15,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f57b0b48ad539fef946d2c7400d2d3de.php",
+      "startA": 137,
+      "fileB": "storage\\framework\\views\\f57b0b48ad539fef946d2c7400d2d3de.php",
+      "startB": 13,
+      "lines": 8,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f57b0b48ad539fef946d2c7400d2d3de.php",
+      "startA": 148,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 10,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f57b0b48ad539fef946d2c7400d2d3de.php",
+      "startA": 170,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 10,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f57b0b48ad539fef946d2c7400d2d3de.php",
+      "startA": 192,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 7,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f57b0b48ad539fef946d2c7400d2d3de.php",
+      "startA": 207,
+      "fileB": "storage\\framework\\views\\f57b0b48ad539fef946d2c7400d2d3de.php",
+      "startB": 39,
+      "lines": 37,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f57b0b48ad539fef946d2c7400d2d3de.php",
+      "startA": 243,
+      "fileB": "storage\\framework\\views\\f57b0b48ad539fef946d2c7400d2d3de.php",
+      "startB": 13,
+      "lines": 8,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f57b0b48ad539fef946d2c7400d2d3de.php",
+      "startA": 254,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 7,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f57b0b48ad539fef946d2c7400d2d3de.php",
+      "startA": 275,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 7,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f57b0b48ad539fef946d2c7400d2d3de.php",
+      "startA": 296,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 7,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f57b0b48ad539fef946d2c7400d2d3de.php",
+      "startA": 317,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 7,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f57b0b48ad539fef946d2c7400d2d3de.php",
+      "startA": 332,
+      "fileB": "storage\\framework\\views\\f57b0b48ad539fef946d2c7400d2d3de.php",
+      "startB": 39,
+      "lines": 35,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f57b0b48ad539fef946d2c7400d2d3de.php",
+      "startA": 369,
+      "fileB": "storage\\framework\\views\\f57b0b48ad539fef946d2c7400d2d3de.php",
+      "startB": 13,
+      "lines": 8,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f57b0b48ad539fef946d2c7400d2d3de.php",
+      "startA": 380,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 10,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f57b0b48ad539fef946d2c7400d2d3de.php",
+      "startA": 395,
+      "fileB": "storage\\framework\\views\\f57b0b48ad539fef946d2c7400d2d3de.php",
+      "startB": 39,
+      "lines": 13,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f523afb71a2671a1bbdfb64281f45fde.php",
+      "startA": 4,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 4,
+      "lines": 16,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f523afb71a2671a1bbdfb64281f45fde.php",
+      "startA": 19,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 19,
+      "lines": 13,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f4e627b94ab06652828a80b84d2b6f62.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\f7adeabacd22b5d77dcc855143b605ee.php",
+      "startB": 1,
+      "lines": 31,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f4e627b94ab06652828a80b84d2b6f62.php",
+      "startA": 36,
+      "fileB": "storage\\framework\\views\\f7adeabacd22b5d77dcc855143b605ee.php",
+      "startB": 83,
+      "lines": 8,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f4e627b94ab06652828a80b84d2b6f62.php",
+      "startA": 43,
+      "fileB": "storage\\framework\\views\\f7adeabacd22b5d77dcc855143b605ee.php",
+      "startB": 90,
+      "lines": 12,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f4e627b94ab06652828a80b84d2b6f62.php",
+      "startA": 116,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 99,
+      "lines": 24,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f4e627b94ab06652828a80b84d2b6f62.php",
+      "startA": 139,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 122,
+      "lines": 8,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f4e627b94ab06652828a80b84d2b6f62.php",
+      "startA": 146,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 129,
+      "lines": 16,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f4e627b94ab06652828a80b84d2b6f62.php",
+      "startA": 167,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 7,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\f4e627b94ab06652828a80b84d2b6f62.php",
+      "startA": 189,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 10,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\ef12a1dd9798768e2bf2828d51e85f40.php",
+      "startA": 11,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 4,
+      "lines": 17,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\ef12a1dd9798768e2bf2828d51e85f40.php",
+      "startA": 33,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 19,
+      "lines": 14,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\ec78b532498fd7bb45e5964141bfec1d.php",
+      "startA": 4,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 4,
+      "lines": 16,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\ec78b532498fd7bb45e5964141bfec1d.php",
+      "startA": 19,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 19,
+      "lines": 14,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\ec78b532498fd7bb45e5964141bfec1d.php",
+      "startA": 114,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 10,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\ec78b532498fd7bb45e5964141bfec1d.php",
+      "startA": 140,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 7,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\ec78b532498fd7bb45e5964141bfec1d.php",
+      "startA": 171,
+      "fileB": "storage\\framework\\views\\ec78b532498fd7bb45e5964141bfec1d.php",
+      "startB": 113,
+      "lines": 8,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\ec78b532498fd7bb45e5964141bfec1d.php",
+      "startA": 178,
+      "fileB": "storage\\framework\\views\\ec78b532498fd7bb45e5964141bfec1d.php",
+      "startB": 120,
+      "lines": 12,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\ec78b532498fd7bb45e5964141bfec1d.php",
+      "startA": 194,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 7,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\ec78b532498fd7bb45e5964141bfec1d.php",
+      "startA": 218,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 7,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\ec78b532498fd7bb45e5964141bfec1d.php",
+      "startA": 250,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 7,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\ec78b532498fd7bb45e5964141bfec1d.php",
+      "startA": 279,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 10,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\ec78b532498fd7bb45e5964141bfec1d.php",
+      "startA": 325,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 10,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\ec78b532498fd7bb45e5964141bfec1d.php",
+      "startA": 354,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 10,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\e42db2ae7f975192cbd054a15d9195b8.php",
+      "startA": 4,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 4,
+      "lines": 16,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\e42db2ae7f975192cbd054a15d9195b8.php",
+      "startA": 19,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 19,
+      "lines": 14,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\e42db2ae7f975192cbd054a15d9195b8.php",
+      "startA": 47,
+      "fileB": "storage\\framework\\views\\f7adeabacd22b5d77dcc855143b605ee.php",
+      "startB": 70,
+      "lines": 12,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\e42db2ae7f975192cbd054a15d9195b8.php",
+      "startA": 57,
+      "fileB": "storage\\framework\\views\\f7adeabacd22b5d77dcc855143b605ee.php",
+      "startB": 80,
+      "lines": 22,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\e42db2ae7f975192cbd054a15d9195b8.php",
+      "startA": 78,
+      "fileB": "storage\\framework\\views\\f7adeabacd22b5d77dcc855143b605ee.php",
+      "startB": 122,
+      "lines": 13,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\e42db2ae7f975192cbd054a15d9195b8.php",
+      "startA": 93,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 7,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\e42db2ae7f975192cbd054a15d9195b8.php",
+      "startA": 127,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 7,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\e42db2ae7f975192cbd054a15d9195b8.php",
+      "startA": 147,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 7,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\e0fa5202f781f19e4be15c3a5f1fe1a4.php",
+      "startA": 4,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 4,
+      "lines": 16,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\e0fa5202f781f19e4be15c3a5f1fe1a4.php",
+      "startA": 19,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 19,
+      "lines": 13,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\e066543b521008e4f8cfffde1240c03a.php",
+      "startA": 105,
+      "fileB": "storage\\framework\\views\\e066543b521008e4f8cfffde1240c03a.php",
+      "startB": 84,
+      "lines": 7,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\e066543b521008e4f8cfffde1240c03a.php",
+      "startA": 111,
+      "fileB": "storage\\framework\\views\\e066543b521008e4f8cfffde1240c03a.php",
+      "startB": 90,
+      "lines": 7,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\ddef2544142bd6d38cbd7f1b9971a213.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\f523afb71a2671a1bbdfb64281f45fde.php",
+      "startB": 1,
+      "lines": 48,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\dbbd6ff4b02faf11f20095e0f150bee0.php",
+      "startA": 71,
+      "fileB": "storage\\framework\\views\\f57b0b48ad539fef946d2c7400d2d3de.php",
+      "startB": 59,
+      "lines": 6,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\db2ff496737e5520f2098f586891462d.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\ef12a1dd9798768e2bf2828d51e85f40.php",
+      "startB": 1,
+      "lines": 98,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\d7d3545900ae6c2504dd71e36fcb1985.php",
+      "startA": 4,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 4,
+      "lines": 16,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\d7d3545900ae6c2504dd71e36fcb1985.php",
+      "startA": 19,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 19,
+      "lines": 14,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\d7d3545900ae6c2504dd71e36fcb1985.php",
+      "startA": 37,
+      "fileB": "storage\\framework\\views\\ec78b532498fd7bb45e5964141bfec1d.php",
+      "startB": 193,
+      "lines": 8,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\d7d3545900ae6c2504dd71e36fcb1985.php",
+      "startA": 44,
+      "fileB": "storage\\framework\\views\\ec78b532498fd7bb45e5964141bfec1d.php",
+      "startB": 200,
+      "lines": 13,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\d7d3545900ae6c2504dd71e36fcb1985.php",
+      "startA": 59,
+      "fileB": "storage\\framework\\views\\ec78b532498fd7bb45e5964141bfec1d.php",
+      "startB": 217,
+      "lines": 8,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\d7d3545900ae6c2504dd71e36fcb1985.php",
+      "startA": 66,
+      "fileB": "storage\\framework\\views\\ec78b532498fd7bb45e5964141bfec1d.php",
+      "startB": 224,
+      "lines": 14,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\d02ff242928ea69f338e816ca46109be.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\dbbd6ff4b02faf11f20095e0f150bee0.php",
+      "startB": 1,
+      "lines": 32,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\c94980d72bb677736de55d90331f32a9.php",
+      "startA": 4,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 4,
+      "lines": 16,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\c94980d72bb677736de55d90331f32a9.php",
+      "startA": 19,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 19,
+      "lines": 14,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\c94980d72bb677736de55d90331f32a9.php",
+      "startA": 38,
+      "fileB": "storage\\framework\\views\\f7adeabacd22b5d77dcc855143b605ee.php",
+      "startB": 111,
+      "lines": 6,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\c94980d72bb677736de55d90331f32a9.php",
+      "startA": 43,
+      "fileB": "storage\\framework\\views\\f7adeabacd22b5d77dcc855143b605ee.php",
+      "startB": 73,
+      "lines": 8,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\c94980d72bb677736de55d90331f32a9.php",
+      "startA": 54,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 10,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\c94980d72bb677736de55d90331f32a9.php",
+      "startA": 71,
+      "fileB": "storage\\framework\\views\\f7adeabacd22b5d77dcc855143b605ee.php",
+      "startB": 122,
+      "lines": 13,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\c7c63dcff695408c441c72663cb768b3.php",
+      "startA": 95,
+      "fileB": "storage\\framework\\views\\f4e627b94ab06652828a80b84d2b6f62.php",
+      "startB": 204,
+      "lines": 8,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\c34b665d90dd1da489f1c99c51a81d5d.php",
+      "startA": 4,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 4,
+      "lines": 16,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\c34b665d90dd1da489f1c99c51a81d5d.php",
+      "startA": 19,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 19,
+      "lines": 13,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\c34b665d90dd1da489f1c99c51a81d5d.php",
+      "startA": 74,
+      "fileB": "storage\\framework\\views\\e42db2ae7f975192cbd054a15d9195b8.php",
+      "startB": 126,
+      "lines": 8,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\c34b665d90dd1da489f1c99c51a81d5d.php",
+      "startA": 81,
+      "fileB": "storage\\framework\\views\\e42db2ae7f975192cbd054a15d9195b8.php",
+      "startB": 133,
+      "lines": 32,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\c1c1097e78eca83ecb94567985eb19b1.php",
+      "startA": 4,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 4,
+      "lines": 16,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\c1c1097e78eca83ecb94567985eb19b1.php",
+      "startA": 19,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 19,
+      "lines": 14,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\c1c1097e78eca83ecb94567985eb19b1.php",
+      "startA": 47,
+      "fileB": "storage\\framework\\views\\ec78b532498fd7bb45e5964141bfec1d.php",
+      "startB": 193,
+      "lines": 8,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\c1c1097e78eca83ecb94567985eb19b1.php",
+      "startA": 54,
+      "fileB": "storage\\framework\\views\\ec78b532498fd7bb45e5964141bfec1d.php",
+      "startB": 200,
+      "lines": 12,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\bc1dd86c8fbb2ce19db6529306eb2c90.php",
+      "startA": 4,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 4,
+      "lines": 16,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\bc1dd86c8fbb2ce19db6529306eb2c90.php",
+      "startA": 19,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 19,
+      "lines": 14,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\bc1dd86c8fbb2ce19db6529306eb2c90.php",
+      "startA": 37,
+      "fileB": "storage\\framework\\views\\d7d3545900ae6c2504dd71e36fcb1985.php",
+      "startB": 37,
+      "lines": 8,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\bc1dd86c8fbb2ce19db6529306eb2c90.php",
+      "startA": 44,
+      "fileB": "storage\\framework\\views\\d7d3545900ae6c2504dd71e36fcb1985.php",
+      "startB": 44,
+      "lines": 16,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\bc1dd86c8fbb2ce19db6529306eb2c90.php",
+      "startA": 59,
+      "fileB": "storage\\framework\\views\\ec78b532498fd7bb45e5964141bfec1d.php",
+      "startB": 217,
+      "lines": 8,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\bc1dd86c8fbb2ce19db6529306eb2c90.php",
+      "startA": 66,
+      "fileB": "storage\\framework\\views\\ec78b532498fd7bb45e5964141bfec1d.php",
+      "startB": 224,
+      "lines": 14,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\b8147178ed0cb4463d57d5b772347979.php",
+      "startA": 4,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 4,
+      "lines": 16,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\b8147178ed0cb4463d57d5b772347979.php",
+      "startA": 19,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 19,
+      "lines": 14,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\b8147178ed0cb4463d57d5b772347979.php",
+      "startA": 38,
+      "fileB": "storage\\framework\\views\\ec78b532498fd7bb45e5964141bfec1d.php",
+      "startB": 193,
+      "lines": 8,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\b8147178ed0cb4463d57d5b772347979.php",
+      "startA": 45,
+      "fileB": "storage\\framework\\views\\ec78b532498fd7bb45e5964141bfec1d.php",
+      "startB": 200,
+      "lines": 13,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\b77c17765954f4f66b2d4641f12c0147.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\c1c1097e78eca83ecb94567985eb19b1.php",
+      "startB": 1,
+      "lines": 33,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\b77c17765954f4f66b2d4641f12c0147.php",
+      "startA": 64,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 10,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\b77c17765954f4f66b2d4641f12c0147.php",
+      "startA": 83,
+      "fileB": "storage\\framework\\views\\f7adeabacd22b5d77dcc855143b605ee.php",
+      "startB": 36,
+      "lines": 8,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\b77c17765954f4f66b2d4641f12c0147.php",
+      "startA": 90,
+      "fileB": "storage\\framework\\views\\f7adeabacd22b5d77dcc855143b605ee.php",
+      "startB": 43,
+      "lines": 12,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\b77c17765954f4f66b2d4641f12c0147.php",
+      "startA": 112,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 99,
+      "lines": 44,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\b77c17765954f4f66b2d4641f12c0147.php",
+      "startA": 161,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 7,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\b5352c9bdee1090806abd2b425f36c32.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\d7d3545900ae6c2504dd71e36fcb1985.php",
+      "startB": 1,
+      "lines": 79,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\b1abd1c66530fcc71a34ef662c8ff196.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 1,
+      "lines": 170,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\aa63fca7bf105df13aa45e8a835c8304.php",
+      "startA": 7,
+      "fileB": "storage\\framework\\views\\c7c63dcff695408c441c72663cb768b3.php",
+      "startB": 71,
+      "lines": 8,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\aa63fca7bf105df13aa45e8a835c8304.php",
+      "startA": 14,
+      "fileB": "storage\\framework\\views\\c7c63dcff695408c441c72663cb768b3.php",
+      "startB": 81,
+      "lines": 8,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\aa63fca7bf105df13aa45e8a835c8304.php",
+      "startA": 23,
+      "fileB": "storage\\framework\\views\\c7c63dcff695408c441c72663cb768b3.php",
+      "startB": 92,
+      "lines": 9,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\aa3da9d6a6316f5241b2b3d47994412b.php",
+      "startA": 22,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 10,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\aa3da9d6a6316f5241b2b3d47994412b.php",
+      "startA": 39,
+      "fileB": "storage\\framework\\views\\aa3da9d6a6316f5241b2b3d47994412b.php",
+      "startB": 18,
+      "lines": 23,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\a7fdd6e91fad6738f036f7a762aa7b87.php",
+      "startA": 4,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 4,
+      "lines": 16,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\a7fdd6e91fad6738f036f7a762aa7b87.php",
+      "startA": 19,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 19,
+      "lines": 13,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\a20e0916b0319e79c78d53483e8dbfea.php",
+      "startA": 4,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 4,
+      "lines": 16,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\a20e0916b0319e79c78d53483e8dbfea.php",
+      "startA": 19,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 19,
+      "lines": 14,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\a20e0916b0319e79c78d53483e8dbfea.php",
+      "startA": 34,
+      "fileB": "storage\\framework\\views\\f523afb71a2671a1bbdfb64281f45fde.php",
+      "startB": 34,
+      "lines": 12,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\a20e0916b0319e79c78d53483e8dbfea.php",
+      "startA": 43,
+      "fileB": "storage\\framework\\views\\ec78b532498fd7bb45e5964141bfec1d.php",
+      "startB": 212,
+      "lines": 6,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\a20e0916b0319e79c78d53483e8dbfea.php",
+      "startA": 48,
+      "fileB": "storage\\framework\\views\\ec78b532498fd7bb45e5964141bfec1d.php",
+      "startB": 217,
+      "lines": 8,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\a20e0916b0319e79c78d53483e8dbfea.php",
+      "startA": 55,
+      "fileB": "storage\\framework\\views\\ec78b532498fd7bb45e5964141bfec1d.php",
+      "startB": 224,
+      "lines": 14,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\a06f5894f3b0ea1cc59d97cf7031c4cb.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\b8147178ed0cb4463d57d5b772347979.php",
+      "startB": 1,
+      "lines": 57,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\9f45653e745948ec4824311a8b1402b9.php",
+      "startA": 4,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 4,
+      "lines": 16,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\9f45653e745948ec4824311a8b1402b9.php",
+      "startA": 19,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 19,
+      "lines": 14,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\9d78f3157a6886b80e2bb89f1c91811f.php",
+      "startA": 12,
+      "fileB": "storage\\framework\\views\\c7c63dcff695408c441c72663cb768b3.php",
+      "startB": 72,
+      "lines": 8,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\9d78f3157a6886b80e2bb89f1c91811f.php",
+      "startA": 19,
+      "fileB": "storage\\framework\\views\\c7c63dcff695408c441c72663cb768b3.php",
+      "startB": 81,
+      "lines": 8,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\9d78f3157a6886b80e2bb89f1c91811f.php",
+      "startA": 28,
+      "fileB": "storage\\framework\\views\\f4e627b94ab06652828a80b84d2b6f62.php",
+      "startB": 204,
+      "lines": 9,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\99f940f49887585939aaf65bfbe574d1.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\f7adeabacd22b5d77dcc855143b605ee.php",
+      "startB": 1,
+      "lines": 31,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\99f940f49887585939aaf65bfbe574d1.php",
+      "startA": 31,
+      "fileB": "storage\\framework\\views\\f4e627b94ab06652828a80b84d2b6f62.php",
+      "startB": 31,
+      "lines": 25,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\99f940f49887585939aaf65bfbe574d1.php",
+      "startA": 65,
+      "fileB": "storage\\framework\\views\\f4e627b94ab06652828a80b84d2b6f62.php",
+      "startB": 162,
+      "lines": 50,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\91cd7334a1705dde882e05dcbd18524a.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\c94980d72bb677736de55d90331f32a9.php",
+      "startB": 1,
+      "lines": 83,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\9173a79aeecf3e5b0b368100026e5bf1.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\fa77c14e9d163273a23bb5cc6a51493b.php",
+      "startB": 1,
+      "lines": 11,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\906b83bf46a372aae4e0c5a92eb90891.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\c1c1097e78eca83ecb94567985eb19b1.php",
+      "startB": 1,
+      "lines": 31,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\906b83bf46a372aae4e0c5a92eb90891.php",
+      "startA": 36,
+      "fileB": "storage\\framework\\views\\b77c17765954f4f66b2d4641f12c0147.php",
+      "startB": 63,
+      "lines": 8,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\906b83bf46a372aae4e0c5a92eb90891.php",
+      "startA": 43,
+      "fileB": "storage\\framework\\views\\b77c17765954f4f66b2d4641f12c0147.php",
+      "startB": 70,
+      "lines": 12,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\906b83bf46a372aae4e0c5a92eb90891.php",
+      "startA": 56,
+      "fileB": "storage\\framework\\views\\b77c17765954f4f66b2d4641f12c0147.php",
+      "startB": 79,
+      "lines": 6,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\906b83bf46a372aae4e0c5a92eb90891.php",
+      "startA": 61,
+      "fileB": "storage\\framework\\views\\f7adeabacd22b5d77dcc855143b605ee.php",
+      "startB": 36,
+      "lines": 8,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\906b83bf46a372aae4e0c5a92eb90891.php",
+      "startA": 68,
+      "fileB": "storage\\framework\\views\\f7adeabacd22b5d77dcc855143b605ee.php",
+      "startB": 43,
+      "lines": 13,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\8ec4d45479d3f4612e1a4fc7fcae6d05.php",
+      "startA": 3,
+      "fileB": "storage\\framework\\views\\a3980b250178a501312be94873b89493.php",
+      "startB": 2,
+      "lines": 25,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\8ec4d45479d3f4612e1a4fc7fcae6d05.php",
+      "startA": 53,
+      "fileB": "storage\\framework\\views\\9d78f3157a6886b80e2bb89f1c91811f.php",
+      "startB": 11,
+      "lines": 9,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\8ec4d45479d3f4612e1a4fc7fcae6d05.php",
+      "startA": 61,
+      "fileB": "storage\\framework\\views\\9d78f3157a6886b80e2bb89f1c91811f.php",
+      "startB": 19,
+      "lines": 8,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\8ec4d45479d3f4612e1a4fc7fcae6d05.php",
+      "startA": 70,
+      "fileB": "storage\\framework\\views\\9d78f3157a6886b80e2bb89f1c91811f.php",
+      "startB": 28,
+      "lines": 9,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\8bc1e7fe27747cc8c5b0f55d130d68a4.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\c34b665d90dd1da489f1c99c51a81d5d.php",
+      "startB": 1,
+      "lines": 115,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\8b572ac3cffe9ee27a59cd274cb5d51b.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\c64233237814850dcb67b61a7ff7e729.php",
+      "startB": 1,
+      "lines": 12,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\824d4ff933d4512faa11e1d86d4ca928.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\c4340ca3381772b9a2c1ce2e863f2d6b.php",
+      "startB": 1,
+      "lines": 28,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\80963eaac6e901673fbcfca0984a549c.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\fbcc28caad78e3ad07ec2da1a0cf0790.php",
+      "startB": 1,
+      "lines": 6,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\78d55870d87b1a91dc65bcf2d5d47500.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\bc1dd86c8fbb2ce19db6529306eb2c90.php",
+      "startB": 1,
+      "lines": 79,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\77503ca3085241d6c9462051e3e65e67.php",
+      "startA": 2,
+      "fileB": "storage\\framework\\views\\c7c63dcff695408c441c72663cb768b3.php",
+      "startB": 4,
+      "lines": 27,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\769e94df0e88d99b3fa893b41d8a7baf.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\c1c1097e78eca83ecb94567985eb19b1.php",
+      "startB": 1,
+      "lines": 80,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\744b2b85638a16ea99860b8249e5bfc0.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\dbbd6ff4b02faf11f20095e0f150bee0.php",
+      "startB": 1,
+      "lines": 86,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\720bbfbb3c15c6c0eef279e8aa86604c.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\f6ca2d9b65e9751769d9596bfe2e5ce8.php",
+      "startB": 1,
+      "lines": 12,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\6c1c1f1c1487b224ed257444c485c9dc.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\f7adeabacd22b5d77dcc855143b605ee.php",
+      "startB": 1,
+      "lines": 157,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\6b3ce080beed56d4cefc54b97c012b8e.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\f7adeabacd22b5d77dcc855143b605ee.php",
+      "startB": 1,
+      "lines": 215,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\6aaae114c4fb9137ac465fe31f572c44.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\a20e0916b0319e79c78d53483e8dbfea.php",
+      "startB": 1,
+      "lines": 69,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\66395f08676c8a27997996e896699b35.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\f57b0b48ad539fef946d2c7400d2d3de.php",
+      "startB": 1,
+      "lines": 418,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\615b80d4707bc4cdd9ea37538ffa4dcb.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\c1c1097e78eca83ecb94567985eb19b1.php",
+      "startB": 1,
+      "lines": 65,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\5fbfca1c38ec9ea2b569fdf318081bc3.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\d4cf22899aa8aa3dece223bd7d9a8eec.php",
+      "startB": 1,
+      "lines": 35,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\5cad6a1bfd11a3c4dfabd78e04c13b3e.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\c965bbfeb3437402266f0e0a85c91710.php",
+      "startB": 1,
+      "lines": 78,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\59a5295c53c2d159c11d29959003e248.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\ec78b532498fd7bb45e5964141bfec1d.php",
+      "startB": 1,
+      "lines": 374,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\52cf702e6c32eff8cbac6ba3054e2a44.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\c1c1097e78eca83ecb94567985eb19b1.php",
+      "startB": 1,
+      "lines": 180,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\4cee7c96377ea73e6e8d409fe42fc706.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\ceec4b1614d164a6f6f260392c891caa.php",
+      "startB": 1,
+      "lines": 6,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\444e0d69ad210ca19d35ef389633ceb2.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\a7fdd6e91fad6738f036f7a762aa7b87.php",
+      "startB": 1,
+      "lines": 35,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\427f452a9c7b14ab246f7029e5d8a3fd.php",
+      "startA": 4,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 9,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\427f452a9c7b14ab246f7029e5d8a3fd.php",
+      "startA": 41,
+      "fileB": "storage\\framework\\views\\ff751cd5af74aa34eb0e7ed9057d8867.php",
+      "startB": 48,
+      "lines": 7,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\427f452a9c7b14ab246f7029e5d8a3fd.php",
+      "startA": 63,
+      "fileB": "storage\\framework\\views\\427f452a9c7b14ab246f7029e5d8a3fd.php",
+      "startB": 24,
+      "lines": 8,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\3eeabe4726cc4e1f38f988b17b1eda6d.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\4539e326acc37558bc796fb48b6849fd.php",
+      "startB": 1,
+      "lines": 11,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\386ecef0dbb67189b1b42ab4517c8604.php",
+      "startA": 12,
+      "fileB": "storage\\framework\\views\\a3980b250178a501312be94873b89493.php",
+      "startB": 11,
+      "lines": 10,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\3366ee06d64b4cb276ecc135b6b2b56f.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\aa3da9d6a6316f5241b2b3d47994412b.php",
+      "startB": 1,
+      "lines": 61,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\326291eb5e5afad7e1161d08e9525deb.php",
+      "startA": 8,
+      "fileB": "storage\\framework\\views\\a3980b250178a501312be94873b89493.php",
+      "startB": 11,
+      "lines": 6,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\326291eb5e5afad7e1161d08e9525deb.php",
+      "startA": 15,
+      "fileB": "storage\\framework\\views\\a3980b250178a501312be94873b89493.php",
+      "startB": 22,
+      "lines": 6,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\302019d90cd43b32e8c44b6c00fb6d95.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\f7adeabacd22b5d77dcc855143b605ee.php",
+      "startB": 1,
+      "lines": 114,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\2a66c1f2d9ea1714a48b56bf613acfbf.php",
+      "startA": 14,
+      "fileB": "storage\\framework\\views\\2a66c1f2d9ea1714a48b56bf613acfbf.php",
+      "startB": 4,
+      "lines": 6,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\27e1933ce7c29fee0ad8f011c48f6963.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\e42db2ae7f975192cbd054a15d9195b8.php",
+      "startB": 1,
+      "lines": 167,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\154f2d9169967c509c6bcf3e99384330.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\61038d8b8d1a3479858a39ce7b5061c9.php",
+      "startB": 1,
+      "lines": 15,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\1503648cc68f4a8efc350a25d55f9184.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\d85db8aae21cc156d5382762d0b203c9.php",
+      "startB": 1,
+      "lines": 12,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\14a7fbb4e122264f1f7343db44768620.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\9f45653e745948ec4824311a8b1402b9.php",
+      "startB": 1,
+      "lines": 51,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\12dc692300c346b9a80d0e4ff5870d7f.php",
+      "startA": 2,
+      "fileB": "storage\\framework\\views\\8ec4d45479d3f4612e1a4fc7fcae6d05.php",
+      "startB": 44,
+      "lines": 44,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\1074e5db1d149923ec7870e0329e3add.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\fc3bb2833e927c5e5533ab48e44327ba.php",
+      "startB": 1,
+      "lines": 77,
+      "tokens": 0
+    },
+    {
+      "fileA": "storage\\framework\\views\\0988c87ee1cc75e75323db8536cbd680.php",
+      "startA": 1,
+      "fileB": "storage\\framework\\views\\d4cf22899aa8aa3dece223bd7d9a8eec.php",
+      "startB": 1,
+      "lines": 9,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\routes\\index.ts",
+      "startA": 69,
+      "fileB": "resources\\js\\routes\\two-factor\\index.ts",
+      "startB": 70,
+      "lines": 16,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\pages\\welcome.tsx",
+      "startA": 100,
+      "fileB": "resources\\js\\pages\\welcome.tsx",
+      "startB": 69,
+      "lines": 19,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\js\\components\\app-header.tsx",
+      "startA": 37,
+      "fileB": "resources\\js\\components\\app-sidebar.tsx",
+      "startB": 18,
+      "lines": 21,
+      "tokens": 0
+    },
+    {
+      "fileA": "app\\Http\\Controllers\\DocumentController.php",
+      "startA": 17,
+      "fileB": "app\\Http\\Controllers\\DocumentTypeController.php",
+      "startB": 11,
+      "lines": 10,
+      "tokens": 0
+    },
+    {
+      "fileA": "app\\Http\\Controllers\\DocumentController.php",
+      "startA": 149,
+      "fileB": "app\\Http\\Controllers\\DocumentController.php",
+      "startB": 79,
+      "lines": 18,
+      "tokens": 0
+    },
+    {
+      "fileA": "resources\\views\\app.blade.php",
+      "startA": 23,
+      "fileB": "storage\\framework\\views\\dbbd6ff4b02faf11f20095e0f150bee0.php",
+      "startB": 23,
+      "lines": 15,
+      "tokens": 0
+    },
+    {
+      "fileA": "database\\migrations\\2026_05_13_001738_add_document_update_id_to_document_files_table.php",
+      "startA": 1,
+      "fileB": "database\\migrations\\2026_05_13_034234_add_is_active_to_users_table.php",
+      "startB": 1,
+      "lines": 14,
+      "tokens": 0
+    },
+    {
+      "fileA": "database\\migrations\\2025_08_14_170933_add_two_factor_columns_to_users_table.php",
+      "startA": 1,
+      "fileB": "database\\migrations\\2026_05_13_034234_add_is_active_to_users_table.php",
+      "startB": 1,
+      "lines": 15,
+      "tokens": 0
+    },
+    {
+      "fileA": "database\\migrations\\2025_05_13_000003_create_document_files_table.php",
+      "startA": 1,
+      "fileB": "database\\migrations\\2025_05_13_000004_create_document_updates_table.php",
+      "startB": 1,
+      "lines": 11,
+      "tokens": 0
+    },
+    {
+      "fileA": "database\\migrations\\2025_05_13_000002_create_documents_table.php",
+      "startA": 1,
+      "fileB": "database\\migrations\\2025_05_13_000004_create_document_updates_table.php",
+      "startB": 1,
+      "lines": 11,
+      "tokens": 0
+    },
+    {
+      "fileA": "database\\migrations\\2025_05_13_000002_create_documents_table.php",
+      "startA": 16,
+      "fileB": "database\\migrations\\2025_05_13_000004_create_document_updates_table.php",
+      "startB": 14,
+      "lines": 9,
+      "tokens": 0
+    },
+    {
+      "fileA": "database\\migrations\\2025_05_13_000001_create_document_types_table.php",
+      "startA": 1,
+      "fileB": "database\\migrations\\2025_05_13_000004_create_document_updates_table.php",
+      "startB": 1,
+      "lines": 11,
+      "tokens": 0
+    },
+    {
+      "fileA": "database\\migrations\\0001_01_01_000002_create_jobs_table.php",
+      "startA": 1,
+      "fileB": "database\\migrations\\2026_05_13_034234_add_is_active_to_users_table.php",
+      "startB": 1,
+      "lines": 14,
+      "tokens": 0
+    },
+    {
+      "fileA": "database\\migrations\\0001_01_01_000001_create_cache_table.php",
+      "startA": 1,
+      "fileB": "database\\migrations\\2026_05_13_034234_add_is_active_to_users_table.php",
+      "startB": 1,
+      "lines": 14,
+      "tokens": 0
+    },
+    {
+      "fileA": "database\\migrations\\0001_01_01_000000_create_users_table.php",
+      "startA": 1,
+      "fileB": "database\\migrations\\2026_05_13_034234_add_is_active_to_users_table.php",
+      "startB": 1,
+      "lines": 14,
+      "tokens": 0
+    },
+    {
+      "fileA": "app\\Models\\Document.php",
+      "startA": 1,
+      "fileB": "app\\Models\\DocumentUpdate.php",
+      "startB": 1,
+      "lines": 10,
+      "tokens": 0
+    },
+    {
+      "fileA": "app\\Models\\Document.php",
+      "startA": 24,
+      "fileB": "app\\Models\\DocumentUpdate.php",
+      "startB": 22,
+      "lines": 14,
+      "tokens": 0
+    },
+    {
+      "fileA": "config\\database.php",
+      "startA": 68,
+      "fileB": "config\\database.php",
+      "startB": 48,
+      "lines": 20,
+      "tokens": 0
+    },
+    {
+      "fileA": "config\\database.php",
+      "startA": 106,
+      "fileB": "config\\database.php",
+      "startB": 91,
+      "lines": 8,
+      "tokens": 0
+    },
+    {
+      "fileA": "config\\database.php",
+      "startA": 169,
+      "fileB": "config\\database.php",
+      "startB": 156,
+      "lines": 7,
+      "tokens": 0
+    },
+    {
+      "fileA": "config\\database.php",
+      "startA": 175,
+      "fileB": "config\\database.php",
+      "startB": 162,
+      "lines": 8,
+      "tokens": 0
+    }
+  ],
+  "duplicatedLines": 7448,
+  "totalLines": 33368,
+  "percentage": 22.32
+}
