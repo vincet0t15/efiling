@@ -221,7 +221,7 @@ export default function DocumentShow({ document: doc }: ShowProps) {
                                                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-primary/10 to-primary/5 shadow-inner">
                                                     <FileText className="h-5 w-5 text-primary" />
                                                 </div>
-                                                <div className="min-w-0 flex-1 space-y-1">
+                                                <div className="min-w-0 flex-1 space-y-1 pr-10">
                                                     <p className="truncate text-sm font-medium leading-tight">
                                                         {file.original_filename}
                                                     </p>
