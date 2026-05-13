@@ -175,7 +175,57 @@
         }
       ],
       "trend": "stable"
+    },
+    "resources\\js\\pages\\documents\\show.tsx": {
+      "latest": {
+        "commit": "e576144",
+        "timestamp": "2026-05-13T05:21:48.964Z",
+        "mi": 15.9,
+        "cognitive": 21,
+        "nesting": 4,
+        "lines": 447,
+        "maxCyclomatic": 29,
+        "entropy": 6.21
+      },
+      "history": [
+        {
+          "commit": "e576144",
+          "timestamp": "2026-05-13T05:21:48.964Z",
+          "mi": 15.9,
+          "cognitive": 21,
+          "nesting": 4,
+          "lines": 447,
+          "maxCyclomatic": 29,
+          "entropy": 6.21
+        }
+      ],
+      "trend": "stable"
+    },
+    "resources\\js\\components\\delete-confirmation-dialog.tsx": {
+      "latest": {
+        "commit": "e576144",
+        "timestamp": "2026-05-13T05:45:27.872Z",
+        "mi": 40.3,
+        "cognitive": 3,
+        "nesting": 2,
+        "lines": 69,
+        "maxCyclomatic": 3,
+        "entropy": 5.09
+      },
+      "history": [
+        {
+          "commit": "e576144",
+          "timestamp": "2026-05-13T05:45:27.872Z",
+          "mi": 40.3,
+          "cognitive": 3,
+          "nesting": 2,
+          "lines": 69,
+          "maxCyclomatic": 3,
+          "entropy": 5.09
+        }
+      ],
+      "trend": "stable"
     }
   },
-  "capturedAt": "2026-05-13T04:58:01.467Z"
+  "capturedAt": "2026-05-13T05:45:32.882Z"
 }

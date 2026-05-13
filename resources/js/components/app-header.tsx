@@ -129,7 +129,7 @@ export function AppHeader({ breadcrumbs = [] }: Props) {
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <div className="ml-8 hidden h-full items-center lg:flex">
+                    <div className="hidden h-full flex-1 items-center justify-center lg:flex">
                         <NavigationMenu className="flex h-full items-stretch">
                             <NavigationMenuList className="flex h-full items-center gap-1">
                                 {mainNavItems.map((item) => (

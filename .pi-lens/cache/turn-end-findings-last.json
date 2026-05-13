@@ -1,4 +1,4 @@
 {
-  "signature": "resources/js/components/app-header.tsx::Unresolved from this turn — resources/js/components/app-header.tsx:\n🔴 STOP — 1 issue(s) must be fixed:\n  L37: import/order: `@/routes/document-types` import should occur before import of `@/routes/documents`",
+  "signature": "resources/js/pages/documents/show.tsx::Unresolved from this turn — resources/js/pages/documents/show.tsx:\n🔴 STOP — 1 issue(s) must be fixed:\n  L134: @stylistic/padding-line-between-statements: Expected blank line before this statement.",
   "sessionId": "lens-mp3jf15a-88a7e95b"
 }

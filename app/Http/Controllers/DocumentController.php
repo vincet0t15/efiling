@@ -129,8 +129,8 @@ class DocumentController extends Controller
     public function updateDocument(Request $request, Document $document)
     {
         $validated = $request->validate([
-            'description' => 'required|string',
-            'files' => 'nullable|array|min:1',
+            'description' => 'nullable|string',
+            'files' => 'nullable|array',
             'files.*' => 'file|max:10240|mimes:pdf,jpg,jpeg,png,doc,docx',
         ]);
 
