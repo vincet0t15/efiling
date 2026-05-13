@@ -225,7 +225,57 @@
         }
       ],
       "trend": "stable"
+    },
+    "resources\\js\\components\\ui\\textarea.tsx": {
+      "latest": {
+        "commit": "8535d38",
+        "timestamp": "2026-05-13T07:47:20.887Z",
+        "mi": 61.4,
+        "cognitive": 0,
+        "nesting": 1,
+        "lines": 15,
+        "maxCyclomatic": 1,
+        "entropy": 3.78
+      },
+      "history": [
+        {
+          "commit": "8535d38",
+          "timestamp": "2026-05-13T07:47:20.887Z",
+          "mi": 61.4,
+          "cognitive": 0,
+          "nesting": 1,
+          "lines": 15,
+          "maxCyclomatic": 1,
+          "entropy": 3.78
+        }
+      ],
+      "trend": "stable"
+    },
+    "resources\\js\\pages\\documents\\create.tsx": {
+      "latest": {
+        "commit": "8535d38",
+        "timestamp": "2026-05-13T07:57:16.713Z",
+        "mi": 16,
+        "cognitive": 36,
+        "nesting": 4,
+        "lines": 456,
+        "maxCyclomatic": 21,
+        "entropy": 6.39
+      },
+      "history": [
+        {
+          "commit": "8535d38",
+          "timestamp": "2026-05-13T07:57:16.713Z",
+          "mi": 16,
+          "cognitive": 36,
+          "nesting": 4,
+          "lines": 456,
+          "maxCyclomatic": 21,
+          "entropy": 6.39
+        }
+      ],
+      "trend": "stable"
     }
   },
-  "capturedAt": "2026-05-13T05:45:32.882Z"
+  "capturedAt": "2026-05-13T07:57:21.725Z"
 }

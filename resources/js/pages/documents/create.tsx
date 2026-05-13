@@ -1,21 +1,13 @@
-import Heading from '@/components/heading';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
-import { CustomComboBox } from '@/components/CustomComboBox';
-import type { FlashProps } from '@/types/flash';
-import type { DocumentType } from '@/types/document-type';
 import { useForm } from '@inertiajs/react';
 import { Head, router } from '@inertiajs/react';
-import { toast } from 'sonner';
 import { FileUp, X, Upload, ArrowLeft } from 'lucide-react';
-import {
-    useState,
-    type ChangeEventHandler,
-    type FormEventHandler,
-} from 'react';
-import documents from '@/routes/documents';
+import { useState } from 'react';
+import type { ChangeEventHandler, FormEventHandler } from 'react';
+import { toast } from 'sonner';
+
+import { CustomComboBox } from '@/components/CustomComboBox';
+import Heading from '@/components/heading';
+import { Button } from '@/components/ui/button';
 import {
     Dialog,
     DialogClose,
@@ -25,6 +17,12 @@ import {
     DialogHeader,
     DialogTitle,
 } from '@/components/ui/dialog';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
+import documents from '@/routes/documents';
+import type { DocumentType } from '@/types/document-type';
+import type { FlashProps } from '@/types/flash';
 interface PageProps {
     documentTypes: DocumentType[];
     flash?: {
@@ -33,14 +31,21 @@ interface PageProps {
 }
 
 export default function CreatePage({ documentTypes }: PageProps) {
-    const { data, setData, post, reset, errors, processing } = useForm({
+    const { data, setData, post, reset, errors, processing } = useForm<{
+        title: string;
+        description: string;
+        document_type_id: string;
+        files: File[];
+    }>({
         title: '',
         description: '',
         document_type_id: '',
-        files: [] as File[],
+        files: [],
     });
 
     const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
+    const [showSuccessDialog, setShowSuccessDialog] = useState(false);
+    const [createdTrackingNumber, setCreatedTrackingNumber] = useState('');
 
     const documentTypeOptions = documentTypes.map((dt) => ({
         value: dt.id.toString(),
@@ -79,12 +84,25 @@ export default function CreatePage({ documentTypes }: PageProps) {
         post(documents.store().url, {
             onSuccess: (response) => {
                 const flash = response.props as unknown as FlashProps;
-                toast.success(
-                    flash.flash?.message || 'Document created successfully.',
-                );
+                const trackingNumber = (
+                    response.props as unknown as {
+                        flash?: { tracking_number?: string };
+                    }
+                )?.flash?.tracking_number;
+
+                if (trackingNumber) {
+                    setCreatedTrackingNumber(trackingNumber);
+                    setShowSuccessDialog(true);
+                } else {
+                    toast.success(
+                        flash.flash?.message ||
+                            'Document created successfully.',
+                    );
+                    router.get(documents.index());
+                }
+
                 reset();
                 setSelectedFiles([]);
-                router.get(documents.index());
             },
             onError: () => {
                 toast.error('Failed to create document.');
@@ -172,18 +190,13 @@ export default function CreatePage({ documentTypes }: PageProps) {
                         {/* File Upload */}
                         <div className="space-y-2">
                             <Label>Files *</Label>
-                            <div className="rounded-md border border-dashed p-6">
-                                <div className="flex flex-col items-center justify-center gap-2">
-                                    <div className="rounded-full bg-primary/10 p-3">
-                                        <Upload className="h-6 w-6 text-primary" />
-                                    </div>
-                                    <p className="text-sm text-muted-foreground">
-                                        Click or drag files to upload
+                            <div className="rounded-lg border-2 border-dashed border-border p-6 text-center transition-colors hover:border-primary/50">
+                                <label className="cursor-pointer">
+                                    <Upload className="mx-auto h-8 w-8 text-muted-foreground" />
+                                    <p className="mt-2 text-sm text-muted-foreground">
+                                        Click to upload files
                                     </p>
-                                    <p className="text-xs text-muted-foreground">
-                                        PDF only (max 10MB each)
-                                    </p>
-                                    <Input
+                                    <input
                                         type="file"
                                         multiple
                                         accept=".pdf"
@@ -191,14 +204,7 @@ export default function CreatePage({ documentTypes }: PageProps) {
                                         className="hidden"
                                         id="file-upload"
                                     />
-                                    <Label
-                                        htmlFor="file-upload"
-                                        className="cursor-pointer rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
-                                    >
-                                        <FileUp className="mr-2 inline h-4 w-4" />
-                                        Choose Files
-                                    </Label>
-                                </div>
+                                </label>
                             </div>
 
                             {/* Selected Files */}
@@ -250,6 +256,40 @@ export default function CreatePage({ documentTypes }: PageProps) {
                     </form>
                 </div>
             </div>
+
+            {/* Success Dialog */}
+            <Dialog
+                open={showSuccessDialog}
+                onOpenChange={setShowSuccessDialog}
+            >
+                <DialogContent className="sm:max-w-md">
+                    <DialogHeader>
+                        <DialogTitle>Document Created Successfully</DialogTitle>
+                        <DialogDescription>
+                            Your document has been submitted. Please use the
+                            tracking number below to reference your document.
+                        </DialogDescription>
+                    </DialogHeader>
+                    <div className="flex flex-col items-center justify-center py-4">
+                        <p className="text-xs text-muted-foreground">
+                            Tracking Number
+                        </p>
+                        <p className="mt-1 font-mono text-xl font-bold tracking-wider text-primary">
+                            {createdTrackingNumber}
+                        </p>
+                    </div>
+                    <DialogFooter>
+                        <Button
+                            onClick={() => {
+                                setShowSuccessDialog(false);
+                                router.get(documents.index());
+                            }}
+                        >
+                            View Documents
+                        </Button>
+                    </DialogFooter>
+                </DialogContent>
+            </Dialog>
         </>
     );
 }
