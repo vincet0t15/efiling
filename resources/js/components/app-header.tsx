@@ -109,7 +109,9 @@ export function AppHeader({ breadcrumbs = [] }: Props) {
                                                     : 'text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-800 dark:hover:text-white',
                                             )}
                                         >
-                                            <item.icon className="h-5 w-5" />
+                                            {item.icon && (
+                                                <item.icon className="h-5 w-5" />
+                                            )}
                                             <span>{item.title}</span>
                                         </Link>
                                     ))}
@@ -148,7 +150,9 @@ export function AppHeader({ breadcrumbs = [] }: Props) {
                                                     'text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white',
                                             )}
                                         >
-                                            <item.icon className="h-4 w-4" />
+                                            {item.icon && (
+                                                <item.icon className="h-4 w-4" />
+                                            )}
                                             {item.title}
                                         </Link>
                                         {isCurrentUrl(item.href) && (
