@@ -13,12 +13,14 @@ import { request } from '@/routes/password';
 
 type Props = {
     status?: string;
+    error?: string;
     canResetPassword: boolean;
     canRegister: boolean;
 };
 
 export default function Login({
     status,
+    error,
     canResetPassword,
     canRegister,
 }: Props) {
@@ -111,11 +113,17 @@ export default function Login({
                     {status}
                 </div>
             )}
+
+            {error && (
+                <div className="mb-4 text-center text-sm font-medium text-red-600">
+                    {error}
+                </div>
+            )}
         </>
     );
 }
 
 Login.layout = {
-    title: 'Log in to your account',
+    title: 'E-Filing System - Log in to your account',
     description: 'Enter your email and password below to log in',
 };

@@ -102,12 +102,12 @@ export default function DocumentShow({ document: doc }: ShowProps) {
     };
 
     const handleView = (fileId: number) => {
-        window.open(documents.viewFile({ id: fileId }).url, '_blank');
+        window.open(`/documents/files/${fileId}/view`, '_blank');
     };
 
     const handleDeleteFile = (fileId: number) => {
         if (confirm('Are you sure you want to delete this file?')) {
-            router.delete(documents.deleteFile({ id: fileId }).url, {
+            router.delete(`/documents/files/${fileId}/delete`, {
                 onSuccess: () => {
                     toast.success('File deleted successfully.');
                     router.reload();
@@ -139,7 +139,7 @@ export default function DocumentShow({ document: doc }: ShowProps) {
                                 title={doc.tracking_number}
                             />
                             <span className="rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-800">
-                                {doc.status || 'Active'}
+                                Active
                             </span>
                         </div>
                         <p className="text-sm text-muted-foreground">

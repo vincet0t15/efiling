@@ -1,7 +1,6 @@
 import { Link } from '@inertiajs/react';
-import { BookOpen, FileText, FolderGit2, LayoutGrid } from 'lucide-react';
+import { FileText, FolderGit2, LayoutGrid } from 'lucide-react';
 import AppLogo from '@/components/app-logo';
-import { NavFooter } from '@/components/nav-footer';
 import { NavMain } from '@/components/nav-main';
 import { NavUser } from '@/components/nav-user';
 import {
@@ -32,7 +31,7 @@ const mainNavItems: NavItem[] = [
     {
         title: 'Document Types',
         href: documentTypes.index(),
-        icon: FileText,
+        icon: FolderGit2,
     },
 ];
 
