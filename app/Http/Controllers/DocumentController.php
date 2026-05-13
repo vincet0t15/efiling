@@ -93,7 +93,7 @@ class DocumentController extends Controller
             }
         }
 
-        return redirect()->back()->with('success', 'Document created successfully.');
+        return redirect()->back()->with('success', 'Document created successfully.')->with('tracking_number', $document->tracking_number);
     }
 
     public function show(Document $document)

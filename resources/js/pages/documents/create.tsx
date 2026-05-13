@@ -27,6 +27,9 @@ import {
 } from '@/components/ui/dialog';
 interface PageProps {
     documentTypes: DocumentType[];
+    flash?: {
+        tracking_number?: string;
+    };
 }
 
 export default function CreatePage({ documentTypes }: PageProps) {
