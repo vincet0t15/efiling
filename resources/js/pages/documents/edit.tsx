@@ -1,5 +1,13 @@
 import { Button } from '@/components/ui/button';
-import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import {
+    Dialog,
+    DialogClose,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+} from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
@@ -19,7 +27,12 @@ interface EditDialogProps {
     documentTypes: DocumentType[];
 }
 
-export function EditDocumentDialog({ isOpen, onClose, document, documentTypes }: EditDialogProps) {
+export function EditDocumentDialog({
+    isOpen,
+    onClose,
+    document,
+    documentTypes,
+}: EditDialogProps) {
     const { data, setData, put, errors, processing } = useForm({
         title: document.title,
         description: document.description || '',
@@ -41,10 +54,12 @@ export function EditDocumentDialog({ isOpen, onClose, document, documentTypes }:
 
     const onSubmit: SubmitEventHandler = (e) => {
         e.preventDefault();
-        put(documents.update(document), {
+        put(documents.update(document).url, {
             onSuccess: (response) => {
                 const flash = response.props as unknown as FlashProps;
-                toast.success(flash.flash?.message || 'Document updated successfully.');
+                toast.success(
+                    flash.flash?.message || 'Document updated successfully.',
+                );
                 onClose();
             },
             onError: () => {
@@ -55,7 +70,7 @@ export function EditDocumentDialog({ isOpen, onClose, document, documentTypes }:
 
     return (
         <Dialog open={isOpen} onOpenChange={onClose}>
-            <DialogContent className="sm:max-w-sm rounded-md">
+            <DialogContent className="rounded-md sm:max-w-sm">
                 <form onSubmit={onSubmit}>
                     <DialogHeader className="mb-4">
                         <DialogTitle>Edit Document</DialogTitle>
@@ -65,14 +80,18 @@ export function EditDocumentDialog({ isOpen, onClose, document, documentTypes }:
                     </DialogHeader>
                     <div className="space-y-4">
                         <div className="space-y-2">
-                            <Label htmlFor="tracking_number">Tracking Number</Label>
+                            <Label htmlFor="tracking_number">
+                                Tracking Number
+                            </Label>
                             <Input
                                 id="tracking_number"
                                 value={document.tracking_number}
                                 disabled
                                 className="bg-gray-100"
                             />
-                            <span className="text-xs text-gray-500">Tracking number cannot be changed.</span>
+                            <span className="text-xs text-gray-500">
+                                Tracking number cannot be changed.
+                            </span>
                         </div>
 
                         <div className="space-y-2">
@@ -83,19 +102,29 @@ export function EditDocumentDialog({ isOpen, onClose, document, documentTypes }:
                                 defaultValue={document.title}
                                 onChange={onChangeInput}
                             />
-                            {errors.title && <span className="text-xs text-orange-600">{errors.title as string}</span>}
+                            {errors.title && (
+                                <span className="text-xs text-orange-600">
+                                    {errors.title as string}
+                                </span>
+                            )}
                         </div>
 
                         <div className="space-y-2">
-                            <Label htmlFor="document_type_id">Document Type *</Label>
+                            <Label htmlFor="document_type_id">
+                                Document Type *
+                            </Label>
                             <CustomComboBox
                                 items={documentTypeOptions}
                                 placeholder="Select document type"
                                 value={data.document_type_id}
-                                onSelect={(val) => setData('document_type_id', val || '')}
+                                onSelect={(val) =>
+                                    setData('document_type_id', val || '')
+                                }
                             />
                             {errors.document_type_id && (
-                                <span className="text-xs text-orange-600">{errors.document_type_id as string}</span>
+                                <span className="text-xs text-orange-600">
+                                    {errors.document_type_id as string}
+                                </span>
                             )}
                         </div>
 
@@ -109,7 +138,9 @@ export function EditDocumentDialog({ isOpen, onClose, document, documentTypes }:
                                 rows={3}
                             />
                             {errors.description && (
-                                <span className="text-xs text-orange-600">{errors.description as string}</span>
+                                <span className="text-xs text-orange-600">
+                                    {errors.description as string}
+                                </span>
                             )}
                         </div>
                     </div>

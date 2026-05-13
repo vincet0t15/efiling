@@ -1,5 +1,13 @@
 import { Button } from '@/components/ui/button';
-import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import {
+    Dialog,
+    DialogClose,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+} from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
@@ -19,7 +27,11 @@ interface CreateDialogProps {
     documentTypes: DocumentType[];
 }
 
-export function CreateDocumentDialog({ isOpen, onClose, documentTypes }: CreateDialogProps) {
+export function CreateDocumentDialog({
+    isOpen,
+    onClose,
+    documentTypes,
+}: CreateDialogProps) {
     const { data, setData, post, reset, errors, processing } = useForm({
         title: '',
         description: '',
@@ -58,10 +70,12 @@ export function CreateDocumentDialog({ isOpen, onClose, documentTypes }: CreateD
 
     const onSubmit: SubmitEventHandler = (e) => {
         e.preventDefault();
-        post(documents.store(), {
+        post(documents.store().url, {
             onSuccess: (response) => {
                 const flash = response.props as unknown as FlashProps;
-                toast.success(flash.flash?.message || 'Document created successfully.');
+                toast.success(
+                    flash.flash?.message || 'Document created successfully.',
+                );
                 onClose();
                 reset();
                 setSelectedFiles([]);
@@ -79,12 +93,13 @@ export function CreateDocumentDialog({ isOpen, onClose, documentTypes }: CreateD
 
     return (
         <Dialog open={isOpen} onOpenChange={onClose}>
-            <DialogContent className="sm:max-w-lg rounded-md max-h-[90vh] overflow-y-auto">
+            <DialogContent className="max-h-[90vh] overflow-y-auto rounded-md sm:max-w-lg">
                 <form onSubmit={onSubmit}>
                     <DialogHeader className="mb-4">
                         <DialogTitle>Upload Document</DialogTitle>
                         <DialogDescription className="text-xs">
-                            Upload a scanned document with tracking number generation.
+                            Upload a scanned document with tracking number
+                            generation.
                         </DialogDescription>
                     </DialogHeader>
                     <div className="space-y-4">
@@ -97,19 +112,29 @@ export function CreateDocumentDialog({ isOpen, onClose, documentTypes }: CreateD
                                 value={data.title}
                                 onChange={onChangeInput}
                             />
-                            {errors.title && <span className="text-xs text-orange-600">{errors.title as string}</span>}
+                            {errors.title && (
+                                <span className="text-xs text-orange-600">
+                                    {errors.title as string}
+                                </span>
+                            )}
                         </div>
 
                         <div className="space-y-2">
-                            <Label htmlFor="document_type_id">Document Type *</Label>
+                            <Label htmlFor="document_type_id">
+                                Document Type *
+                            </Label>
                             <CustomComboBox
                                 items={documentTypeOptions}
                                 placeholder="Select document type"
                                 value={data.document_type_id || null}
-                                onSelect={(val) => setData('document_type_id', val || '')}
+                                onSelect={(val) =>
+                                    setData('document_type_id', val || '')
+                                }
                             />
                             {errors.document_type_id && (
-                                <span className="text-xs text-orange-600">{errors.document_type_id as string}</span>
+                                <span className="text-xs text-orange-600">
+                                    {errors.document_type_id as string}
+                                </span>
                             )}
                         </div>
 
@@ -124,19 +149,27 @@ export function CreateDocumentDialog({ isOpen, onClose, documentTypes }: CreateD
                                 rows={3}
                             />
                             {errors.description && (
-                                <span className="text-xs text-orange-600">{errors.description as string}</span>
+                                <span className="text-xs text-orange-600">
+                                    {errors.description as string}
+                                </span>
                             )}
                         </div>
 
                         <div className="space-y-2">
                             <Label>Files *</Label>
-                            <div className="border-2 border-dashed border-gray-300 rounded-md p-4 text-center">
-                                <label htmlFor="file-upload" className="cursor-pointer">
+                            <div className="rounded-md border-2 border-dashed border-gray-300 p-4 text-center">
+                                <label
+                                    htmlFor="file-upload"
+                                    className="cursor-pointer"
+                                >
                                     <FileUp className="mx-auto h-8 w-8 text-gray-400" />
                                     <span className="mt-2 block text-sm text-gray-600">
-                                        Click to upload files (PDF, JPG, PNG, DOC, DOCX)
+                                        Click to upload files (PDF, JPG, PNG,
+                                        DOC, DOCX)
                                     </span>
-                                    <span className="text-xs text-gray-400">Max 10MB each</span>
+                                    <span className="text-xs text-gray-400">
+                                        Max 10MB each
+                                    </span>
                                 </label>
                                 <input
                                     id="file-upload"
@@ -154,10 +187,14 @@ export function CreateDocumentDialog({ isOpen, onClose, documentTypes }: CreateD
                                             key={index}
                                             className="flex items-center justify-between rounded bg-gray-50 px-2 py-1 text-sm"
                                         >
-                                            <span className="truncate">{file.name}</span>
+                                            <span className="truncate">
+                                                {file.name}
+                                            </span>
                                             <button
                                                 type="button"
-                                                onClick={() => removeFile(index)}
+                                                onClick={() =>
+                                                    removeFile(index)
+                                                }
                                                 className="text-red-500 hover:text-red-700"
                                             >
                                                 <X className="h-4 w-4" />
@@ -166,7 +203,11 @@ export function CreateDocumentDialog({ isOpen, onClose, documentTypes }: CreateD
                                     ))}
                                 </div>
                             )}
-                            {errors.files && <span className="text-xs text-orange-600">{errors.files as string}</span>}
+                            {errors.files && (
+                                <span className="text-xs text-orange-600">
+                                    {errors.files as string}
+                                </span>
+                            )}
                         </div>
                     </div>
                     <DialogFooter className="mt-4">

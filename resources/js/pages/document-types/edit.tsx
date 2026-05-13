@@ -1,5 +1,13 @@
 import { Button } from '@/components/ui/button';
-import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import {
+    Dialog,
+    DialogClose,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+} from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
@@ -16,7 +24,11 @@ interface EditDialogProps {
     documentType: DocumentType;
 }
 
-export function EditDocumentTypeDialog({ isOpen, onClose, documentType }: EditDialogProps) {
+export function EditDocumentTypeDialog({
+    isOpen,
+    onClose,
+    documentType,
+}: EditDialogProps) {
     const { data, setData, put, errors, processing } = useForm({
         name: documentType.name,
         description: documentType.description || '',
@@ -32,7 +44,7 @@ export function EditDocumentTypeDialog({ isOpen, onClose, documentType }: EditDi
 
     const onSubmit: SubmitEventHandler = (e) => {
         e.preventDefault();
-        put(documentTypes.update(documentType), {
+        put(documentTypes.update(documentType.id).url, {
             onSuccess: (response) => {
                 const flash = response.props as unknown as FlashProps;
                 toast.success(flash.flash?.message || 'Updated successfully.');
@@ -46,7 +58,7 @@ export function EditDocumentTypeDialog({ isOpen, onClose, documentType }: EditDi
 
     return (
         <Dialog open={isOpen} onOpenChange={onClose}>
-            <DialogContent className="sm:max-w-sm rounded-md">
+            <DialogContent className="rounded-md sm:max-w-sm">
                 <form onSubmit={onSubmit}>
                     <DialogHeader className="mb-4">
                         <DialogTitle>Edit Document Type</DialogTitle>
@@ -63,7 +75,11 @@ export function EditDocumentTypeDialog({ isOpen, onClose, documentType }: EditDi
                                 defaultValue={documentType.name}
                                 onChange={onChangeInput}
                             />
-                            {errors.name && <span className="text-xs text-orange-600">{errors.name}</span>}
+                            {errors.name && (
+                                <span className="text-xs text-orange-600">
+                                    {errors.name}
+                                </span>
+                            )}
                         </div>
                         <div className="space-y-2">
                             <Label htmlFor="description">Description</Label>
@@ -74,14 +90,22 @@ export function EditDocumentTypeDialog({ isOpen, onClose, documentType }: EditDi
                                 onChange={onChangeTextarea}
                                 rows={3}
                             />
-                            {errors.description && <span className="text-xs text-orange-600">{errors.description}</span>}
+                            {errors.description && (
+                                <span className="text-xs text-orange-600">
+                                    {errors.description}
+                                </span>
+                            )}
                         </div>
                     </div>
                     <DialogFooter className="mt-4">
                         <DialogClose asChild>
-                            <Button type="button" variant="outline">Cancel</Button>
+                            <Button type="button" variant="outline">
+                                Cancel
+                            </Button>
                         </DialogClose>
-                        <Button type="submit" disabled={processing}>Save Changes</Button>
+                        <Button type="submit" disabled={processing}>
+                            Save Changes
+                        </Button>
                     </DialogFooter>
                 </form>
             </DialogContent>
