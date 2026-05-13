@@ -1,35 +1,35 @@
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import type { FlashProps } from '@/types/flash';
-import type { DocumentType } from '@/types/document-type';
+import type { Document } from '@/types/document';
 import { useForm } from '@inertiajs/react';
 import { SubmitEventHandler } from 'react';
 import { toast } from 'sonner';
-import documentTypes from '@/routes/document-types';
+import documents from '@/routes/documents';
 
 interface DeleteDialogProps {
     isOpen: boolean;
     onClose: () => void;
-    documentType: DocumentType;
+    document: Document;
 }
 
-export function DeleteDocumentTypeDialog({ isOpen, onClose, documentType }: DeleteDialogProps) {
+export function DeleteDocumentDialog({ isOpen, onClose, document }: DeleteDialogProps) {
     const { delete: destroy, processing } = useForm();
 
     const onSubmit: SubmitEventHandler = (e) => {
         e.preventDefault();
-        destroy(documentTypes.destroy(documentType), {
+        destroy(documents.destroy(document), {
             onSuccess: (response) => {
                 const flash = response.props as unknown as FlashProps;
                 if (flash.flash?.type === 'error') {
                     toast.error(flash.flash.message || 'Failed to delete.');
                 } else {
-                    toast.success(flash.flash?.message || 'Deleted successfully.');
+                    toast.success(flash.flash?.message || 'Document deleted successfully.');
                 }
                 onClose();
             },
             onError: () => {
-                toast.error('Failed to delete.');
+                toast.error('Failed to delete document.');
             },
         });
     };
@@ -39,16 +39,21 @@ export function DeleteDocumentTypeDialog({ isOpen, onClose, documentType }: Dele
             <DialogContent className="sm:max-w-sm rounded-md">
                 <form onSubmit={onSubmit}>
                     <DialogHeader className="mb-4">
-                        <DialogTitle>Delete Document Type</DialogTitle>
+                        <DialogTitle>Delete Document</DialogTitle>
                         <DialogDescription className="text-xs">
-                            Are you sure you want to delete "{documentType.name}"? This action cannot be undone.
+                            Are you sure you want to delete "{document.title}" (Tracking: {document.tracking_number})?
+                            This action cannot be undone. All associated files will also be deleted.
                         </DialogDescription>
                     </DialogHeader>
                     <DialogFooter>
                         <DialogClose asChild>
-                            <Button type="button" variant="outline">Cancel</Button>
+                            <Button type="button" variant="outline">
+                                Cancel
+                            </Button>
                         </DialogClose>
-                        <Button type="submit" variant="destructive" disabled={processing}>Delete</Button>
+                        <Button type="submit" variant="destructive" disabled={processing}>
+                            Delete
+                        </Button>
                     </DialogFooter>
                 </form>
             </DialogContent>

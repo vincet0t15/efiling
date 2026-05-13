@@ -1,5 +1,13 @@
 import { Button } from '@/components/ui/button';
-import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import {
+    Dialog,
+    DialogClose,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+} from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
@@ -8,30 +16,40 @@ import type { DocumentTypeCreateRequest } from '@/types/document-type';
 import { useForm } from '@inertiajs/react';
 import { toast } from 'sonner';
 import type { ChangeEventHandler, SubmitEventHandler } from 'react';
-import { documentTypes } from '@/routes/document-types';
+import documentTypes from '@/routes/document-types';
 
 interface CreateDialogProps {
     isOpen: boolean;
     onClose: () => void;
 }
 
-export function CreateDocumentTypeDialog({ isOpen, onClose }: CreateDialogProps) {
-    const { data, setData, post, reset, errors, processing } = useForm<DocumentTypeCreateRequest>({
-        name: '',
-        description: '',
-    });
+export function CreateDocumentTypeDialog({
+    isOpen,
+    onClose,
+}: CreateDialogProps) {
+    const { data, setData, post, reset, errors, processing } =
+        useForm<DocumentTypeCreateRequest>({
+            name: '',
+            description: '',
+        });
 
     const onChangeInput: ChangeEventHandler<HTMLInputElement> = (e) => {
-        setData(e.target.name as keyof DocumentTypeCreateRequest, e.target.value);
+        setData(
+            e.target.name as keyof DocumentTypeCreateRequest,
+            e.target.value,
+        );
     };
 
     const onChangeTextarea: ChangeEventHandler<HTMLTextAreaElement> = (e) => {
-        setData(e.target.name as keyof DocumentTypeCreateRequest, e.target.value);
+        setData(
+            e.target.name as keyof DocumentTypeCreateRequest,
+            e.target.value,
+        );
     };
 
     const onSubmit: SubmitEventHandler = (e) => {
         e.preventDefault();
-        post(documentTypes.store(), {
+        post(documentTypes.store().url, {
             onSuccess: (response) => {
                 const flash = response.props as unknown as FlashProps;
                 toast.success(flash.flash?.message || 'Created successfully.');
@@ -46,7 +64,7 @@ export function CreateDocumentTypeDialog({ isOpen, onClose }: CreateDialogProps)
 
     return (
         <Dialog open={isOpen} onOpenChange={onClose}>
-            <DialogContent className="sm:max-w-sm rounded-md">
+            <DialogContent className="rounded-md sm:max-w-sm">
                 <form onSubmit={onSubmit}>
                     <DialogHeader className="mb-4">
                         <DialogTitle>Create Document Type</DialogTitle>
@@ -64,7 +82,11 @@ export function CreateDocumentTypeDialog({ isOpen, onClose }: CreateDialogProps)
                                 value={data.name}
                                 onChange={onChangeInput}
                             />
-                            {errors.name && <span className="text-xs text-orange-600">{errors.name}</span>}
+                            {errors.name && (
+                                <span className="text-xs text-orange-600">
+                                    {errors.name}
+                                </span>
+                            )}
                         </div>
                         <div className="space-y-2">
                             <Label htmlFor="description">Description</Label>
@@ -76,14 +98,22 @@ export function CreateDocumentTypeDialog({ isOpen, onClose }: CreateDialogProps)
                                 onChange={onChangeTextarea}
                                 rows={3}
                             />
-                            {errors.description && <span className="text-xs text-orange-600">{errors.description}</span>}
+                            {errors.description && (
+                                <span className="text-xs text-orange-600">
+                                    {errors.description}
+                                </span>
+                            )}
                         </div>
                     </div>
                     <DialogFooter className="mt-4">
                         <DialogClose asChild>
-                            <Button type="button" variant="outline">Cancel</Button>
+                            <Button type="button" variant="outline">
+                                Cancel
+                            </Button>
                         </DialogClose>
-                        <Button type="submit" disabled={processing}>Create</Button>
+                        <Button type="submit" disabled={processing}>
+                            Create
+                        </Button>
                     </DialogFooter>
                 </form>
             </DialogContent>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\DocumentType;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Inertia\Inertia;
 use Inertia\Response as InertiaResponse;
 
 class DocumentTypeController extends Controller
@@ -35,7 +36,7 @@ class DocumentTypeController extends Controller
         ]);
     }
 
-    public function store(Request $request): Response
+    public function store(Request $request)
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255|unique:document_types,name',
@@ -44,12 +45,10 @@ class DocumentTypeController extends Controller
 
         DocumentType::create($validated);
 
-        $this->flash('Document type created successfully.');
-
-        return back();
+        return back()->with('success', 'Document type created successfully.');
     }
 
-    public function update(Request $request, DocumentType $documentType): Response
+    public function update(Request $request, DocumentType $documentType)
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255|unique:document_types,name,' . $documentType->id,
@@ -58,12 +57,10 @@ class DocumentTypeController extends Controller
 
         $documentType->update($validated);
 
-        $this->flash('Document type updated successfully.');
-
-        return back();
+        return back()->with('success', 'Document type updated successfully.');
     }
 
-    public function destroy(DocumentType $documentType): Response
+    public function destroy(DocumentType $documentType)
     {
         if ($documentType->documents()->exists()) {
             $this->flash('Cannot delete document type that has associated documents.', 'error');
@@ -72,8 +69,6 @@ class DocumentTypeController extends Controller
 
         $documentType->delete();
 
-        $this->flash('Document type deleted successfully.');
-
-        return back();
+        return back()->with('success', 'Document type deleted successfully.');
     }
 }

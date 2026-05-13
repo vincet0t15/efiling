@@ -8,7 +8,7 @@ import type { DocumentType } from '@/types/document-type';
 import { useForm } from '@inertiajs/react';
 import { toast } from 'sonner';
 import type { ChangeEventHandler, SubmitEventHandler } from 'react';
-import { documentTypes } from '@/routes/document-types';
+import documentTypes from '@/routes/document-types';
 
 interface EditDialogProps {
     isOpen: boolean;
