@@ -49,9 +49,9 @@ export default function DocumentShow({ document: doc }: ShowProps) {
         post: postUpdate,
         reset: resetUpdate,
         errors: updateErrors,
-    } = useForm({
+    } = useForm<{ description: string; files: File[] }>({
         description: '',
-        files: [] as File[],
+        files: [],
     });
 
     const [openUploadFileDialog, setOpenUploadFileDialog] = useState(false);
@@ -61,7 +61,7 @@ export default function DocumentShow({ document: doc }: ShowProps) {
         if (e.target.files) {
             const newFiles = Array.from(e.target.files);
             setSelectedFiles((prev) => [...prev, ...newFiles]);
-            setUpdateData('files', (prev) => [...(prev || []), ...newFiles]);
+            setUpdateData('files', [...selectedFiles, ...newFiles]);
         }
     };
 
