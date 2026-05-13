@@ -1,6 +1,17 @@
 {
-  "files": {},
+  "files": {
+    "resources/js/pages/documents/show.tsx": {
+      "modifiedRanges": [
+        {
+          "start": 1,
+          "end": 576
+        }
+      ],
+      "importsChanged": true,
+      "lastEdit": "2026-05-13T07:29:27.150Z"
+    }
+  },
   "turnCycles": 0,
   "maxCycles": 3,
-  "lastUpdated": "2026-05-13T06:38:23.313Z"
+  "lastUpdated": "2026-05-13T07:29:27.150Z"
 }

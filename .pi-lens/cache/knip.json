@@ -178,18 +178,18 @@
     },
     {
       "type": "file",
-      "name": "resources/js/layouts/app-layout.tsx",
-      "file": "resources/js/layouts/app-layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/auth-layout.tsx",
-      "file": "resources/js/layouts/auth-layout.tsx"
-    },
-    {
-      "type": "file",
       "name": "resources/js/lib/utils.ts",
       "file": "resources/js/lib/utils.ts"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/dashboard.tsx",
+      "file": "resources/js/pages/dashboard.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/welcome.tsx",
+      "file": "resources/js/pages/welcome.tsx"
     },
     {
       "type": "file",
@@ -208,13 +208,13 @@
     },
     {
       "type": "file",
-      "name": "resources/js/pages/dashboard.tsx",
-      "file": "resources/js/pages/dashboard.tsx"
+      "name": "resources/js/layouts/app-layout.tsx",
+      "file": "resources/js/layouts/app-layout.tsx"
     },
     {
       "type": "file",
-      "name": "resources/js/pages/welcome.tsx",
-      "file": "resources/js/pages/welcome.tsx"
+      "name": "resources/js/layouts/auth-layout.tsx",
+      "file": "resources/js/layouts/auth-layout.tsx"
     },
     {
       "type": "file",
@@ -373,21 +373,6 @@
     },
     {
       "type": "file",
-      "name": "resources/js/layouts/app/app-header-layout.tsx",
-      "file": "resources/js/layouts/app/app-header-layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/app/app-sidebar-layout.tsx",
-      "file": "resources/js/layouts/app/app-sidebar-layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/settings/layout.tsx",
-      "file": "resources/js/layouts/settings/layout.tsx"
-    },
-    {
-      "type": "file",
       "name": "resources/js/pages/document-types/create.tsx",
       "file": "resources/js/pages/document-types/create.tsx"
     },
@@ -405,6 +390,21 @@
       "type": "file",
       "name": "resources/js/pages/document-types/index.tsx",
       "file": "resources/js/pages/document-types/index.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/settings/appearance.tsx",
+      "file": "resources/js/pages/settings/appearance.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/settings/profile.tsx",
+      "file": "resources/js/pages/settings/profile.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/settings/security.tsx",
+      "file": "resources/js/pages/settings/security.tsx"
     },
     {
       "type": "file",
@@ -468,18 +468,13 @@
     },
     {
       "type": "file",
-      "name": "resources/js/pages/settings/appearance.tsx",
-      "file": "resources/js/pages/settings/appearance.tsx"
+      "name": "resources/js/layouts/app/app-header-layout.tsx",
+      "file": "resources/js/layouts/app/app-header-layout.tsx"
     },
     {
       "type": "file",
-      "name": "resources/js/pages/settings/profile.tsx",
-      "file": "resources/js/pages/settings/profile.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/pages/settings/security.tsx",
-      "file": "resources/js/pages/settings/security.tsx"
+      "name": "resources/js/layouts/app/app-sidebar-layout.tsx",
+      "file": "resources/js/layouts/app/app-sidebar-layout.tsx"
     },
     {
       "type": "file",
@@ -495,6 +490,11 @@
       "type": "file",
       "name": "resources/js/layouts/auth/auth-split-layout.tsx",
       "file": "resources/js/layouts/auth/auth-split-layout.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/layouts/settings/layout.tsx",
+      "file": "resources/js/layouts/settings/layout.tsx"
     },
     {
       "type": "dependency",
@@ -899,18 +899,18 @@
     },
     {
       "type": "file",
-      "name": "resources/js/layouts/app-layout.tsx",
-      "file": "resources/js/layouts/app-layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/auth-layout.tsx",
-      "file": "resources/js/layouts/auth-layout.tsx"
-    },
-    {
-      "type": "file",
       "name": "resources/js/lib/utils.ts",
       "file": "resources/js/lib/utils.ts"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/dashboard.tsx",
+      "file": "resources/js/pages/dashboard.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/welcome.tsx",
+      "file": "resources/js/pages/welcome.tsx"
     },
     {
       "type": "file",
@@ -929,13 +929,13 @@
     },
     {
       "type": "file",
-      "name": "resources/js/pages/dashboard.tsx",
-      "file": "resources/js/pages/dashboard.tsx"
+      "name": "resources/js/layouts/app-layout.tsx",
+      "file": "resources/js/layouts/app-layout.tsx"
     },
     {
       "type": "file",
-      "name": "resources/js/pages/welcome.tsx",
-      "file": "resources/js/pages/welcome.tsx"
+      "name": "resources/js/layouts/auth-layout.tsx",
+      "file": "resources/js/layouts/auth-layout.tsx"
     },
     {
       "type": "file",
@@ -1094,21 +1094,6 @@
     },
     {
       "type": "file",
-      "name": "resources/js/layouts/app/app-header-layout.tsx",
-      "file": "resources/js/layouts/app/app-header-layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/app/app-sidebar-layout.tsx",
-      "file": "resources/js/layouts/app/app-sidebar-layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/settings/layout.tsx",
-      "file": "resources/js/layouts/settings/layout.tsx"
-    },
-    {
-      "type": "file",
       "name": "resources/js/pages/document-types/create.tsx",
       "file": "resources/js/pages/document-types/create.tsx"
     },
@@ -1126,6 +1111,21 @@
       "type": "file",
       "name": "resources/js/pages/document-types/index.tsx",
       "file": "resources/js/pages/document-types/index.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/settings/appearance.tsx",
+      "file": "resources/js/pages/settings/appearance.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/settings/profile.tsx",
+      "file": "resources/js/pages/settings/profile.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/settings/security.tsx",
+      "file": "resources/js/pages/settings/security.tsx"
     },
     {
       "type": "file",
@@ -1189,18 +1189,13 @@
     },
     {
       "type": "file",
-      "name": "resources/js/pages/settings/appearance.tsx",
-      "file": "resources/js/pages/settings/appearance.tsx"
+      "name": "resources/js/layouts/app/app-header-layout.tsx",
+      "file": "resources/js/layouts/app/app-header-layout.tsx"
     },
     {
       "type": "file",
-      "name": "resources/js/pages/settings/profile.tsx",
-      "file": "resources/js/pages/settings/profile.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/pages/settings/security.tsx",
-      "file": "resources/js/pages/settings/security.tsx"
+      "name": "resources/js/layouts/app/app-sidebar-layout.tsx",
+      "file": "resources/js/layouts/app/app-sidebar-layout.tsx"
     },
     {
       "type": "file",
@@ -1216,6 +1211,11 @@
       "type": "file",
       "name": "resources/js/layouts/auth/auth-split-layout.tsx",
       "file": "resources/js/layouts/auth/auth-split-layout.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/layouts/settings/layout.tsx",
+      "file": "resources/js/layouts/settings/layout.tsx"
     }
   ],
   "unusedDeps": [

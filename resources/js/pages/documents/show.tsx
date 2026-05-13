@@ -32,10 +32,9 @@ import {
 } from '@/components/ui/dialog';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
+import documents from '@/routes/documents';
 import type { Document } from '@/types/document';
 import type { FlashProps } from '@/types/flash';
-
-import documents from '@/routes/documents';
 
 interface ShowProps {
     document: Document;
@@ -120,7 +119,6 @@ export default function DocumentShow({ document: doc }: ShowProps) {
         });
     };
 
-    
     return (
         <>
             <Head title={`Document - ${doc.tracking_number}`} />
@@ -149,14 +147,13 @@ export default function DocumentShow({ document: doc }: ShowProps) {
                                     <span className="text-border">•</span>
                                     <span>
                                         Created{' '}
-                                        {new Date(doc.created_at).toLocaleDateString(
-                                            'en-US',
-                                            {
-                                                month: 'short',
-                                                day: 'numeric',
-                                                year: 'numeric',
-                                            },
-                                        )}
+                                        {new Date(
+                                            doc.created_at,
+                                        ).toLocaleDateString('en-US', {
+                                            month: 'short',
+                                            day: 'numeric',
+                                            year: 'numeric',
+                                        })}
                                     </span>
                                 </p>
                             </div>
@@ -189,8 +186,9 @@ export default function DocumentShow({ document: doc }: ShowProps) {
                                 </CardTitle>
                             </CardHeader>
                             <CardContent className="pt-5">
-                                <p className="text-sm leading-7 text-muted-foreground whitespace-pre-wrap">
-                                    {doc.description || 'No description provided.'}
+                                <p className="text-sm leading-7 whitespace-pre-wrap text-muted-foreground">
+                                    {doc.description ||
+                                        'No description provided.'}
                                 </p>
                             </CardContent>
                         </Card>
@@ -222,7 +220,7 @@ export default function DocumentShow({ document: doc }: ShowProps) {
                                                     <FileText className="h-5 w-5 text-primary" />
                                                 </div>
                                                 <div className="min-w-0 flex-1 space-y-1 pr-10">
-                                                    <p className="truncate text-sm font-medium leading-tight">
+                                                    <p className="truncate text-sm leading-tight font-medium">
                                                         {file.original_filename}
                                                     </p>
                                                     <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
@@ -236,7 +234,9 @@ export default function DocumentShow({ document: doc }: ShowProps) {
                                                                   )} KB`
                                                                 : 'Unknown'}
                                                         </span>
-                                                        <span className="text-border">•</span>
+                                                        <span className="text-border">
+                                                            •
+                                                        </span>
                                                         <span className="uppercase">
                                                             {file.file_type?.split(
                                                                 '/',
@@ -246,7 +246,7 @@ export default function DocumentShow({ document: doc }: ShowProps) {
                                                         </span>
                                                     </div>
                                                 </div>
-                                                <div className="absolute right-2 top-2 flex items-center gap-0.5 opacity-0 transition-opacity group-hover:opacity-100">
+                                                <div className="absolute top-2 right-2 flex items-center gap-0.5 opacity-0 transition-opacity group-hover:opacity-100">
                                                     <Button
                                                         variant="ghost"
                                                         size="icon"
@@ -360,7 +360,7 @@ export default function DocumentShow({ document: doc }: ShowProps) {
                         {/* Document Info Card */}
                         <Card className="overflow-hidden shadow-sm ring-1 ring-border/50">
                             <CardHeader className="border-b bg-muted/30 pb-4">
-                                <CardTitle className="text-sm font-medium uppercase tracking-wide text-muted-foreground">
+                                <CardTitle className="text-sm font-medium tracking-wide text-muted-foreground uppercase">
                                     Information
                                 </CardTitle>
                             </CardHeader>
@@ -370,7 +370,7 @@ export default function DocumentShow({ document: doc }: ShowProps) {
                                         <Tag className="h-4 w-4 text-muted-foreground" />
                                     </div>
                                     <div className="space-y-0.5">
-                                        <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                                        <p className="text-xs font-medium tracking-wide text-muted-foreground uppercase">
                                             Document Type
                                         </p>
                                         <p className="text-sm font-medium">
@@ -384,7 +384,7 @@ export default function DocumentShow({ document: doc }: ShowProps) {
                                         <User className="h-4 w-4 text-muted-foreground" />
                                     </div>
                                     <div className="space-y-0.5">
-                                        <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                                        <p className="text-xs font-medium tracking-wide text-muted-foreground uppercase">
                                             Created By
                                         </p>
                                         <p className="text-sm font-medium">
@@ -398,18 +398,17 @@ export default function DocumentShow({ document: doc }: ShowProps) {
                                         <Calendar className="h-4 w-4 text-muted-foreground" />
                                     </div>
                                     <div className="space-y-0.5">
-                                        <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                                        <p className="text-xs font-medium tracking-wide text-muted-foreground uppercase">
                                             Created Date
                                         </p>
                                         <p className="text-sm font-medium">
-                                            {new Date(doc.created_at).toLocaleDateString(
-                                                'en-US',
-                                                {
-                                                    month: 'short',
-                                                    day: 'numeric',
-                                                    year: 'numeric',
-                                                },
-                                            )}
+                                            {new Date(
+                                                doc.created_at,
+                                            ).toLocaleDateString('en-US', {
+                                                month: 'short',
+                                                day: 'numeric',
+                                                year: 'numeric',
+                                            })}
                                         </p>
                                     </div>
                                 </div>
@@ -419,18 +418,17 @@ export default function DocumentShow({ document: doc }: ShowProps) {
                                         <Clock className="h-4 w-4 text-muted-foreground" />
                                     </div>
                                     <div className="space-y-0.5">
-                                        <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                                        <p className="text-xs font-medium tracking-wide text-muted-foreground uppercase">
                                             Last Updated
                                         </p>
                                         <p className="text-sm font-medium">
-                                            {new Date(doc.updated_at).toLocaleDateString(
-                                                'en-US',
-                                                {
-                                                    month: 'short',
-                                                    day: 'numeric',
-                                                    year: 'numeric',
-                                                },
-                                            )}
+                                            {new Date(
+                                                doc.updated_at,
+                                            ).toLocaleDateString('en-US', {
+                                                month: 'short',
+                                                day: 'numeric',
+                                                year: 'numeric',
+                                            })}
                                         </p>
                                     </div>
                                 </div>
@@ -440,7 +438,7 @@ export default function DocumentShow({ document: doc }: ShowProps) {
                         {/* Quick Actions Card */}
                         <Card className="overflow-hidden shadow-sm ring-1 ring-border/50">
                             <CardHeader className="border-b bg-muted/30 pb-4">
-                                <CardTitle className="text-sm font-medium uppercase tracking-wide text-muted-foreground">
+                                <CardTitle className="text-sm font-medium tracking-wide text-muted-foreground uppercase">
                                     Quick Actions
                                 </CardTitle>
                             </CardHeader>
