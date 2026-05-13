@@ -13,61 +13,6 @@
     },
     {
       "type": "file",
-      "name": "resources/js/hooks/use-appearance.tsx",
-      "file": "resources/js/hooks/use-appearance.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/hooks/use-clipboard.ts",
-      "file": "resources/js/hooks/use-clipboard.ts"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/hooks/use-current-url.ts",
-      "file": "resources/js/hooks/use-current-url.ts"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/hooks/use-flash-toast.ts",
-      "file": "resources/js/hooks/use-flash-toast.ts"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/hooks/use-initials.tsx",
-      "file": "resources/js/hooks/use-initials.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/hooks/use-mobile-navigation.ts",
-      "file": "resources/js/hooks/use-mobile-navigation.ts"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/hooks/use-mobile.tsx",
-      "file": "resources/js/hooks/use-mobile.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/hooks/use-two-factor-auth.ts",
-      "file": "resources/js/hooks/use-two-factor-auth.ts"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/app-layout.tsx",
-      "file": "resources/js/layouts/app-layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/auth-layout.tsx",
-      "file": "resources/js/layouts/auth-layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/lib/utils.ts",
-      "file": "resources/js/lib/utils.ts"
-    },
-    {
-      "type": "file",
       "name": "resources/js/components/alert-error.tsx",
       "file": "resources/js/components/alert-error.tsx"
     },
@@ -193,6 +138,61 @@
     },
     {
       "type": "file",
+      "name": "resources/js/hooks/use-appearance.tsx",
+      "file": "resources/js/hooks/use-appearance.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/hooks/use-clipboard.ts",
+      "file": "resources/js/hooks/use-clipboard.ts"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/hooks/use-current-url.ts",
+      "file": "resources/js/hooks/use-current-url.ts"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/hooks/use-flash-toast.ts",
+      "file": "resources/js/hooks/use-flash-toast.ts"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/hooks/use-initials.tsx",
+      "file": "resources/js/hooks/use-initials.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/hooks/use-mobile-navigation.ts",
+      "file": "resources/js/hooks/use-mobile-navigation.ts"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/hooks/use-mobile.tsx",
+      "file": "resources/js/hooks/use-mobile.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/hooks/use-two-factor-auth.ts",
+      "file": "resources/js/hooks/use-two-factor-auth.ts"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/layouts/app-layout.tsx",
+      "file": "resources/js/layouts/app-layout.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/layouts/auth-layout.tsx",
+      "file": "resources/js/layouts/auth-layout.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/lib/utils.ts",
+      "file": "resources/js/lib/utils.ts"
+    },
+    {
+      "type": "file",
       "name": "resources/js/pages/dashboard.tsx",
       "file": "resources/js/pages/dashboard.tsx"
     },
@@ -215,71 +215,6 @@
       "type": "file",
       "name": "resources/js/types/ui.ts",
       "file": "resources/js/types/ui.ts"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/app/app-header-layout.tsx",
-      "file": "resources/js/layouts/app/app-header-layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/app/app-sidebar-layout.tsx",
-      "file": "resources/js/layouts/app/app-sidebar-layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/auth/auth-card-layout.tsx",
-      "file": "resources/js/layouts/auth/auth-card-layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/auth/auth-simple-layout.tsx",
-      "file": "resources/js/layouts/auth/auth-simple-layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/auth/auth-split-layout.tsx",
-      "file": "resources/js/layouts/auth/auth-split-layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/settings/layout.tsx",
-      "file": "resources/js/layouts/settings/layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/pages/auth/confirm-password.tsx",
-      "file": "resources/js/pages/auth/confirm-password.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/pages/auth/forgot-password.tsx",
-      "file": "resources/js/pages/auth/forgot-password.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/pages/auth/login.tsx",
-      "file": "resources/js/pages/auth/login.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/pages/auth/register.tsx",
-      "file": "resources/js/pages/auth/register.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/pages/auth/reset-password.tsx",
-      "file": "resources/js/pages/auth/reset-password.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/pages/auth/two-factor-challenge.tsx",
-      "file": "resources/js/pages/auth/two-factor-challenge.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/pages/auth/verify-email.tsx",
-      "file": "resources/js/pages/auth/verify-email.tsx"
     },
     {
       "type": "file",
@@ -438,6 +373,71 @@
     },
     {
       "type": "file",
+      "name": "resources/js/layouts/app/app-header-layout.tsx",
+      "file": "resources/js/layouts/app/app-header-layout.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/layouts/app/app-sidebar-layout.tsx",
+      "file": "resources/js/layouts/app/app-sidebar-layout.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/layouts/auth/auth-card-layout.tsx",
+      "file": "resources/js/layouts/auth/auth-card-layout.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/layouts/auth/auth-simple-layout.tsx",
+      "file": "resources/js/layouts/auth/auth-simple-layout.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/layouts/auth/auth-split-layout.tsx",
+      "file": "resources/js/layouts/auth/auth-split-layout.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/layouts/settings/layout.tsx",
+      "file": "resources/js/layouts/settings/layout.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/auth/confirm-password.tsx",
+      "file": "resources/js/pages/auth/confirm-password.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/auth/forgot-password.tsx",
+      "file": "resources/js/pages/auth/forgot-password.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/auth/login.tsx",
+      "file": "resources/js/pages/auth/login.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/auth/register.tsx",
+      "file": "resources/js/pages/auth/register.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/auth/reset-password.tsx",
+      "file": "resources/js/pages/auth/reset-password.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/auth/two-factor-challenge.tsx",
+      "file": "resources/js/pages/auth/two-factor-challenge.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/auth/verify-email.tsx",
+      "file": "resources/js/pages/auth/verify-email.tsx"
+    },
+    {
+      "type": "file",
       "name": "resources/js/pages/document-types/create.tsx",
       "file": "resources/js/pages/document-types/create.tsx"
     },
@@ -455,6 +455,21 @@
       "type": "file",
       "name": "resources/js/pages/document-types/index.tsx",
       "file": "resources/js/pages/document-types/index.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/settings/appearance.tsx",
+      "file": "resources/js/pages/settings/appearance.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/settings/profile.tsx",
+      "file": "resources/js/pages/settings/profile.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/settings/security.tsx",
+      "file": "resources/js/pages/settings/security.tsx"
     },
     {
       "type": "file",
@@ -480,21 +495,6 @@
       "type": "file",
       "name": "resources/js/pages/documents/show.tsx",
       "file": "resources/js/pages/documents/show.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/pages/settings/appearance.tsx",
-      "file": "resources/js/pages/settings/appearance.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/pages/settings/profile.tsx",
-      "file": "resources/js/pages/settings/profile.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/pages/settings/security.tsx",
-      "file": "resources/js/pages/settings/security.tsx"
     },
     {
       "type": "dependency",
@@ -734,61 +734,6 @@
     },
     {
       "type": "file",
-      "name": "resources/js/hooks/use-appearance.tsx",
-      "file": "resources/js/hooks/use-appearance.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/hooks/use-clipboard.ts",
-      "file": "resources/js/hooks/use-clipboard.ts"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/hooks/use-current-url.ts",
-      "file": "resources/js/hooks/use-current-url.ts"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/hooks/use-flash-toast.ts",
-      "file": "resources/js/hooks/use-flash-toast.ts"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/hooks/use-initials.tsx",
-      "file": "resources/js/hooks/use-initials.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/hooks/use-mobile-navigation.ts",
-      "file": "resources/js/hooks/use-mobile-navigation.ts"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/hooks/use-mobile.tsx",
-      "file": "resources/js/hooks/use-mobile.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/hooks/use-two-factor-auth.ts",
-      "file": "resources/js/hooks/use-two-factor-auth.ts"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/app-layout.tsx",
-      "file": "resources/js/layouts/app-layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/auth-layout.tsx",
-      "file": "resources/js/layouts/auth-layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/lib/utils.ts",
-      "file": "resources/js/lib/utils.ts"
-    },
-    {
-      "type": "file",
       "name": "resources/js/components/alert-error.tsx",
       "file": "resources/js/components/alert-error.tsx"
     },
@@ -914,6 +859,61 @@
     },
     {
       "type": "file",
+      "name": "resources/js/hooks/use-appearance.tsx",
+      "file": "resources/js/hooks/use-appearance.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/hooks/use-clipboard.ts",
+      "file": "resources/js/hooks/use-clipboard.ts"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/hooks/use-current-url.ts",
+      "file": "resources/js/hooks/use-current-url.ts"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/hooks/use-flash-toast.ts",
+      "file": "resources/js/hooks/use-flash-toast.ts"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/hooks/use-initials.tsx",
+      "file": "resources/js/hooks/use-initials.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/hooks/use-mobile-navigation.ts",
+      "file": "resources/js/hooks/use-mobile-navigation.ts"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/hooks/use-mobile.tsx",
+      "file": "resources/js/hooks/use-mobile.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/hooks/use-two-factor-auth.ts",
+      "file": "resources/js/hooks/use-two-factor-auth.ts"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/layouts/app-layout.tsx",
+      "file": "resources/js/layouts/app-layout.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/layouts/auth-layout.tsx",
+      "file": "resources/js/layouts/auth-layout.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/lib/utils.ts",
+      "file": "resources/js/lib/utils.ts"
+    },
+    {
+      "type": "file",
       "name": "resources/js/pages/dashboard.tsx",
       "file": "resources/js/pages/dashboard.tsx"
     },
@@ -936,71 +936,6 @@
       "type": "file",
       "name": "resources/js/types/ui.ts",
       "file": "resources/js/types/ui.ts"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/app/app-header-layout.tsx",
-      "file": "resources/js/layouts/app/app-header-layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/app/app-sidebar-layout.tsx",
-      "file": "resources/js/layouts/app/app-sidebar-layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/auth/auth-card-layout.tsx",
-      "file": "resources/js/layouts/auth/auth-card-layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/auth/auth-simple-layout.tsx",
-      "file": "resources/js/layouts/auth/auth-simple-layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/auth/auth-split-layout.tsx",
-      "file": "resources/js/layouts/auth/auth-split-layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/settings/layout.tsx",
-      "file": "resources/js/layouts/settings/layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/pages/auth/confirm-password.tsx",
-      "file": "resources/js/pages/auth/confirm-password.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/pages/auth/forgot-password.tsx",
-      "file": "resources/js/pages/auth/forgot-password.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/pages/auth/login.tsx",
-      "file": "resources/js/pages/auth/login.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/pages/auth/register.tsx",
-      "file": "resources/js/pages/auth/register.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/pages/auth/reset-password.tsx",
-      "file": "resources/js/pages/auth/reset-password.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/pages/auth/two-factor-challenge.tsx",
-      "file": "resources/js/pages/auth/two-factor-challenge.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/pages/auth/verify-email.tsx",
-      "file": "resources/js/pages/auth/verify-email.tsx"
     },
     {
       "type": "file",
@@ -1159,6 +1094,71 @@
     },
     {
       "type": "file",
+      "name": "resources/js/layouts/app/app-header-layout.tsx",
+      "file": "resources/js/layouts/app/app-header-layout.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/layouts/app/app-sidebar-layout.tsx",
+      "file": "resources/js/layouts/app/app-sidebar-layout.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/layouts/auth/auth-card-layout.tsx",
+      "file": "resources/js/layouts/auth/auth-card-layout.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/layouts/auth/auth-simple-layout.tsx",
+      "file": "resources/js/layouts/auth/auth-simple-layout.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/layouts/auth/auth-split-layout.tsx",
+      "file": "resources/js/layouts/auth/auth-split-layout.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/layouts/settings/layout.tsx",
+      "file": "resources/js/layouts/settings/layout.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/auth/confirm-password.tsx",
+      "file": "resources/js/pages/auth/confirm-password.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/auth/forgot-password.tsx",
+      "file": "resources/js/pages/auth/forgot-password.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/auth/login.tsx",
+      "file": "resources/js/pages/auth/login.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/auth/register.tsx",
+      "file": "resources/js/pages/auth/register.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/auth/reset-password.tsx",
+      "file": "resources/js/pages/auth/reset-password.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/auth/two-factor-challenge.tsx",
+      "file": "resources/js/pages/auth/two-factor-challenge.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/auth/verify-email.tsx",
+      "file": "resources/js/pages/auth/verify-email.tsx"
+    },
+    {
+      "type": "file",
       "name": "resources/js/pages/document-types/create.tsx",
       "file": "resources/js/pages/document-types/create.tsx"
     },
@@ -1176,6 +1176,21 @@
       "type": "file",
       "name": "resources/js/pages/document-types/index.tsx",
       "file": "resources/js/pages/document-types/index.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/settings/appearance.tsx",
+      "file": "resources/js/pages/settings/appearance.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/settings/profile.tsx",
+      "file": "resources/js/pages/settings/profile.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/settings/security.tsx",
+      "file": "resources/js/pages/settings/security.tsx"
     },
     {
       "type": "file",
@@ -1201,21 +1216,6 @@
       "type": "file",
       "name": "resources/js/pages/documents/show.tsx",
       "file": "resources/js/pages/documents/show.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/pages/settings/appearance.tsx",
-      "file": "resources/js/pages/settings/appearance.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/pages/settings/profile.tsx",
-      "file": "resources/js/pages/settings/profile.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/pages/settings/security.tsx",
-      "file": "resources/js/pages/settings/security.tsx"
     }
   ],
   "unusedDeps": [

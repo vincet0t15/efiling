@@ -275,7 +275,32 @@
         }
       ],
       "trend": "stable"
+    },
+    "resources\\js\\pages\\documents\\index.tsx": {
+      "latest": {
+        "commit": "296261d",
+        "timestamp": "2026-05-13T09:10:07.752Z",
+        "mi": 21.1,
+        "cognitive": 38,
+        "nesting": 4,
+        "lines": 293,
+        "maxCyclomatic": 42,
+        "entropy": 6.17
+      },
+      "history": [
+        {
+          "commit": "296261d",
+          "timestamp": "2026-05-13T09:10:07.752Z",
+          "mi": 21.1,
+          "cognitive": 38,
+          "nesting": 4,
+          "lines": 293,
+          "maxCyclomatic": 42,
+          "entropy": 6.17
+        }
+      ],
+      "trend": "stable"
     }
   },
-  "capturedAt": "2026-05-13T07:57:21.725Z"
+  "capturedAt": "2026-05-13T09:10:12.760Z"
 }

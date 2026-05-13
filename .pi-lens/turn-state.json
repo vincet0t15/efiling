@@ -1,17 +1,17 @@
 {
   "files": {
-    "resources/js/pages/documents/create.tsx": {
+    "resources/js/pages/documents/index.tsx": {
       "modifiedRanges": [
         {
           "start": 1,
-          "end": 486
+          "end": 336
         }
       ],
       "importsChanged": true,
-      "lastEdit": "2026-05-13T08:34:22.577Z"
+      "lastEdit": "2026-05-13T09:28:51.964Z"
     }
   },
   "turnCycles": 0,
   "maxCycles": 3,
-  "lastUpdated": "2026-05-13T08:34:22.577Z"
+  "lastUpdated": "2026-05-13T09:28:51.964Z"
 }

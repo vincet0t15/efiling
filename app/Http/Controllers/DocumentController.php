@@ -93,7 +93,8 @@ class DocumentController extends Controller
             }
         }
 
-        return redirect()->back()->with('flash', [
+        // Return success response with flash message and redirect to index
+        return to_route('documents.index')->with('flash', [
             'message' => 'Document created successfully.',
             'tracking_number' => $document->tracking_number,
         ]);

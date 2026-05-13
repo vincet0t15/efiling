@@ -84,11 +84,7 @@ export default function CreatePage({ documentTypes }: PageProps) {
         post(documents.store().url, {
             onSuccess: (response) => {
                 const flash = response.props as unknown as FlashProps;
-                const trackingNumber = (
-                    response.props as unknown as {
-                        flash?: { tracking_number?: string };
-                    }
-                )?.flash?.tracking_number;
+                const trackingNumber = flash.flash?.tracking_number;
 
                 if (trackingNumber) {
                     setCreatedTrackingNumber(trackingNumber);

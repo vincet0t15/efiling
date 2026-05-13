@@ -1,4 +1,4 @@
 {
-  "signature": "resources/js/pages/documents/create.tsx::Unresolved from this turn — resources/js/pages/documents/create.tsx:\n🔴 STOP — 2 issue(s) must be fixed:\n  L90: @stylistic/padding-line-between-statements: Expected blank line before this statement.\n  L99: @stylistic/padding-line-between-statements: Expected blank line before this statement.",
+  "signature": "resources/js/pages/documents/index.tsx::Unresolved from this turn — resources/js/pages/documents/index.tsx:\n🔴 STOP — 4 issue(s) must be fixed:\n  L113: @stylistic/padding-line-between-statements: Expected blank line before this statement.\n  L113: curly: Expected { after 'if' condition.\n  L114: @stylistic/padding-line-between-statements: Expected blank line before this statement.\n  L120: @stylistic/padding-line-between-statements: Expected blank line before this statement.",
   "sessionId": "lens-mp3jf15a-88a7e95b"
 }
