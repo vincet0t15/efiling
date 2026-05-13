@@ -33,6 +33,9 @@ import {
 } from '@/components/ui/dialog';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
+import type { Document } from '@/types/document';
+import type { FlashProps } from '@/types/flash';
+
 import documents from '@/routes/documents';
 
 interface ShowProps {
@@ -138,117 +141,150 @@ export default function DocumentShow({ document: doc }: ShowProps) {
         <>
             <Head title={`Document - ${doc.tracking_number}`} />
 
-            <div className="flex flex-1 flex-col gap-6 p-4 md:p-6">
-                {/* Header */}
-                <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                    <div className="flex items-center gap-3">
-                        <Button
-                            variant="ghost"
-                            size="icon"
-                            className="h-9 w-9"
-                            onClick={() => router.get(documents.index())}
-                        >
-                            <ArrowLeft className="h-5 w-5" />
-                        </Button>
-                        <div>
-                            <h1 className="text-2xl font-bold tracking-tight text-foreground">
-                                {doc.title}
-                            </h1>
-                            <p className="text-sm text-muted-foreground">
-                                Tracking No: {doc.tracking_number}
-                            </p>
+            <div className="flex flex-1 flex-col gap-6 p-4 md:p-6 lg:p-8">
+                {/* Header Section */}
+                <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-background via-background to-primary/5 p-6 shadow-sm ring-1 ring-border/50">
+                    <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                        <div className="flex items-start gap-4">
+                            <Button
+                                variant="ghost"
+                                size="icon"
+                                className="h-10 w-10 shrink-0 rounded-lg bg-muted/50 hover:bg-muted"
+                                onClick={() => router.get(documents.index())}
+                            >
+                                <ArrowLeft className="h-5 w-5" />
+                            </Button>
+                            <div className="space-y-1">
+                                <h1 className="text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
+                                    {doc.title}
+                                </h1>
+                                <p className="flex items-center gap-2 text-sm text-muted-foreground">
+                                    <span className="font-mono text-xs">
+                                        {doc.tracking_number}
+                                    </span>
+                                    <span className="text-border">•</span>
+                                    <span>
+                                        Created{' '}
+                                        {new Date(doc.created_at).toLocaleDateString(
+                                            'en-US',
+                                            {
+                                                month: 'short',
+                                                day: 'numeric',
+                                                year: 'numeric',
+                                            },
+                                        )}
+                                    </span>
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div className="flex items-center gap-2">
-                        <Badge
-                            className={`px-3 py-1 ${getStatusBadge(doc.status)}`}
-                        >
-                            {doc.status?.replace('_', ' ').toUpperCase()}
-                        </Badge>
-                        <Button
-                            size="sm"
-                            onClick={() => setOpenUploadFileDialog(true)}
-                            className="gap-2"
-                        >
-                            <Upload className="h-4 w-4" />
-                            Add Update
-                        </Button>
+                        <div className="flex items-center gap-3">
+                            <Badge
+                                className={`px-3.5 py-1.5 text-xs font-medium shadow-sm ${getStatusBadge(
+                                    doc.status,
+                                )}`}
+                            >
+                                {doc.status?.replace('_', ' ').toUpperCase()}
+                            </Badge>
+                            <Button
+                                size="sm"
+                                onClick={() => setOpenUploadFileDialog(true)}
+                                className="gap-2 shadow-sm"
+                            >
+                                <Upload className="h-4 w-4" />
+                                Add Update
+                            </Button>
+                        </div>
                     </div>
                 </div>
 
                 {/* Main Content */}
-                <div className="grid grid-cols-1 gap-6 lg:grid-cols-4">
+                <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
                     {/* Left Column - Document Details */}
-                    <div className="space-y-6 lg:col-span-3">
+                    <div className="space-y-6 lg:col-span-8">
                         {/* Description Card */}
-                        <Card className="overflow-hidden">
-                            <CardHeader className="bg-gradient-to-r from-primary/5 to-transparent pb-4">
-                                <CardTitle className="flex items-center gap-2 text-lg">
-                                    <FileText className="h-5 w-5 text-primary" />
-                                    Document Details
+                        <Card className="overflow-hidden shadow-sm ring-1 ring-border/50">
+                            <CardHeader className="border-b bg-muted/30 pb-4">
+                                <CardTitle className="flex items-center gap-2.5 text-base font-medium">
+                                    <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10">
+                                        <FileText className="h-4 w-4 text-primary" />
+                                    </div>
+                                    Document Description
                                 </CardTitle>
                             </CardHeader>
-                            <CardContent className="pt-4">
-                                <p className="text-sm leading-relaxed whitespace-pre-wrap text-foreground/80">
-                                    {doc.description ||
-                                        'No description provided.'}
+                            <CardContent className="pt-5">
+                                <p className="text-sm leading-7 text-muted-foreground whitespace-pre-wrap">
+                                    {doc.description || 'No description provided.'}
                                 </p>
                             </CardContent>
                         </Card>
 
                         {/* Files Card */}
-                        <Card className="overflow-hidden">
-                            <CardHeader className="bg-gradient-to-r from-primary/5 to-transparent pb-4">
+                        <Card className="overflow-hidden shadow-sm ring-1 ring-border/50">
+                            <CardHeader className="border-b bg-muted/30 pb-4">
                                 <div className="flex items-center justify-between">
-                                    <CardTitle className="flex items-center gap-2 text-lg">
-                                        <FileStack className="h-5 w-5 text-primary" />
+                                    <CardTitle className="flex items-center gap-2.5 text-base font-medium">
+                                        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10">
+                                            <FileStack className="h-4 w-4 text-primary" />
+                                        </div>
                                         Attached Files
                                     </CardTitle>
-                                    <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+                                    <span className="rounded-md bg-muted px-2.5 py-1 text-xs font-medium text-muted-foreground">
                                         {doc.files?.length || 0} files
                                     </span>
                                 </div>
                             </CardHeader>
-                            <CardContent className="pt-4">
+                            <CardContent className="pt-5">
                                 {doc.files && doc.files.length > 0 ? (
-                                    <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                                    <div className="grid gap-3 sm:grid-cols-2">
                                         {doc.files.map((file) => (
                                             <div
                                                 key={file.id}
-                                                className="group relative flex items-start gap-3 rounded-lg border border-border p-3 transition-all hover:border-primary/50 hover:bg-accent/50"
+                                                className="group relative flex items-start gap-3 rounded-lg border border-border/60 p-3.5 transition-all hover:border-primary/40 hover:shadow-md hover:shadow-primary/5"
                                             >
-                                                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                                                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-primary/10 to-primary/5 shadow-inner">
                                                     <FileText className="h-5 w-5 text-primary" />
                                                 </div>
-                                                <div className="min-w-0 flex-1">
-                                                    <p className="truncate text-sm font-medium">
+                                                <div className="min-w-0 flex-1 space-y-1">
+                                                    <p className="truncate text-sm font-medium leading-tight">
                                                         {file.original_filename}
                                                     </p>
-                                                    <p className="text-xs text-muted-foreground">
-                                                        {file.file_size
-                                                            ? `${(file.file_size / 1024).toFixed(1)} KB`
-                                                            : 'Unknown size'}{' '}
-                                                        •{' '}
-                                                        {file.file_type ||
-                                                            'Unknown type'}
-                                                    </p>
+                                                    <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                                                        <span>
+                                                            {file.file_size
+                                                                ? `${(
+                                                                      file.file_size /
+                                                                      1024
+                                                                  ).toFixed(
+                                                                      1,
+                                                                  )} KB`
+                                                                : 'Unknown'}
+                                                        </span>
+                                                        <span className="text-border">•</span>
+                                                        <span className="uppercase">
+                                                            {file.file_type?.split(
+                                                                '/',
+                                                            )[1] ||
+                                                                file.file_type ||
+                                                                'File'}
+                                                        </span>
+                                                    </div>
                                                 </div>
-                                                <div className="flex items-center gap-1 opacity-0 transition-opacity group-hover:opacity-100">
+                                                <div className="absolute right-2 top-2 flex items-center gap-0.5 opacity-0 transition-opacity group-hover:opacity-100">
                                                     <Button
                                                         variant="ghost"
                                                         size="icon"
-                                                        className="h-8 w-8"
+                                                        className="h-7 w-7 hover:bg-muted"
                                                         title="View"
                                                         onClick={() =>
                                                             handleView(file.id)
                                                         }
                                                     >
-                                                        <Eye className="h-4 w-4" />
+                                                        <Eye className="h-3.5 w-3.5" />
                                                     </Button>
                                                     <Button
                                                         variant="ghost"
                                                         size="icon"
-                                                        className="h-8 w-8"
+                                                        className="h-7 w-7 hover:bg-muted"
                                                         title="Download"
                                                         onClick={() =>
                                                             handleDownload(
@@ -256,11 +292,11 @@ export default function DocumentShow({ document: doc }: ShowProps) {
                                                             )
                                                         }
                                                     >
-                                                        <Download className="h-4 w-4" />
+                                                        <Download className="h-3.5 w-3.5" />
                                                     </Button>
                                                     <DeleteConfirmationDialog
                                                         title="Delete File"
-                                                        description={`Delete "${file.original_filename}"?`}
+                                                        description={`Delete "${file.original_filename}"? This action cannot be undone.`}
                                                         onConfirm={() =>
                                                             handleDeleteFile(
                                                                 file.id,
@@ -270,10 +306,10 @@ export default function DocumentShow({ document: doc }: ShowProps) {
                                                         <Button
                                                             variant="ghost"
                                                             size="icon"
-                                                            className="h-8 w-8 text-red-500 hover:text-red-600"
+                                                            className="h-7 w-7 text-red-500/80 hover:bg-red-500/10 hover:text-red-600"
                                                             title="Delete"
                                                         >
-                                                            <Trash2 className="h-4 w-4" />
+                                                            <Trash2 className="h-3.5 w-3.5" />
                                                         </Button>
                                                     </DeleteConfirmationDialog>
                                                 </div>
@@ -282,9 +318,14 @@ export default function DocumentShow({ document: doc }: ShowProps) {
                                     </div>
                                 ) : (
                                     <div className="flex flex-col items-center justify-center py-12 text-center">
-                                        <FileStack className="h-12 w-12 text-muted-foreground/50" />
-                                        <p className="mt-2 text-sm text-muted-foreground">
+                                        <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-muted">
+                                            <FileStack className="h-7 w-7 text-muted-foreground/50" />
+                                        </div>
+                                        <p className="text-sm font-medium text-muted-foreground">
                                             No files uploaded yet
+                                        </p>
+                                        <p className="mt-1 text-xs text-muted-foreground/70">
+                                            Attach files to this document
                                         </p>
                                     </div>
                                 )}
@@ -293,24 +334,28 @@ export default function DocumentShow({ document: doc }: ShowProps) {
 
                         {/* Document Updates */}
                         {doc.updates && doc.updates.length > 0 && (
-                            <Card className="overflow-hidden">
-                                <CardHeader className="bg-gradient-to-r from-primary/5 to-transparent pb-4">
-                                    <CardTitle className="flex items-center gap-2 text-lg">
-                                        <Clock className="h-5 w-5 text-primary" />
+                            <Card className="overflow-hidden shadow-sm ring-1 ring-border/50">
+                                <CardHeader className="border-b bg-muted/30 pb-4">
+                                    <CardTitle className="flex items-center gap-2.5 text-base font-medium">
+                                        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10">
+                                            <Clock className="h-4 w-4 text-primary" />
+                                        </div>
                                         Document Timeline
                                     </CardTitle>
                                 </CardHeader>
-                                <CardContent className="pt-4">
-                                    <div className="relative space-y-6 before:absolute before:top-2 before:left-4 before:h-full before:w-0.5 before:bg-border before:content-['']">
+                                <CardContent className="pt-5">
+                                    <div className="relative space-y-6 pl-2 before:absolute before:top-3 before:left-[15px] before:h-[calc(100%-24px)] before:w-0.5 before:bg-gradient-to-b before:from-primary/30 before:to-transparent before:content-['']">
                                         {doc.updates.map((update, index) => (
                                             <div
                                                 key={update.id || index}
                                                 className="relative flex gap-4"
                                             >
-                                                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-background bg-primary/10">
-                                                    <Clock className="h-4 w-4 text-primary" />
+                                                <div className="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-background bg-gradient-to-br from-primary/20 to-primary/10 shadow-sm ring-1 ring-primary/20">
+                                                    <span className="text-xs font-semibold text-primary">
+                                                        {index + 1}
+                                                    </span>
                                                 </div>
-                                                <div className="flex-1 pb-6">
+                                                <div className="flex-1 pb-4">
                                                     <div className="flex items-center justify-between">
                                                         <p className="text-sm font-medium">
                                                             Update #{index + 1}
@@ -321,7 +366,7 @@ export default function DocumentShow({ document: doc }: ShowProps) {
                                                             )}
                                                         </span>
                                                     </div>
-                                                    <p className="mt-1 text-sm text-foreground/80">
+                                                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                                                         {update.description}
                                                     </p>
                                                 </div>
@@ -334,34 +379,35 @@ export default function DocumentShow({ document: doc }: ShowProps) {
                     </div>
 
                     {/* Right Column - Sidebar Info */}
-                    <div className="space-y-6">
+                    <div className="space-y-6 lg:col-span-4">
                         {/* Document Info Card */}
-                        <Card className="overflow-hidden">
-                            <CardHeader className="bg-gradient-to-r from-primary/5 to-transparent pb-4">
-                                <CardTitle className="text-base">
+                        <Card className="overflow-hidden shadow-sm ring-1 ring-border/50">
+                            <CardHeader className="border-b bg-muted/30 pb-4">
+                                <CardTitle className="text-sm font-medium uppercase tracking-wide text-muted-foreground">
                                     Information
                                 </CardTitle>
                             </CardHeader>
-                            <CardContent className="space-y-4 pt-4">
-                                <div className="flex items-center gap-3">
-                                    <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary/10">
-                                        <Tag className="h-4 w-4 text-primary" />
+                            <CardContent className="space-y-5 pt-5">
+                                <div className="flex items-center gap-4">
+                                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-muted">
+                                        <Tag className="h-4 w-4 text-muted-foreground" />
                                     </div>
-                                    <div>
-                                        <p className="text-xs text-muted-foreground">
-                                            Type
+                                    <div className="space-y-0.5">
+                                        <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                                            Document Type
                                         </p>
                                         <p className="text-sm font-medium">
                                             {doc.document_type?.name || 'N/A'}
                                         </p>
                                     </div>
                                 </div>
-                                <div className="flex items-center gap-3">
-                                    <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary/10">
-                                        <User className="h-4 w-4 text-primary" />
+                                <div className="h-px bg-border/60" />
+                                <div className="flex items-center gap-4">
+                                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-muted">
+                                        <User className="h-4 w-4 text-muted-foreground" />
                                     </div>
-                                    <div>
-                                        <p className="text-xs text-muted-foreground">
+                                    <div className="space-y-0.5">
+                                        <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
                                             Created By
                                         </p>
                                         <p className="text-sm font-medium">
@@ -369,32 +415,79 @@ export default function DocumentShow({ document: doc }: ShowProps) {
                                         </p>
                                     </div>
                                 </div>
-                                <div className="flex items-center gap-3">
-                                    <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary/10">
-                                        <Calendar className="h-4 w-4 text-primary" />
+                                <div className="h-px bg-border/60" />
+                                <div className="flex items-center gap-4">
+                                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-muted">
+                                        <Calendar className="h-4 w-4 text-muted-foreground" />
                                     </div>
-                                    <div>
-                                        <p className="text-xs text-muted-foreground">
-                                            Created
+                                    <div className="space-y-0.5">
+                                        <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                                            Created Date
                                         </p>
                                         <p className="text-sm font-medium">
-                                            {formatDate(doc.created_at)}
+                                            {new Date(doc.created_at).toLocaleDateString(
+                                                'en-US',
+                                                {
+                                                    month: 'short',
+                                                    day: 'numeric',
+                                                    year: 'numeric',
+                                                },
+                                            )}
                                         </p>
                                     </div>
                                 </div>
-                                <div className="flex items-center gap-3">
-                                    <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary/10">
-                                        <Clock className="h-4 w-4 text-primary" />
+                                <div className="h-px bg-border/60" />
+                                <div className="flex items-center gap-4">
+                                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-muted">
+                                        <Clock className="h-4 w-4 text-muted-foreground" />
                                     </div>
-                                    <div>
-                                        <p className="text-xs text-muted-foreground">
+                                    <div className="space-y-0.5">
+                                        <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
                                             Last Updated
                                         </p>
                                         <p className="text-sm font-medium">
-                                            {formatDate(doc.updated_at)}
+                                            {new Date(doc.updated_at).toLocaleDateString(
+                                                'en-US',
+                                                {
+                                                    month: 'short',
+                                                    day: 'numeric',
+                                                    year: 'numeric',
+                                                },
+                                            )}
                                         </p>
                                     </div>
                                 </div>
+                            </CardContent>
+                        </Card>
+
+                        {/* Quick Actions Card */}
+                        <Card className="overflow-hidden shadow-sm ring-1 ring-border/50">
+                            <CardHeader className="border-b bg-muted/30 pb-4">
+                                <CardTitle className="text-sm font-medium uppercase tracking-wide text-muted-foreground">
+                                    Quick Actions
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent className="space-y-2 pt-5">
+                                <Button
+                                    variant="outline"
+                                    className="w-full justify-start gap-2"
+                                    onClick={() =>
+                                        router.get(documents.index())
+                                    }
+                                >
+                                    <ArrowLeft className="h-4 w-4" />
+                                    Back to Documents
+                                </Button>
+                                <Button
+                                    variant="outline"
+                                    className="w-full justify-start gap-2"
+                                    onClick={() =>
+                                        setOpenUploadFileDialog(true)
+                                    }
+                                >
+                                    <Upload className="h-4 w-4" />
+                                    Add New Update
+                                </Button>
                             </CardContent>
                         </Card>
                     </div>

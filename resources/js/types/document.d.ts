@@ -3,6 +3,7 @@ export interface Document {
     tracking_number: string;
     title: string;
     description: string | null;
+    status: string;
     document_type_id: number;
     user_id: number;
     created_at: string;

@@ -21,6 +21,7 @@ interface DeleteConfirmationDialogProps {
     description?: string;
     onConfirm: () => void;
     loading?: boolean;
+    children?: ReactNode;
 }
 
 export function DeleteConfirmationDialog({
@@ -29,6 +30,7 @@ export function DeleteConfirmationDialog({
     description = 'Are you sure you want to delete this item? This action cannot be undone.',
     onConfirm,
     loading = false,
+    children,
 }: DeleteConfirmationDialogProps) {
     const [open, setOpen] = useState(false);
 
@@ -40,7 +42,7 @@ export function DeleteConfirmationDialog({
     return (
         <AlertDialog open={open} onOpenChange={setOpen}>
             <AlertDialogTrigger asChild>
-                {trigger || (
+                {trigger || children || (
                     <Button
                         variant="ghost"
                         size="icon"
