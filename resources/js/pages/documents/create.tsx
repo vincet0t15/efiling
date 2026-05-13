@@ -360,122 +360,128 @@ export function CreateDocumentDialog({
     };
 
     return (
-        <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-            <DialogContent className="max-h-[90vh] overflow-y-auto">
-                <DialogHeader>
-                    <DialogTitle>Upload Document</DialogTitle>
-                    <DialogDescription>
-                        Submit a new document for processing.
-                    </DialogDescription>
-                </DialogHeader>
-                <form onSubmit={onSubmit} className="space-y-4">
-                    <div className="space-y-2">
-                        <Label htmlFor="dialog-title">Title *</Label>
-                        <Input
-                            id="dialog-title"
-                            name="title"
-                            placeholder="Enter document title"
-                            value={data.title}
-                            onChange={onChangeInput}
-                            className={errors.title ? 'border-red-500' : ''}
-                        />
-                        {errors.title && (
-                            <p className="text-sm text-red-500">
-                                {errors.title}
-                            </p>
-                        )}
-                    </div>
-
-                    <div className="space-y-2">
-                        <Label htmlFor="dialog-description">Description</Label>
-                        <Textarea
-                            id="dialog-description"
-                            name="description"
-                            placeholder="Enter document description"
-                            value={data.description}
-                            onChange={onChangeTextarea}
-                            className={
-                                errors.description ? 'border-red-500' : ''
-                            }
-                        />
-                    </div>
-
-                    <div className="space-y-2">
-                        <Label>Document Type *</Label>
-                        <CustomComboBox
-                            items={documentTypeOptions}
-                            placeholder="Select document type"
-                            value={data.document_type_id}
-                            onSelect={onDocumentTypeChange}
-                        />
-                        {errors.document_type_id && (
-                            <p className="text-sm text-red-500">
-                                {errors.document_type_id}
-                            </p>
-                        )}
-                    </div>
-
-                    <div className="space-y-2">
-                        <Label>Files *</Label>
-                        <div className="rounded-md border border-dashed p-4">
-                            <div className="flex flex-col items-center justify-center gap-2">
-                                <Input
-                                    type="file"
-                                    multiple
-                                    accept=".pdf"
-                                    onChange={handleFileChange}
-                                    className="hidden"
-                                    id="dialog-file-upload"
-                                />
-                                <Label
-                                    htmlFor="dialog-file-upload"
-                                    className="cursor-pointer rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
-                                >
-                                    <FileUp className="mr-2 inline h-4 w-4" />
-                                    Choose Files
-                                </Label>
-                            </div>
+        <>
+            <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
+                <DialogContent className="max-h-[90vh] overflow-y-auto">
+                    <DialogHeader>
+                        <DialogTitle>Upload Document</DialogTitle>
+                        <DialogDescription>
+                            Submit a new document for processing.
+                        </DialogDescription>
+                    </DialogHeader>
+                    <form onSubmit={onSubmit} className="space-y-4">
+                        <div className="space-y-2">
+                            <Label htmlFor="dialog-title">Title *</Label>
+                            <Input
+                                id="dialog-title"
+                                name="title"
+                                placeholder="Enter document title"
+                                value={data.title}
+                                onChange={onChangeInput}
+                                className={errors.title ? 'border-red-500' : ''}
+                            />
+                            {errors.title && (
+                                <p className="text-sm text-red-500">
+                                    {errors.title}
+                                </p>
+                            )}
                         </div>
-                        {selectedFiles.length > 0 && (
-                            <div className="space-y-1">
-                                {selectedFiles.map((file, index) => (
-                                    <div
-                                        key={index}
-                                        className="flex items-center justify-between rounded bg-muted px-2 py-1 text-sm"
-                                    >
-                                        <span className="truncate">
-                                            {file.name}
-                                        </span>
-                                        <button
-                                            type="button"
-                                            onClick={() => removeFile(index)}
-                                            className="text-red-500"
-                                        >
-                                            <X className="h-4 w-4" />
-                                        </button>
-                                    </div>
-                                ))}
-                            </div>
-                        )}
-                        {errors.files && (
-                            <p className="text-sm text-orange-600">
-                                {errors.files as string}
-                            </p>
-                        )}
-                    </div>
 
-                    <DialogFooter>
-                        <DialogClose asChild>
-                            <Button type="button" variant="outline">
-                                Cancel
+                        <div className="space-y-2">
+                            <Label htmlFor="dialog-description">
+                                Description
+                            </Label>
+                            <Textarea
+                                id="dialog-description"
+                                name="description"
+                                placeholder="Enter document description"
+                                value={data.description}
+                                onChange={onChangeTextarea}
+                                className={
+                                    errors.description ? 'border-red-500' : ''
+                                }
+                            />
+                        </div>
+
+                        <div className="space-y-2">
+                            <Label>Document Type *</Label>
+                            <CustomComboBox
+                                items={documentTypeOptions}
+                                placeholder="Select document type"
+                                value={data.document_type_id}
+                                onSelect={onDocumentTypeChange}
+                            />
+                            {errors.document_type_id && (
+                                <p className="text-sm text-red-500">
+                                    {errors.document_type_id}
+                                </p>
+                            )}
+                        </div>
+
+                        <div className="space-y-2">
+                            <Label>Files *</Label>
+                            <div className="rounded-md border border-dashed p-4">
+                                <div className="flex flex-col items-center justify-center gap-2">
+                                    <Input
+                                        type="file"
+                                        multiple
+                                        accept=".pdf"
+                                        onChange={handleFileChange}
+                                        className="hidden"
+                                        id="dialog-file-upload"
+                                    />
+                                    <Label
+                                        htmlFor="dialog-file-upload"
+                                        className="cursor-pointer rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
+                                    >
+                                        <FileUp className="mr-2 inline h-4 w-4" />
+                                        Choose Files
+                                    </Label>
+                                </div>
+                            </div>
+                            {selectedFiles.length > 0 && (
+                                <div className="space-y-1">
+                                    {selectedFiles.map((file, index) => (
+                                        <div
+                                            key={index}
+                                            className="flex items-center justify-between rounded bg-muted px-2 py-1 text-sm"
+                                        >
+                                            <span className="truncate">
+                                                {file.name}
+                                            </span>
+                                            <button
+                                                type="button"
+                                                onClick={() =>
+                                                    removeFile(index)
+                                                }
+                                                className="text-red-500"
+                                            >
+                                                <X className="h-4 w-4" />
+                                            </button>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+                            {errors.files && (
+                                <p className="text-sm text-orange-600">
+                                    {errors.files as string}
+                                </p>
+                            )}
+                        </div>
+
+                        <DialogFooter>
+                            <DialogClose asChild>
+                                <Button type="button" variant="outline">
+                                    Cancel
+                                </Button>
+                            </DialogClose>
+                            <Button type="submit" disabled={processing}>
+                                {processing ? 'Uploading...' : 'Upload'}
                             </Button>
-                        </DialogClose>
-                        <Button type="submit" disabled={processing}>
-                            {processing ? 'Uploading...' : 'Upload'}
-                        </Button>
-                    </DialogFooter>
-                </form>
-            </DialogContent>
-        </Dialog>
+                        </DialogFooter>
+                    </form>
+                </DialogContent>
+            </Dialog>
+        </>
     );
 }

@@ -138,6 +138,16 @@
     },
     {
       "type": "file",
+      "name": "resources/js/pages/dashboard.tsx",
+      "file": "resources/js/pages/dashboard.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/welcome.tsx",
+      "file": "resources/js/pages/welcome.tsx"
+    },
+    {
+      "type": "file",
       "name": "resources/js/hooks/use-appearance.tsx",
       "file": "resources/js/hooks/use-appearance.tsx"
     },
@@ -178,18 +188,13 @@
     },
     {
       "type": "file",
-      "name": "resources/js/lib/utils.ts",
-      "file": "resources/js/lib/utils.ts"
+      "name": "resources/js/layouts/app-layout.tsx",
+      "file": "resources/js/layouts/app-layout.tsx"
     },
     {
       "type": "file",
-      "name": "resources/js/pages/dashboard.tsx",
-      "file": "resources/js/pages/dashboard.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/pages/welcome.tsx",
-      "file": "resources/js/pages/welcome.tsx"
+      "name": "resources/js/layouts/auth-layout.tsx",
+      "file": "resources/js/layouts/auth-layout.tsx"
     },
     {
       "type": "file",
@@ -208,13 +213,8 @@
     },
     {
       "type": "file",
-      "name": "resources/js/layouts/app-layout.tsx",
-      "file": "resources/js/layouts/app-layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/auth-layout.tsx",
-      "file": "resources/js/layouts/auth-layout.tsx"
+      "name": "resources/js/lib/utils.ts",
+      "file": "resources/js/lib/utils.ts"
     },
     {
       "type": "file",
@@ -408,26 +408,6 @@
     },
     {
       "type": "file",
-      "name": "resources/js/pages/document-types/create.tsx",
-      "file": "resources/js/pages/document-types/create.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/pages/document-types/delete.tsx",
-      "file": "resources/js/pages/document-types/delete.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/pages/document-types/edit.tsx",
-      "file": "resources/js/pages/document-types/edit.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/pages/document-types/index.tsx",
-      "file": "resources/js/pages/document-types/index.tsx"
-    },
-    {
-      "type": "file",
       "name": "resources/js/pages/documents/create.tsx",
       "file": "resources/js/pages/documents/create.tsx"
     },
@@ -450,6 +430,26 @@
       "type": "file",
       "name": "resources/js/pages/documents/show.tsx",
       "file": "resources/js/pages/documents/show.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/document-types/create.tsx",
+      "file": "resources/js/pages/document-types/create.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/document-types/delete.tsx",
+      "file": "resources/js/pages/document-types/delete.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/document-types/edit.tsx",
+      "file": "resources/js/pages/document-types/edit.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/document-types/index.tsx",
+      "file": "resources/js/pages/document-types/index.tsx"
     },
     {
       "type": "file",
@@ -859,6 +859,16 @@
     },
     {
       "type": "file",
+      "name": "resources/js/pages/dashboard.tsx",
+      "file": "resources/js/pages/dashboard.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/welcome.tsx",
+      "file": "resources/js/pages/welcome.tsx"
+    },
+    {
+      "type": "file",
       "name": "resources/js/hooks/use-appearance.tsx",
       "file": "resources/js/hooks/use-appearance.tsx"
     },
@@ -899,18 +909,13 @@
     },
     {
       "type": "file",
-      "name": "resources/js/lib/utils.ts",
-      "file": "resources/js/lib/utils.ts"
+      "name": "resources/js/layouts/app-layout.tsx",
+      "file": "resources/js/layouts/app-layout.tsx"
     },
     {
       "type": "file",
-      "name": "resources/js/pages/dashboard.tsx",
-      "file": "resources/js/pages/dashboard.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/pages/welcome.tsx",
-      "file": "resources/js/pages/welcome.tsx"
+      "name": "resources/js/layouts/auth-layout.tsx",
+      "file": "resources/js/layouts/auth-layout.tsx"
     },
     {
       "type": "file",
@@ -929,13 +934,8 @@
     },
     {
       "type": "file",
-      "name": "resources/js/layouts/app-layout.tsx",
-      "file": "resources/js/layouts/app-layout.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/layouts/auth-layout.tsx",
-      "file": "resources/js/layouts/auth-layout.tsx"
+      "name": "resources/js/lib/utils.ts",
+      "file": "resources/js/lib/utils.ts"
     },
     {
       "type": "file",
@@ -1129,26 +1129,6 @@
     },
     {
       "type": "file",
-      "name": "resources/js/pages/document-types/create.tsx",
-      "file": "resources/js/pages/document-types/create.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/pages/document-types/delete.tsx",
-      "file": "resources/js/pages/document-types/delete.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/pages/document-types/edit.tsx",
-      "file": "resources/js/pages/document-types/edit.tsx"
-    },
-    {
-      "type": "file",
-      "name": "resources/js/pages/document-types/index.tsx",
-      "file": "resources/js/pages/document-types/index.tsx"
-    },
-    {
-      "type": "file",
       "name": "resources/js/pages/documents/create.tsx",
       "file": "resources/js/pages/documents/create.tsx"
     },
@@ -1171,6 +1151,26 @@
       "type": "file",
       "name": "resources/js/pages/documents/show.tsx",
       "file": "resources/js/pages/documents/show.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/document-types/create.tsx",
+      "file": "resources/js/pages/document-types/create.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/document-types/delete.tsx",
+      "file": "resources/js/pages/document-types/delete.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/document-types/edit.tsx",
+      "file": "resources/js/pages/document-types/edit.tsx"
+    },
+    {
+      "type": "file",
+      "name": "resources/js/pages/document-types/index.tsx",
+      "file": "resources/js/pages/document-types/index.tsx"
     },
     {
       "type": "file",

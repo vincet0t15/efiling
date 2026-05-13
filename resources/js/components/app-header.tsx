@@ -11,12 +11,6 @@ import {
     DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import {
-    NavigationMenu,
-    NavigationMenuItem,
-    NavigationMenuList,
-    navigationMenuTriggerStyle,
-} from '@/components/ui/navigation-menu';
-import {
     Sheet,
     SheetContent,
     SheetHeader,
@@ -54,18 +48,16 @@ const mainNavItems: NavItem[] = [
     },
 ];
 
-const activeItemStyles =
-    'text-neutral-900 dark:text-neutral-100 bg-neutral-100/50 dark:bg-neutral-800/50';
 
 export function AppHeader({ breadcrumbs = [] }: Props) {
     const page = usePage();
     const { auth } = page.props;
     const getInitials = useInitials();
-    const { isCurrentUrl, whenCurrentUrl } = useCurrentUrl();
+    const { isCurrentUrl } = useCurrentUrl();
 
     return (
         <>
-            <div className="border-b border-neutral-200/50 bg-white dark:border-neutral-800 dark:bg-neutral-950">
+            <div className="sticky top-0 z-50 border-b border-neutral-200/50 bg-white/95 backdrop-blur-sm dark:border-neutral-800 dark:bg-neutral-950/95">
                 <div className="mx-auto flex h-16 items-center px-4 md:max-w-7xl">
                     {/* Mobile Menu */}
                     <div className="lg:hidden">
@@ -103,16 +95,24 @@ export function AppHeader({ breadcrumbs = [] }: Props) {
                                             key={item.title}
                                             href={item.href}
                                             className={cn(
-                                                'flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-all',
+                                                'group flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-all duration-200',
                                                 isCurrentUrl(item.href)
-                                                    ? 'bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400'
+                                                    ? 'bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary'
                                                     : 'text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900 dark:text-neutral-400 dark:hover:bg-neutral-800 dark:hover:text-white',
                                             )}
                                         >
                                             {item.icon && (
-                                                <item.icon className="h-5 w-5" />
+                                                <item.icon className={cn(
+                                                    'h-5 w-5 transition-colors duration-200',
+                                                    isCurrentUrl(item.href)
+                                                        ? 'text-primary dark:text-primary'
+                                                        : 'text-neutral-500 group-hover:text-neutral-700 dark:text-neutral-400 dark:group-hover:text-neutral-200'
+                                                )} />
                                             )}
                                             <span>{item.title}</span>
+                                            {isCurrentUrl(item.href) && (
+                                                <div className="ml-auto h-1.5 w-1.5 rounded-full bg-primary" />
+                                            )}
                                         </Link>
                                     ))}
                                 </div>
@@ -123,46 +123,37 @@ export function AppHeader({ breadcrumbs = [] }: Props) {
                     <Link
                         href={dashboard()}
                         prefetch
-                        className="flex items-center gap-2"
+                        className="flex items-center gap-2 mr-4"
                     >
                         <AppLogo />
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden h-full flex-1 items-center justify-center lg:flex">
-                        <NavigationMenu className="flex h-full items-stretch">
-                            <NavigationMenuList className="flex h-full items-center gap-1">
-                                {mainNavItems.map((item) => (
-                                    <NavigationMenuItem
-                                        key={item.title}
-                                        className="relative flex h-full items-center"
-                                    >
-                                        <Link
-                                            href={item.href}
-                                            className={cn(
-                                                navigationMenuTriggerStyle(),
-                                                whenCurrentUrl(
-                                                    item.href,
-                                                    activeItemStyles,
-                                                ),
-                                                'h-10 cursor-pointer gap-2 rounded-lg px-4 text-sm font-medium transition-all',
-                                                !isCurrentUrl(item.href) &&
-                                                    'text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white',
-                                            )}
-                                        >
-                                            {item.icon && (
-                                                <item.icon className="h-4 w-4" />
-                                            )}
-                                            {item.title}
-                                        </Link>
-                                        {isCurrentUrl(item.href) && (
-                                            <div className="absolute bottom-0 left-1/2 h-0.5 w-[calc(100%-2rem)] -translate-x-1/2 translate-y-px rounded-full bg-blue-600 dark:bg-blue-400" />
+                    <nav className="hidden h-full flex-1 items-center justify-center lg:flex ml-8">
+                        <ul className="flex h-full items-center gap-1">
+                            {mainNavItems.map((item) => (
+                                <li key={item.title} className="relative h-full">
+                                    <Link
+                                        href={item.href}
+                                        className={cn(
+                                            'flex h-full items-center gap-2 px-4 text-sm font-medium transition-all duration-200',
+                                            isCurrentUrl(item.href)
+                                                ? 'text-primary'
+                                                : 'text-muted-foreground hover:text-foreground',
                                         )}
-                                    </NavigationMenuItem>
-                                ))}
-                            </NavigationMenuList>
-                        </NavigationMenu>
-                    </div>
+                                    >
+                                        {item.icon && (
+                                            <item.icon className="h-4 w-4" />
+                                        )}
+                                        {item.title}
+                                        {isCurrentUrl(item.href) && (
+                                            <div className="absolute bottom-0 left-2 right-2 h-0.5 rounded-full bg-primary" />
+                                        )}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </nav>
 
                     <div className="ml-auto flex items-center gap-3">
                         <DropdownMenu>

@@ -1,4 +1,4 @@
-import { Head, router, useForm, usePage } from '@inertiajs/react';
+import { Head, router, useForm } from '@inertiajs/react';
 import {
     EyeIcon,
     PencilIcon,
@@ -13,14 +13,6 @@ import { CustomComboBox } from '@/components/CustomComboBox';
 import Heading from '@/components/heading';
 import Pagination from '@/components/paginationData';
 import { Button } from '@/components/ui/button';
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-} from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import {
@@ -67,11 +59,6 @@ export default function DocumentIndex({
     );
     const [openEditDialog, setOpenEditDialog] = useState(false);
     const [openDeleteDialog, setOpenDeleteDialog] = useState(false);
-
-    // Handle flash messages (e.g., tracking number after document creation)
-    const initialFlash = (usePage().props as { flash?: { tracking_number?: string } }).flash;
-    const [showSuccessDialog, setShowSuccessDialog] = useState(!!initialFlash?.tracking_number);
-    const [createdTrackingNumber] = useState(initialFlash?.tracking_number || '');
 
     const documentTypeOptions = [
         { value: 'all', label: 'All Types' },
@@ -319,42 +306,6 @@ export default function DocumentIndex({
                         document={selectedDocument}
                     />
                 )}
-
-                {/* Success Dialog - shown after document creation */}
-                <Dialog
-                    open={showSuccessDialog}
-                    onOpenChange={setShowSuccessDialog}
-                >
-                    <DialogContent className="sm:max-w-md">
-                        <DialogHeader>
-                            <DialogTitle>
-                                Document Created Successfully
-                            </DialogTitle>
-                            <DialogDescription>
-                                Your document has been submitted. Please use the
-                                tracking number below to reference your
-                                document.
-                            </DialogDescription>
-                        </DialogHeader>
-                        <div className="flex flex-col items-center justify-center py-4">
-                            <p className="text-xs text-muted-foreground">
-                                Tracking Number
-                            </p>
-                            <p className="mt-1 font-mono text-xl font-bold tracking-wider text-primary">
-                                {createdTrackingNumber}
-                            </p>
-                        </div>
-                        <DialogFooter>
-                            <Button
-                                onClick={() => {
-                                    setShowSuccessDialog(false);
-                                }}
-                            >
-                                Close
-                            </Button>
-                        </DialogFooter>
-                    </DialogContent>
-                </Dialog>
             </div>
         </>
     );

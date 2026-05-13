@@ -253,14 +253,14 @@
     },
     "resources\\js\\pages\\documents\\create.tsx": {
       "latest": {
-        "commit": "8535d38",
-        "timestamp": "2026-05-13T07:57:16.713Z",
-        "mi": 16,
+        "commit": "5e7f907",
+        "timestamp": "2026-05-13T11:11:27.289Z",
+        "mi": 16.4,
         "cognitive": 36,
         "nesting": 4,
-        "lines": 456,
+        "lines": 444,
         "maxCyclomatic": 21,
-        "entropy": 6.39
+        "entropy": 6.38
       },
       "history": [
         {
@@ -272,6 +272,16 @@
           "lines": 456,
           "maxCyclomatic": 21,
           "entropy": 6.39
+        },
+        {
+          "commit": "5e7f907",
+          "timestamp": "2026-05-13T11:11:27.289Z",
+          "mi": 16.4,
+          "cognitive": 36,
+          "nesting": 4,
+          "lines": 444,
+          "maxCyclomatic": 21,
+          "entropy": 6.38
         }
       ],
       "trend": "stable"
@@ -312,5 +322,5 @@
       "trend": "stable"
     }
   },
-  "capturedAt": "2026-05-13T10:58:29.229Z"
+  "capturedAt": "2026-05-13T11:11:32.299Z"
 }
