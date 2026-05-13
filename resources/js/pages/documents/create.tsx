@@ -178,12 +178,12 @@ export default function CreatePage({ documentTypes }: PageProps) {
                                         Click or drag files to upload
                                     </p>
                                     <p className="text-xs text-muted-foreground">
-                                        PDF, JPG, PNG, DOC, DOCX (max 10MB each)
+                                        PDF only (max 10MB each)
                                     </p>
                                     <Input
                                         type="file"
                                         multiple
-                                        accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"
+                                        accept=".pdf"
                                         onChange={handleFileChange}
                                         className="hidden"
                                         id="file-upload"
@@ -383,7 +383,7 @@ export function CreateDocumentDialog({
                                 <Input
                                     type="file"
                                     multiple
-                                    accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"
+                                    accept=".pdf"
                                     onChange={handleFileChange}
                                     className="hidden"
                                     id="dialog-file-upload"

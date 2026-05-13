@@ -19,7 +19,6 @@ import type { SubmitEventHandler, ChangeEventHandler } from 'react';
 import { toast } from 'sonner';
 
 import { DeleteConfirmationDialog } from '@/components/delete-confirmation-dialog';
-import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import {
@@ -121,22 +120,7 @@ export default function DocumentShow({ document: doc }: ShowProps) {
         });
     };
 
-    // Get status badge color
-    const getStatusBadge = (status: string) => {
-        const statusColors: Record<string, string> = {
-            pending:
-                'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400',
-            in_progress:
-                'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400',
-            completed:
-                'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400',
-            rejected:
-                'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400',
-        };
-
-        return statusColors[status] || 'bg-gray-100 text-gray-800';
-    };
-
+    
     return (
         <>
             <Head title={`Document - ${doc.tracking_number}`} />
@@ -178,13 +162,6 @@ export default function DocumentShow({ document: doc }: ShowProps) {
                             </div>
                         </div>
                         <div className="flex items-center gap-3">
-                            <Badge
-                                className={`px-3.5 py-1.5 text-xs font-medium shadow-sm ${getStatusBadge(
-                                    doc.status,
-                                )}`}
-                            >
-                                {doc.status?.replace('_', ' ').toUpperCase()}
-                            </Badge>
                             <Button
                                 size="sm"
                                 onClick={() => setOpenUploadFileDialog(true)}
