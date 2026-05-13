@@ -49,6 +49,13 @@ class DocumentController extends Controller
         ]);
     }
 
+    public function create(Request $request): InertiaResponse
+    {
+        return Inertia::render('documents/create', [
+            'documentTypes' => DocumentType::orderBy('name')->get(),
+        ]);
+    }
+
     public function store(Request $request)
     {
         $validated = $request->validate([
@@ -95,6 +102,14 @@ class DocumentController extends Controller
 
         return Inertia::render('documents/show', [
             'document' => $document,
+        ]);
+    }
+
+    public function edit(Document $document): InertiaResponse
+    {
+        return Inertia::render('documents/edit', [
+            'document' => $document->load(['documentType', 'files']),
+            'documentTypes' => DocumentType::orderBy('name')->get(),
         ]);
     }
 

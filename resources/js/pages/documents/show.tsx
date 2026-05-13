@@ -25,6 +25,8 @@ import {
     Clock,
     User,
     File,
+    Eye,
+    Trash2,
 } from 'lucide-react';
 import { useState } from 'react';
 import documents from '@/routes/documents';
@@ -58,7 +60,7 @@ export default function DocumentShow({ document: doc }: ShowProps) {
         files: [] as File[],
     });
 
-    const [openAddUpdateDialog, setOpenAddUpdateDialog] = useState(false);
+    const [openUploadFileDialog, setOpenUploadFileDialog] = useState(false);
     const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
 
     const handleFileChange: ChangeEventHandler<HTMLInputElement> = (e) => {
@@ -83,7 +85,7 @@ export default function DocumentShow({ document: doc }: ShowProps) {
                 toast.success(
                     flash.flash?.message || 'Update added successfully.',
                 );
-                setOpenAddUpdateDialog(false);
+                setOpenUploadFileDialog(false);
                 resetUpdate();
                 setSelectedFiles([]);
                 // Refresh to show new update
@@ -99,24 +101,54 @@ export default function DocumentShow({ document: doc }: ShowProps) {
         window.open(documents.downloadFile({ id: fileId }).url, '_blank');
     };
 
+    const handleView = (fileId: number) => {
+        window.open(documents.viewFile({ id: fileId }).url, '_blank');
+    };
+
+    const handleDeleteFile = (fileId: number) => {
+        if (confirm('Are you sure you want to delete this file?')) {
+            router.delete(documents.deleteFile({ id: fileId }).url, {
+                onSuccess: () => {
+                    toast.success('File deleted successfully.');
+                    router.reload();
+                },
+                onError: () => {
+                    toast.error('Failed to delete file.');
+                },
+            });
+        }
+    };
+
     return (
         <>
             <Head title={`Document - ${doc.tracking_number}`} />
 
             <div className="flex h-full flex-1 flex-col gap-4 overflow-x-auto rounded-xl p-4">
-                <div className="mb-6 flex items-center gap-4">
-                <Button
-                    variant="ghost"
-                    size="icon"
-                    onClick={() => router.get(documents.index())}
-                >
-                    <ArrowLeft className="h-5 w-5" />
-                </Button>
-                <div>
-                    <Heading
-                        title={doc.tracking_number}
-                        description={`Created on ${new Date(doc.created_at).toLocaleDateString()}`}
-                    />
+                <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                <div className="flex items-center gap-4">
+                    <Button
+                        variant="ghost"
+                        size="icon"
+                        onClick={() => router.get(documents.index())}
+                    >
+                        <ArrowLeft className="h-5 w-5" />
+                    </Button>
+                    <div>
+                        <div className="flex items-center gap-3">
+                            <Heading
+                                title={doc.tracking_number}
+                            />
+                            <span className="rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-800">
+                                {doc.status || 'Active'}
+                            </span>
+                        </div>
+                        <p className="text-sm text-muted-foreground">
+                            Created on {new Date(doc.created_at).toLocaleDateString()}
+                        </p>
+                    </div>
+                </div>
+                <div className="text-sm text-muted-foreground">
+                    Last updated: {new Date(doc.updated_at).toLocaleString()}
                 </div>
             </div>
 
@@ -221,17 +253,39 @@ export default function DocumentShow({ document: doc }: ShowProps) {
                                                         : '-'}
                                                 </TableCell>
                                                 <TableCell className="text-right">
-                                                    <Button
-                                                        variant="ghost"
-                                                        size="icon"
-                                                        onClick={() =>
-                                                            handleDownload(
-                                                                file.id,
-                                                            )
-                                                        }
-                                                    >
-                                                        <Download className="h-4 w-4" />
-                                                    </Button>
+                                                    <div className="flex items-center justify-end gap-1">
+                                                        <Button
+                                                            variant="ghost"
+                                                            size="icon"
+                                                            title="View"
+                                                            onClick={() =>
+                                                                handleView(file.id)
+                                                            }
+                                                        >
+                                                            <Eye className="h-4 w-4" />
+                                                        </Button>
+                                                        <Button
+                                                            variant="ghost"
+                                                            size="icon"
+                                                            title="Download"
+                                                            onClick={() =>
+                                                                handleDownload(file.id)
+                                                            }
+                                                        >
+                                                            <Download className="h-4 w-4" />
+                                                        </Button>
+                                                        <Button
+                                                            variant="ghost"
+                                                            size="icon"
+                                                            title="Delete"
+                                                            className="text-red-500 hover:text-red-700"
+                                                            onClick={() =>
+                                                                handleDeleteFile(file.id)
+                                                            }
+                                                        >
+                                                            <Trash2 className="h-4 w-4" />
+                                                        </Button>
+                                                    </div>
                                                 </TableCell>
                                             </TableRow>
                                         ))}
@@ -242,99 +296,19 @@ export default function DocumentShow({ document: doc }: ShowProps) {
                                     No files uploaded.
                                 </p>
                             )}
+
+                            {/* Upload another file button */}
+                            <div className="mt-4 flex justify-end">
+                                <Button
+                                    size="sm"
+                                    onClick={() => setOpenUploadFileDialog(true)}
+                                >
+                                    <Upload className="mr-2 h-4 w-4" />
+                                    Upload Another File
+                                </Button>
+                            </div>
                         </CardContent>
                     </Card>
-
-                    {/* Updates History */}
-                    <Card>
-                        <CardHeader className="flex flex-row items-center justify-between">
-                            <CardTitle className="text-lg">
-                                Update History ({doc.updates?.length || 0})
-                            </CardTitle>
-                            <Button
-                                size="sm"
-                                onClick={() => setOpenAddUpdateDialog(true)}
-                            >
-                                <PlusIcon className="h-4 w-4" />
-                                Add Update
-                            </Button>
-                        </CardHeader>
-                        <CardContent>
-                            {doc.updates && doc.updates.length > 0 ? (
-                                <div className="space-y-4">
-                                    {doc.updates.map((update) => (
-                                        <div
-                                            key={update.id}
-                                            className="rounded-lg border bg-gray-50 p-4"
-                                        >
-                                            <div className="mb-2 flex items-center justify-between">
-                                                <div className="flex items-center gap-2 text-sm text-gray-500">
-                                                    <Clock className="h-4 w-4" />
-                                                    {new Date(
-                                                        update.created_at,
-                                                    ).toLocaleString()}
-                                                </div>
-                                                <div className="flex items-center gap-2 text-sm text-gray-500">
-                                                    <User className="h-4 w-4" />
-                                                    {update.user?.name ||
-                                                        'Unknown'}
-                                                </div>
-                                            </div>
-                                            <p className="mb-3 text-sm">
-                                                {update.description}
-                                            </p>
-                                            {update.files &&
-                                                update.files.length > 0 && (
-                                                    <div className="space-y-1">
-                                                        <Label className="text-xs text-gray-500">
-                                                            Attached Files:
-                                                        </Label>
-                                                        {update.files.map(
-                                                            (
-                                                                file: DocumentFile,
-                                                            ) => (
-                                                                <div
-                                                                    key={
-                                                                        file.id
-                                                                    }
-                                                                    className="flex items-center justify-between rounded bg-white p-2 text-sm"
-                                                                >
-                                                                    <div className="flex items-center gap-2">
-                                                                        <File className="h-4 w-4 text-gray-500" />
-                                                                        {
-                                                                            file.original_filename
-                                                                        }
-                                                                    </div>
-                                                                    <Button
-                                                                        variant="ghost"
-                                                                        size="icon"
-                                                                        onClick={() =>
-                                                                            handleDownload(
-                                                                                file.id,
-                                                                            )
-                                                                        }
-                                                                    >
-                                                                        <Download className="h-4 w-4" />
-                                                                    </Button>
-                                                                </div>
-                                                            ),
-                                                        )}
-                                                    </div>
-                                                )}
-                                        </div>
-                                    ))}
-                                </div>
-                            ) : (
-                                <p className="py-4 text-center text-gray-500">
-                                    No updates yet.
-                                </p>
-                            )}
-                        </CardContent>
-                    </Card>
-                </div>
-
-                {/* Sidebar Info */}
-                <div className="space-y-6">
                     <Card>
                         <CardHeader>
                             <CardTitle className="text-lg">
@@ -381,8 +355,8 @@ export default function DocumentShow({ document: doc }: ShowProps) {
 
             {/* Add Update Dialog */}
             <Dialog
-                open={openAddUpdateDialog}
-                onOpenChange={setOpenAddUpdateDialog}
+                open={openUploadFileDialog}
+                onOpenChange={setOpenUploadFileDialog}
             >
                 <DialogContent className="rounded-md sm:max-w-lg">
                     <form onSubmit={handleAddUpdate}>
@@ -469,8 +443,8 @@ export default function DocumentShow({ document: doc }: ShowProps) {
                                     Cancel
                                 </Button>
                             </DialogClose>
-                            <Button type="submit" disabled={updateProcessing}>
-                                Add Update
+                            <Button type="submit" disabled={selectedFiles.length === 0}>
+                                Upload
                             </Button>
                         </DialogFooter>
                     </form>
