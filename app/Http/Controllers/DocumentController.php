@@ -180,24 +180,24 @@ class DocumentController extends Controller
 
     public function downloadFile(DocumentFile $file)
     {
-        return Storage::disk('local')->download($file->file_path, $file->original_filename);
+        return response()->download(Storage::path($file->file_path), $file->original_filename);
     }
 
     public function viewFile(DocumentFile $file)
     {
-        return Storage::disk('local')->response($file->file_path, $file->original_filename);
+        return response()->file(Storage::path($file->file_path), $file->original_filename);
     }
 
     public function deleteFile(DocumentFile $file)
     {
         // Delete file from storage
         Storage::disk('local')->delete($file->file_path);
-        
+
         // Delete from database
         $file->delete();
-        
+
         $this->flash('File deleted successfully.');
-        
+
         return back();
     }
 }
