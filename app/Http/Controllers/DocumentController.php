@@ -37,7 +37,7 @@ class DocumentController extends Controller
             $query->where('document_type_id', $request->document_type_id);
         }
 
-        $data = $query->orderBy('created_at', 'desc')->paginate(10)->withQueryString();
+        $data = $query->orderBy('created_at', 'desc')->paginate(50)->withQueryString();
 
         return Inertia::render('documents/index', [
             'data' => $data,
