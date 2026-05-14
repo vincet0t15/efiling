@@ -27,7 +27,6 @@ import documents from '@/routes/documents';
 import type { Document } from '@/types/document';
 import type { DocumentType } from '@/types/document-type';
 import type { PaginatedDataResponse } from '@/types/pagination';
-import { CreateDocumentDialog } from './create';
 import { DeleteDocumentDialog } from './delete';
 import { EditDocumentDialog } from './edit';
 
@@ -53,7 +52,6 @@ export default function DocumentIndex({
         document_type_id: filters.document_type_id || 'all',
     });
 
-    const [openCreateDialog, setOpenCreateDialog] = useState(false);
     const [selectedDocument, setSelectedDocument] = useState<Document | null>(
         null,
     );
@@ -145,7 +143,7 @@ export default function DocumentIndex({
 
                 {/* Search and Create buttons */}
                 <div className="flex w-full flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-                    <Button onClick={() => setOpenCreateDialog(true)}>
+                    <Button onClick={() => router.get(documents.create())}>
                         <PlusIcon className="h-4 w-4" />
                         Upload Document
                     </Button>
@@ -283,14 +281,6 @@ export default function DocumentIndex({
 
                 <Pagination data={data} />
 
-                {/* Dialogs */}
-                {openCreateDialog && (
-                    <CreateDocumentDialog
-                        isOpen={openCreateDialog}
-                        onClose={() => setOpenCreateDialog(false)}
-                        documentTypes={documentTypes}
-                    />
-                )}
                 {openEditDialog && selectedDocument && (
                     <EditDocumentDialog
                         isOpen={openEditDialog}

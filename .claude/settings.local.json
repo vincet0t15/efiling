@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx tsc *)"
+      "Bash(npx tsc *)",
+      "Bash(Get-Content \"C:\\\\laragon\\\\www\\\\efiling\\\\resources\\\\js\\\\pages\\\\documents\\\\create.tsx\")",
+      "Bash(Select-Object -First 350)"
     ]
   }
 }

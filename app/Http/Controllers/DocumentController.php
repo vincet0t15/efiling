@@ -53,6 +53,10 @@ class DocumentController extends Controller
     {
         return Inertia::render('documents/create', [
             'documentTypes' => DocumentType::orderBy('name')->get(),
+            'flash' => [
+                'tracking_number' => $request->session()->get('flash.tracking_number'),
+                'message' => $request->session()->get('flash.message'),
+            ],
         ]);
     }
 
@@ -93,8 +97,8 @@ class DocumentController extends Controller
             }
         }
 
-        // Return success response with flash message and redirect to index
-        return to_route('documents.index')->with('flash', [
+        // Return success response with flash message back to create page
+        return to_route('documents.create')->with('flash', [
             'message' => 'Document created successfully.',
             'tracking_number' => $document->tracking_number,
         ]);
@@ -185,7 +189,9 @@ class DocumentController extends Controller
 
     public function viewFile(DocumentFile $file)
     {
-        return response()->file(Storage::path($file->file_path), $file->original_filename);
+        return response()->file(Storage::path($file->file_path), [
+            'Content-Disposition' => 'inline; filename="' . $file->original_filename . '"',
+        ]);
     }
 
     public function deleteFile(DocumentFile $file)
