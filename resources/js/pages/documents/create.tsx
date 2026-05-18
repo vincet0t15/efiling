@@ -129,6 +129,7 @@ export default function CreatePage({ documentTypes, flash }: PageProps) {
                                 placeholder="Enter document title"
                                 value={data.title}
                                 onChange={onChangeInput}
+                                maxLength={255}
                                 className={errors.title ? 'border-red-500' : ''}
                             />
                             {errors.title && (
