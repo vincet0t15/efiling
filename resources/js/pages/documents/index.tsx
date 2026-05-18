@@ -216,7 +216,7 @@ export default function DocumentIndex({
                                         <TableCell className="font-mono text-sm text-blue-600">
                                             {document.tracking_number}
                                         </TableCell>
-                                        <TableCell className="text-sm font-medium">
+                                        <TableCell className="max-w-xs truncate text-sm font-medium">
                                             {document.title}
                                         </TableCell>
                                         <TableCell className="text-sm">

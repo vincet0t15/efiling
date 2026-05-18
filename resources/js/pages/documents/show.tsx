@@ -137,7 +137,7 @@ export default function DocumentShow({ document: doc }: ShowProps) {
                                 <ArrowLeft className="h-5 w-5" />
                             </Button>
                             <div className="space-y-1">
-                                <h1 className="text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
+                                <h1 className="max-w-2xl truncate text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
                                     {doc.title}
                                 </h1>
                                 <p className="flex items-center gap-2 text-sm text-muted-foreground">
