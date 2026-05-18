@@ -101,6 +101,7 @@ export function EditDocumentDialog({
                                 name="title"
                                 defaultValue={document.title}
                                 onChange={onChangeInput}
+                                maxLength={255}
                             />
                             {errors.title && (
                                 <span className="text-xs text-orange-600">
