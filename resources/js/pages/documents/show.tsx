@@ -219,7 +219,7 @@ export default function DocumentShow({ document: doc }: ShowProps) {
                                                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-primary/10 to-primary/5 shadow-inner">
                                                     <FileText className="h-5 w-5 text-primary" />
                                                 </div>
-                                                <div className="min-w-0 flex-1 space-y-1 pr-10">
+                                                <div className="min-w-0 flex-1 space-y-1 pr-20">
                                                     <p className="truncate text-sm leading-tight font-medium">
                                                         {file.original_filename}
                                                     </p>
@@ -474,7 +474,7 @@ export default function DocumentShow({ document: doc }: ShowProps) {
                 open={openUploadFileDialog}
                 onOpenChange={setOpenUploadFileDialog}
             >
-                <DialogContent className="sm:max-w-lg">
+                <DialogContent className="w-full max-w-[calc(100vw-2rem)] overflow-hidden sm:max-w-lg">
                     <DialogHeader>
                         <DialogTitle>Add Document Update</DialogTitle>
                         <DialogDescription>
@@ -482,8 +482,12 @@ export default function DocumentShow({ document: doc }: ShowProps) {
                             files.
                         </DialogDescription>
                     </DialogHeader>
-                    <form onSubmit={handleAddUpdate}>
-                        <div className="space-y-4 py-4">
+                    {/* Idinagdag ang w-full at min-w-0 dito para pigilan ang grid/flex layout breakage */}
+                    <form
+                        onSubmit={handleAddUpdate}
+                        className="w-full min-w-0 overflow-hidden"
+                    >
+                        <div className="w-full min-w-0 space-y-4 py-4">
                             <div className="space-y-2">
                                 <Label htmlFor="description">
                                     Update Description
@@ -508,7 +512,7 @@ export default function DocumentShow({ document: doc }: ShowProps) {
                                 )}
                             </div>
 
-                            <div className="space-y-2">
+                            <div className="w-full min-w-0 space-y-2">
                                 <Label>Attach Files (Optional)</Label>
                                 <div className="rounded-lg border-2 border-dashed border-border p-6 text-center transition-colors hover:border-primary/50">
                                     <label className="cursor-pointer">
@@ -525,22 +529,30 @@ export default function DocumentShow({ document: doc }: ShowProps) {
                                         />
                                     </label>
                                 </div>
+
+                                {/* ANG BINAGO AT SINIGURADONG CONTAINER NG ATTACHMENTS */}
                                 {selectedFiles.length > 0 && (
-                                    <div className="space-y-2">
+                                    <div className="mt-2 w-full min-w-0 space-y-2 overflow-hidden">
                                         {selectedFiles.map((file, index) => (
                                             <div
                                                 key={index}
-                                                className="flex items-center justify-between rounded-md bg-muted px-3 py-2 text-sm"
+                                                className="table-layout-fixed flex w-full min-w-0 items-center justify-between gap-3 rounded-md bg-muted px-3 py-2 text-sm"
                                             >
-                                                <span className="truncate">
-                                                    {file.name}
-                                                </span>
+                                                {/* piliting putulin ang text gamit ang truncate at break-all combinations */}
+                                                <div className="min-w-0 flex-1 overflow-hidden">
+                                                    <p
+                                                        className="block truncate text-sm font-medium break-all text-foreground"
+                                                        title={file.name}
+                                                    >
+                                                        {file.name}
+                                                    </p>
+                                                </div>
                                                 <button
                                                     type="button"
                                                     onClick={() =>
                                                         removeFile(index)
                                                     }
-                                                    className="text-red-500 hover:text-red-600"
+                                                    className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-sm text-lg font-semibold text-muted-foreground transition-colors hover:bg-background/50 hover:text-destructive"
                                                 >
                                                     ×
                                                 </button>
@@ -550,7 +562,7 @@ export default function DocumentShow({ document: doc }: ShowProps) {
                                 )}
                             </div>
                         </div>
-                        <DialogFooter>
+                        <DialogFooter className="gap-2 sm:gap-0">
                             <DialogClose asChild>
                                 <Button type="button" variant="outline">
                                     Cancel

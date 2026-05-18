@@ -63,7 +63,7 @@ class DocumentController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'title' => 'required|string|max:255',
+            'title' => 'required|string',
             'description' => 'nullable|string',
             'document_type_id' => 'required|exists:document_types,id',
             'files' => 'required|array|min:1',
@@ -124,7 +124,7 @@ class DocumentController extends Controller
     public function update(Request $request, Document $document)
     {
         $validated = $request->validate([
-            'title' => 'required|string|max:255',
+            'title' => 'required|string',
             'description' => 'nullable|string',
             'document_type_id' => 'required|exists:document_types,id',
         ]);
