@@ -1,15 +1,10 @@
 import { Head, router, usePage } from '@inertiajs/react';
 import { 
     FileText, 
-    Clock, 
-    CheckCircle, 
-    XCircle, 
     Plus, 
     ArrowRight,
     FileUp,
-    Settings,
-    Users,
-    BarChart3
+    Settings
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -29,15 +24,17 @@ import documentTypes from '@/routes/document-types';
 interface DashboardProps {
     stats?: {
         total: number;
-        pending: number;
-        approved: number;
-        rejected: number;
+        documentTypes?: Array<{
+            document_type_id: number;
+            name: string;
+            count: number;
+        }>;
     };
     recentDocuments?: Array<{
         id: number;
         title: string;
         tracking_number: string;
-        status: string;
+        status?: string;
         created_at: string;
         document_type?: {
             name: string;
@@ -61,40 +58,16 @@ export default function Dashboard({ stats, recentDocuments, user }: DashboardPro
         rejected: 0
     };
 
-    const statCards = [
-        {
-            title: 'Total Documents',
-            value: dashboardStats.total,
+    const documentTypeCards = dashboardStats.documentTypes?.length
+        ? dashboardStats.documentTypes.map((docType, index) => ({
+            title: docType.name,
+            value: docType.count,
             icon: FileText,
-            description: 'All submitted documents',
+            description: 'Documents',
             color: 'bg-blue-500',
             textColor: 'text-blue-500'
-        },
-        {
-            title: 'Pending',
-            value: dashboardStats.pending,
-            icon: Clock,
-            description: 'Awaiting review',
-            color: 'bg-yellow-500',
-            textColor: 'text-yellow-500'
-        },
-        {
-            title: 'Approved',
-            value: dashboardStats.approved,
-            icon: CheckCircle,
-            description: 'Successfully processed',
-            color: 'bg-green-500',
-            textColor: 'text-green-500'
-        },
-        {
-            title: 'Rejected',
-            value: dashboardStats.rejected,
-            icon: XCircle,
-            description: 'Needs revision',
-            color: 'bg-red-500',
-            textColor: 'text-red-500'
-        }
-    ];
+        }))
+        : [];
 
     const quickActions = [
         {
@@ -120,16 +93,6 @@ export default function Dashboard({ stats, recentDocuments, user }: DashboardPro
         }
     ];
 
-    const getStatusBadge = (status: string) => {
-        const statusConfig: Record<string, { variant: 'default' | 'secondary' | 'destructive' | 'outline'; label: string }> = {
-            pending: { variant: 'secondary', label: 'Pending' },
-            approved: { variant: 'default', label: 'Approved' },
-            rejected: { variant: 'destructive', label: 'Rejected' },
-        };
-        const config = statusConfig[status?.toLowerCase()] || { variant: 'outline', label: status || 'Unknown' };
-        return <Badge variant={config.variant}>{config.label}</Badge>;
-    };
-
     return (
         <>
             <Head title="Dashboard" />
@@ -150,7 +113,21 @@ export default function Dashboard({ stats, recentDocuments, user }: DashboardPro
 
                 {/* Stats Grid */}
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                    {statCards.map((stat, index) => (
+                    <Card className="relative overflow-hidden">
+                        <CardContent className="pt-6">
+                            <div className="flex items-start justify-between">
+                                <div className="space-y-2">
+                                    <p className="text-sm font-medium text-muted-foreground">Total Documents</p>
+                                    <p className="text-3xl font-bold">{dashboardStats.total}</p>
+                                    <p className="text-xs text-muted-foreground">All submitted documents</p>
+                                </div>
+                                <div className="rounded-lg bg-blue-500/10 p-3">
+                                    <FileText className="h-6 w-6 text-blue-500" />
+                                </div>
+                            </div>
+                        </CardContent>
+                    </Card>
+                    {documentTypeCards.map((stat, index) => (
                         <Card key={index} className="relative overflow-hidden">
                             <CardContent className="pt-6">
                                 <div className="flex items-start justify-between">
@@ -215,7 +192,6 @@ export default function Dashboard({ stats, recentDocuments, user }: DashboardPro
                                         <TableHead>Title</TableHead>
                                         <TableHead>Type</TableHead>
                                         <TableHead>Date</TableHead>
-                                        <TableHead>Status</TableHead>
                                         <TableHead className="text-right">Action</TableHead>
                                     </TableRow>
                                 </TableHeader>
@@ -233,9 +209,6 @@ export default function Dashboard({ stats, recentDocuments, user }: DashboardPro
                                             </TableCell>
                                             <TableCell className="text-muted-foreground">
                                                 {new Date(doc.created_at).toLocaleDateString()}
-                                            </TableCell>
-                                            <TableCell>
-                                                {getStatusBadge(doc.status)}
                                             </TableCell>
                                             <TableCell className="text-right">
                                                 <Button 
